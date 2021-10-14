@@ -1,7 +1,7 @@
 ﻿
 namespace csharp_winform
 {
-    partial class DanNhapHeThong
+    partial class DangNhapHeThong
     {
         /// <summary>
         /// Required designer variable.
