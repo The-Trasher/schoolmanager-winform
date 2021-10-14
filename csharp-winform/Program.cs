@@ -16,7 +16,7 @@ namespace csharp_winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DangNhapHeThong());
+            Application.Run(new Form1());
         }
     }
 }

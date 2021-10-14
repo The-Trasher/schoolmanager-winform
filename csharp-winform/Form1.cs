@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace csharp_winform
 {
-    public partial class QuanLyDiemSinhVien : Form
+    public partial class Form1 : Form
     {
-        public QuanLyDiemSinhVien()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void QuanLyDiemSinhVien_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
