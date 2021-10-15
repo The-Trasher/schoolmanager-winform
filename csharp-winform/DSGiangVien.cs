@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace csharp_winform
 {
-    public partial class DoiMatKhau : Form
+    public partial class DSGiangVien : Form
     {
-        public DoiMatKhau()
+        public DSGiangVien()
         {
             InitializeComponent();
         }
 
-        private void lblThongTinTaiKhoan_Click(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
