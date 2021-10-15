@@ -1,0 +1,13 @@
+D:\csharp-winform\csharp-winform\bin\Debug\csharp-winform.exe.config
+D:\csharp-winform\csharp-winform\bin\Debug\csharp-winform.exe
+D:\csharp-winform\csharp-winform\bin\Debug\csharp-winform.pdb
+D:\csharp-winform\csharp-winform\obj\Debug\csharp-winform.csproj.AssemblyReference.cache
+D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.DanNhapHeThong.resources
+D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.Properties.Resources.resources
+D:\csharp-winform\csharp-winform\obj\Debug\csharp-winform.csproj.GenerateResource.cache
+D:\csharp-winform\csharp-winform\obj\Debug\csharp-winform.csproj.CoreCompileInputs.cache
+D:\csharp-winform\csharp-winform\obj\Debug\csharp-winform.exe
+D:\csharp-winform\csharp-winform\obj\Debug\csharp-winform.pdb
+D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.DoiMatKhau.resources
+D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.DSThiLai.resources
+D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.QuanLyDiemSinhVien.resources
