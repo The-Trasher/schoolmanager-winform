@@ -29,163 +29,179 @@ namespace csharp_winform
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.lblThongTinTaiKhoan = new System.Windows.Forms.Label();
+            this.grThongTin = new System.Windows.Forms.GroupBox();
+            this.cmbQuyenAdmin = new System.Windows.Forms.ComboBox();
+            this.txtNhapLaiMK = new System.Windows.Forms.TextBox();
+            this.txtMKMoi = new System.Windows.Forms.TextBox();
+            this.txtMKCu = new System.Windows.Forms.TextBox();
+            this.txtTenTaiKhoan = new System.Windows.Forms.TextBox();
+            this.lblNhapLaiMK = new System.Windows.Forms.Label();
+            this.lblQuyenADMin = new System.Windows.Forms.Label();
+            this.lblMKMoi = new System.Windows.Forms.Label();
+            this.lblMkCu = new System.Windows.Forms.Label();
+            this.lblTenTaiKhoan = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.grThongTin.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblThongTinTaiKhoan
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(323, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.lblThongTinTaiKhoan.AutoSize = true;
+            this.lblThongTinTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblThongTinTaiKhoan.ForeColor = System.Drawing.Color.Red;
+            this.lblThongTinTaiKhoan.Location = new System.Drawing.Point(211, 29);
+            this.lblThongTinTaiKhoan.Name = "lblThongTinTaiKhoan";
+            this.lblThongTinTaiKhoan.Size = new System.Drawing.Size(369, 35);
+            this.lblThongTinTaiKhoan.TabIndex = 0;
+            this.lblThongTinTaiKhoan.Text = "THÔNG TIN TÀI KHOẢN";
+            this.lblThongTinTaiKhoan.Click += new System.EventHandler(this.lblThongTinTaiKhoan_Click);
             // 
-            // groupBox1
+            // grThongTin
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(92, 67);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(618, 293);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.grThongTin.Controls.Add(this.cmbQuyenAdmin);
+            this.grThongTin.Controls.Add(this.txtNhapLaiMK);
+            this.grThongTin.Controls.Add(this.txtMKMoi);
+            this.grThongTin.Controls.Add(this.txtMKCu);
+            this.grThongTin.Controls.Add(this.txtTenTaiKhoan);
+            this.grThongTin.Controls.Add(this.lblNhapLaiMK);
+            this.grThongTin.Controls.Add(this.lblQuyenADMin);
+            this.grThongTin.Controls.Add(this.lblMKMoi);
+            this.grThongTin.Controls.Add(this.lblMkCu);
+            this.grThongTin.Controls.Add(this.lblTenTaiKhoan);
+            this.grThongTin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.grThongTin.Location = new System.Drawing.Point(91, 92);
+            this.grThongTin.Name = "grThongTin";
+            this.grThongTin.Size = new System.Drawing.Size(608, 293);
+            this.grThongTin.TabIndex = 1;
+            this.grThongTin.TabStop = false;
+            this.grThongTin.Text = "Thông tin";
             // 
-            // label2
+            // cmbQuyenAdmin
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "label2";
+            this.cmbQuyenAdmin.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cmbQuyenAdmin.FormattingEnabled = true;
+            this.cmbQuyenAdmin.Location = new System.Drawing.Point(218, 227);
+            this.cmbQuyenAdmin.Name = "cmbQuyenAdmin";
+            this.cmbQuyenAdmin.Size = new System.Drawing.Size(299, 27);
+            this.cmbQuyenAdmin.TabIndex = 9;
             // 
-            // label3
+            // txtNhapLaiMK
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 89);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "label3";
+            this.txtNhapLaiMK.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtNhapLaiMK.Location = new System.Drawing.Point(218, 178);
+            this.txtNhapLaiMK.Name = "txtNhapLaiMK";
+            this.txtNhapLaiMK.Size = new System.Drawing.Size(299, 27);
+            this.txtNhapLaiMK.TabIndex = 8;
             // 
-            // label4
+            // txtMKMoi
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(56, 133);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
+            this.txtMKMoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMKMoi.Location = new System.Drawing.Point(218, 126);
+            this.txtMKMoi.Name = "txtMKMoi";
+            this.txtMKMoi.Size = new System.Drawing.Size(299, 27);
+            this.txtMKMoi.TabIndex = 7;
             // 
-            // label5
+            // txtMKCu
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(56, 234);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 17);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "label5";
+            this.txtMKCu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMKCu.Location = new System.Drawing.Point(218, 82);
+            this.txtMKCu.Name = "txtMKCu";
+            this.txtMKCu.Size = new System.Drawing.Size(299, 27);
+            this.txtMKCu.TabIndex = 6;
             // 
-            // label6
+            // txtTenTaiKhoan
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(56, 188);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 17);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "label6";
+            this.txtTenTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTenTaiKhoan.Location = new System.Drawing.Point(218, 35);
+            this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
+            this.txtTenTaiKhoan.Size = new System.Drawing.Size(299, 27);
+            this.txtTenTaiKhoan.TabIndex = 5;
             // 
-            // textBox1
+            // lblNhapLaiMK
             // 
-            this.textBox1.Location = new System.Drawing.Point(177, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(299, 22);
-            this.textBox1.TabIndex = 5;
+            this.lblNhapLaiMK.AutoSize = true;
+            this.lblNhapLaiMK.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblNhapLaiMK.Location = new System.Drawing.Point(56, 188);
+            this.lblNhapLaiMK.Name = "lblNhapLaiMK";
+            this.lblNhapLaiMK.Size = new System.Drawing.Size(129, 19);
+            this.lblNhapLaiMK.TabIndex = 4;
+            this.lblNhapLaiMK.Text = "Nhập lại mật khẩu";
             // 
-            // textBox2
+            // lblQuyenADMin
             // 
-            this.textBox2.Location = new System.Drawing.Point(177, 89);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(299, 22);
-            this.textBox2.TabIndex = 6;
+            this.lblQuyenADMin.AutoSize = true;
+            this.lblQuyenADMin.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblQuyenADMin.Location = new System.Drawing.Point(56, 234);
+            this.lblQuyenADMin.Name = "lblQuyenADMin";
+            this.lblQuyenADMin.Size = new System.Drawing.Size(98, 19);
+            this.lblQuyenADMin.TabIndex = 3;
+            this.lblQuyenADMin.Text = "Quyền admin";
             // 
-            // textBox3
+            // lblMKMoi
             // 
-            this.textBox3.Location = new System.Drawing.Point(177, 133);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(299, 22);
-            this.textBox3.TabIndex = 7;
+            this.lblMKMoi.AutoSize = true;
+            this.lblMKMoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblMKMoi.Location = new System.Drawing.Point(56, 133);
+            this.lblMKMoi.Name = "lblMKMoi";
+            this.lblMKMoi.Size = new System.Drawing.Size(102, 19);
+            this.lblMKMoi.TabIndex = 2;
+            this.lblMKMoi.Text = "Mật khẩu mới";
             // 
-            // textBox4
+            // lblMkCu
             // 
-            this.textBox4.Location = new System.Drawing.Point(177, 185);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(299, 22);
-            this.textBox4.TabIndex = 8;
+            this.lblMkCu.AutoSize = true;
+            this.lblMkCu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblMkCu.Location = new System.Drawing.Point(56, 89);
+            this.lblMkCu.Name = "lblMkCu";
+            this.lblMkCu.Size = new System.Drawing.Size(91, 19);
+            this.lblMkCu.TabIndex = 1;
+            this.lblMkCu.Text = "Mật khẩu cũ";
             // 
-            // comboBox1
+            // lblTenTaiKhoan
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(177, 234);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(299, 24);
-            this.comboBox1.TabIndex = 9;
+            this.lblTenTaiKhoan.AutoSize = true;
+            this.lblTenTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTenTaiKhoan.Location = new System.Drawing.Point(56, 42);
+            this.lblTenTaiKhoan.Name = "lblTenTaiKhoan";
+            this.lblTenTaiKhoan.Size = new System.Drawing.Size(99, 19);
+            this.lblTenTaiKhoan.TabIndex = 0;
+            this.lblTenTaiKhoan.Text = "Tên tài khoản";
             // 
-            // button1
+            // btnOK
             // 
-            this.button1.Location = new System.Drawing.Point(181, 399);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 55);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnOK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnOK.Location = new System.Drawing.Point(150, 409);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(136, 55);
+            this.btnOK.TabIndex = 2;
+            this.btnOK.Text = "Ok";
+            this.btnOK.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnThoat
             // 
-            this.button2.Location = new System.Drawing.Point(473, 399);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 55);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnThoat.Location = new System.Drawing.Point(491, 409);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(136, 55);
+            this.btnThoat.TabIndex = 3;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
             // 
             // DoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 485);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(800, 497);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.grThongTin);
+            this.Controls.Add(this.lblThongTinTaiKhoan);
             this.Name = "DoiMatKhau";
             this.Text = "DoiMatKhau";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grThongTin.ResumeLayout(false);
+            this.grThongTin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,19 +209,19 @@ namespace csharp_winform
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblThongTinTaiKhoan;
+        private System.Windows.Forms.GroupBox grThongTin;
+        private System.Windows.Forms.ComboBox cmbQuyenAdmin;
+        private System.Windows.Forms.TextBox txtNhapLaiMK;
+        private System.Windows.Forms.TextBox txtMKMoi;
+        private System.Windows.Forms.TextBox txtMKCu;
+        private System.Windows.Forms.TextBox txtTenTaiKhoan;
+        private System.Windows.Forms.Label lblNhapLaiMK;
+        private System.Windows.Forms.Label lblQuyenADMin;
+        private System.Windows.Forms.Label lblMKMoi;
+        private System.Windows.Forms.Label lblMkCu;
+        private System.Windows.Forms.Label lblTenTaiKhoan;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Button btnThoat;
     }
 }

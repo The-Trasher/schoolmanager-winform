@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace csharp_winform
 {
-    public partial class DoiMatKhau : Form
+    public partial class QuanLyMonHoc : Form
     {
-        public DoiMatKhau()
+        public QuanLyMonHoc()
         {
             InitializeComponent();
         }
 
-        private void lblThongTinTaiKhoan_Click(object sender, EventArgs e)
+        private void btnSua_Click(object sender, EventArgs e)
         {
 
         }
