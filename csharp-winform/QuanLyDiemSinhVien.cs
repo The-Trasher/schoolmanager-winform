@@ -17,9 +17,9 @@ namespace csharp_winform
             InitializeComponent();
         }
 
-        private void QuanLyDiemSinhVien_Load(object sender, EventArgs e)
+        private void QuanLyDiemSinhVien_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Environment.Exit(1);
         }
     }
 }

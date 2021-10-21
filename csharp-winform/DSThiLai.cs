@@ -16,10 +16,5 @@ namespace csharp_winform
         {
             InitializeComponent();
         }
-
-        private void lblLoai_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

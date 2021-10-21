@@ -16,15 +16,5 @@ namespace csharp_winform
         {
             InitializeComponent();
         }
-
-        private void QuanLyKhoa_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTenKhoa_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

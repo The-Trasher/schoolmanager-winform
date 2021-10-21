@@ -7,19 +7,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using csharp_winform.Model;
 
 namespace csharp_winform
 {
-    public partial class DanNhapHeThong : Form
+    public partial class DangNhapHeThong : Form
     {
-        public DanNhapHeThong()
+        StudentDBContext dBContext = new StudentDBContext();
+
+        public DangNhapHeThong()
         {
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            DANGNHAP dn = dBContext.DANGNHAPs.Where(p => p.TenDN == txtTenDN.Text && p.MatKhau == txtMatKhau.Text).FirstOrDefault();
 
+            if (dn != null)
+            {
+                if (dn.Quyen == "admin")
+                {
+                    this.Hide();
+                    QuanLyDiemSinhVien frmMain = new QuanLyDiemSinhVien();
+                    frmMain.Show();
+                }
+                else
+                {
+                    this.Hide();
+                    QuanLyDiemSinhVien frmMain = new QuanLyDiemSinhVien();
+                    frmMain.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Sai ten dang nhap hoac mat khau");
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
