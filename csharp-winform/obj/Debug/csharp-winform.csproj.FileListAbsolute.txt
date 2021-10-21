@@ -16,10 +16,10 @@ D:\csharp-winform\csharp-winform\bin\Debug\EntityFramework.dll
 D:\csharp-winform\csharp-winform\bin\Debug\EntityFramework.SqlServer.dll
 D:\csharp-winform\csharp-winform\bin\Debug\EntityFramework.xml
 D:\csharp-winform\csharp-winform\bin\Debug\EntityFramework.SqlServer.xml
-D:\csharp-winform\csharp-winform\obj\Debug\csharp-winform.csproj.AssemblyReference.cache
 D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.DangNhapHeThong.resources
 D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.NhapDiemSinhVien.resources
 D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.QuanLyDiemHocLai.resources
 D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.QuanLyDiemThiLai.resources
 D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.QuanLyMonHoc.resources
-D:\csharp-winform\csharp-winform\obj\Debug\csharp-winform.csproj.CopyComplete
+D:\csharp-winform\csharp-winform\obj\Debug\csharp-winform.csproj.AssemblyReference.cache
+D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.NhapSinhVien.resources

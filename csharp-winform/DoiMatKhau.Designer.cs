@@ -31,13 +31,11 @@ namespace csharp_winform
         {
             this.lblThongTinTaiKhoan = new System.Windows.Forms.Label();
             this.grThongTin = new System.Windows.Forms.GroupBox();
-            this.cmbQuyenAdmin = new System.Windows.Forms.ComboBox();
             this.txtNhapLaiMK = new System.Windows.Forms.TextBox();
             this.txtMKMoi = new System.Windows.Forms.TextBox();
             this.txtMKCu = new System.Windows.Forms.TextBox();
             this.txtTenTaiKhoan = new System.Windows.Forms.TextBox();
             this.lblNhapLaiMK = new System.Windows.Forms.Label();
-            this.lblQuyenADMin = new System.Windows.Forms.Label();
             this.lblMKMoi = new System.Windows.Forms.Label();
             this.lblMkCu = new System.Windows.Forms.Label();
             this.lblTenTaiKhoan = new System.Windows.Forms.Label();
@@ -60,41 +58,29 @@ namespace csharp_winform
             // 
             // grThongTin
             // 
-            this.grThongTin.Controls.Add(this.cmbQuyenAdmin);
             this.grThongTin.Controls.Add(this.txtNhapLaiMK);
             this.grThongTin.Controls.Add(this.txtMKMoi);
             this.grThongTin.Controls.Add(this.txtMKCu);
             this.grThongTin.Controls.Add(this.txtTenTaiKhoan);
             this.grThongTin.Controls.Add(this.lblNhapLaiMK);
-            this.grThongTin.Controls.Add(this.lblQuyenADMin);
             this.grThongTin.Controls.Add(this.lblMKMoi);
             this.grThongTin.Controls.Add(this.lblMkCu);
             this.grThongTin.Controls.Add(this.lblTenTaiKhoan);
             this.grThongTin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.grThongTin.Location = new System.Drawing.Point(68, 75);
-            this.grThongTin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grThongTin.Margin = new System.Windows.Forms.Padding(2);
             this.grThongTin.Name = "grThongTin";
-            this.grThongTin.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grThongTin.Padding = new System.Windows.Forms.Padding(2);
             this.grThongTin.Size = new System.Drawing.Size(456, 238);
             this.grThongTin.TabIndex = 1;
             this.grThongTin.TabStop = false;
             this.grThongTin.Text = "Thông tin";
             // 
-            // cmbQuyenAdmin
-            // 
-            this.cmbQuyenAdmin.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cmbQuyenAdmin.FormattingEnabled = true;
-            this.cmbQuyenAdmin.Location = new System.Drawing.Point(164, 184);
-            this.cmbQuyenAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cmbQuyenAdmin.Name = "cmbQuyenAdmin";
-            this.cmbQuyenAdmin.Size = new System.Drawing.Size(225, 24);
-            this.cmbQuyenAdmin.TabIndex = 9;
-            // 
             // txtNhapLaiMK
             // 
             this.txtNhapLaiMK.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtNhapLaiMK.Location = new System.Drawing.Point(164, 145);
-            this.txtNhapLaiMK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNhapLaiMK.Location = new System.Drawing.Point(177, 161);
+            this.txtNhapLaiMK.Margin = new System.Windows.Forms.Padding(2);
             this.txtNhapLaiMK.Name = "txtNhapLaiMK";
             this.txtNhapLaiMK.Size = new System.Drawing.Size(225, 23);
             this.txtNhapLaiMK.TabIndex = 8;
@@ -102,8 +88,8 @@ namespace csharp_winform
             // txtMKMoi
             // 
             this.txtMKMoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMKMoi.Location = new System.Drawing.Point(164, 102);
-            this.txtMKMoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMKMoi.Location = new System.Drawing.Point(177, 125);
+            this.txtMKMoi.Margin = new System.Windows.Forms.Padding(2);
             this.txtMKMoi.Name = "txtMKMoi";
             this.txtMKMoi.Size = new System.Drawing.Size(225, 23);
             this.txtMKMoi.TabIndex = 7;
@@ -111,8 +97,8 @@ namespace csharp_winform
             // txtMKCu
             // 
             this.txtMKCu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMKCu.Location = new System.Drawing.Point(164, 67);
-            this.txtMKCu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMKCu.Location = new System.Drawing.Point(177, 90);
+            this.txtMKCu.Margin = new System.Windows.Forms.Padding(2);
             this.txtMKCu.Name = "txtMKCu";
             this.txtMKCu.Size = new System.Drawing.Size(225, 23);
             this.txtMKCu.TabIndex = 6;
@@ -120,8 +106,8 @@ namespace csharp_winform
             // txtTenTaiKhoan
             // 
             this.txtTenTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenTaiKhoan.Location = new System.Drawing.Point(164, 28);
-            this.txtTenTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenTaiKhoan.Location = new System.Drawing.Point(177, 51);
+            this.txtTenTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
             this.txtTenTaiKhoan.Size = new System.Drawing.Size(225, 23);
             this.txtTenTaiKhoan.TabIndex = 5;
@@ -130,29 +116,18 @@ namespace csharp_winform
             // 
             this.lblNhapLaiMK.AutoSize = true;
             this.lblNhapLaiMK.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblNhapLaiMK.Location = new System.Drawing.Point(42, 153);
+            this.lblNhapLaiMK.Location = new System.Drawing.Point(55, 169);
             this.lblNhapLaiMK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNhapLaiMK.Name = "lblNhapLaiMK";
             this.lblNhapLaiMK.Size = new System.Drawing.Size(110, 16);
             this.lblNhapLaiMK.TabIndex = 4;
             this.lblNhapLaiMK.Text = "Nhập lại mật khẩu";
             // 
-            // lblQuyenADMin
-            // 
-            this.lblQuyenADMin.AutoSize = true;
-            this.lblQuyenADMin.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblQuyenADMin.Location = new System.Drawing.Point(42, 190);
-            this.lblQuyenADMin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblQuyenADMin.Name = "lblQuyenADMin";
-            this.lblQuyenADMin.Size = new System.Drawing.Size(83, 16);
-            this.lblQuyenADMin.TabIndex = 3;
-            this.lblQuyenADMin.Text = "Quyền admin";
-            // 
             // lblMKMoi
             // 
             this.lblMKMoi.AutoSize = true;
             this.lblMKMoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMKMoi.Location = new System.Drawing.Point(42, 108);
+            this.lblMKMoi.Location = new System.Drawing.Point(55, 131);
             this.lblMKMoi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMKMoi.Name = "lblMKMoi";
             this.lblMKMoi.Size = new System.Drawing.Size(86, 16);
@@ -163,7 +138,7 @@ namespace csharp_winform
             // 
             this.lblMkCu.AutoSize = true;
             this.lblMkCu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMkCu.Location = new System.Drawing.Point(42, 72);
+            this.lblMkCu.Location = new System.Drawing.Point(55, 95);
             this.lblMkCu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMkCu.Name = "lblMkCu";
             this.lblMkCu.Size = new System.Drawing.Size(79, 16);
@@ -174,7 +149,7 @@ namespace csharp_winform
             // 
             this.lblTenTaiKhoan.AutoSize = true;
             this.lblTenTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTenTaiKhoan.Location = new System.Drawing.Point(42, 34);
+            this.lblTenTaiKhoan.Location = new System.Drawing.Point(55, 57);
             this.lblTenTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenTaiKhoan.Name = "lblTenTaiKhoan";
             this.lblTenTaiKhoan.Size = new System.Drawing.Size(85, 16);
@@ -185,7 +160,7 @@ namespace csharp_winform
             // 
             this.btnOK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnOK.Location = new System.Drawing.Point(112, 332);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(102, 45);
             this.btnOK.TabIndex = 2;
@@ -196,7 +171,7 @@ namespace csharp_winform
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThoat.Location = new System.Drawing.Point(368, 332);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(102, 45);
             this.btnThoat.TabIndex = 3;
@@ -212,7 +187,7 @@ namespace csharp_winform
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.grThongTin);
             this.Controls.Add(this.lblThongTinTaiKhoan);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DoiMatKhau";
             this.Text = "DoiMatKhau";
             this.grThongTin.ResumeLayout(false);
@@ -226,13 +201,11 @@ namespace csharp_winform
 
         private System.Windows.Forms.Label lblThongTinTaiKhoan;
         private System.Windows.Forms.GroupBox grThongTin;
-        private System.Windows.Forms.ComboBox cmbQuyenAdmin;
         private System.Windows.Forms.TextBox txtNhapLaiMK;
         private System.Windows.Forms.TextBox txtMKMoi;
         private System.Windows.Forms.TextBox txtMKCu;
         private System.Windows.Forms.TextBox txtTenTaiKhoan;
         private System.Windows.Forms.Label lblNhapLaiMK;
-        private System.Windows.Forms.Label lblQuyenADMin;
         private System.Windows.Forms.Label lblMKMoi;
         private System.Windows.Forms.Label lblMkCu;
         private System.Windows.Forms.Label lblTenTaiKhoan;

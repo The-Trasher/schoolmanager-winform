@@ -69,7 +69,7 @@ namespace csharp_winform
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThoat.Location = new System.Drawing.Point(688, 340);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(80, 47);
             this.btnThoat.TabIndex = 12;
@@ -80,7 +80,7 @@ namespace csharp_winform
             // 
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnXoa.Location = new System.Drawing.Point(688, 258);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(80, 49);
             this.btnXoa.TabIndex = 11;
@@ -91,7 +91,7 @@ namespace csharp_winform
             // 
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSua.Location = new System.Drawing.Point(688, 176);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(80, 47);
             this.btnSua.TabIndex = 10;
@@ -102,7 +102,7 @@ namespace csharp_winform
             // 
             this.btnNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnNhap.Location = new System.Drawing.Point(688, 98);
-            this.btnNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhap.Name = "btnNhap";
             this.btnNhap.Size = new System.Drawing.Size(80, 44);
             this.btnNhap.TabIndex = 9;
@@ -122,7 +122,7 @@ namespace csharp_winform
             this.Phone,
             this.Email});
             this.dataGridView1.Location = new System.Drawing.Point(15, 24);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -198,9 +198,9 @@ namespace csharp_winform
             this.grThongTinChiTiet.Controls.Add(this.label2);
             this.grThongTinChiTiet.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grThongTinChiTiet.Location = new System.Drawing.Point(21, 67);
-            this.grThongTinChiTiet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grThongTinChiTiet.Margin = new System.Windows.Forms.Padding(2);
             this.grThongTinChiTiet.Name = "grThongTinChiTiet";
-            this.grThongTinChiTiet.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grThongTinChiTiet.Padding = new System.Windows.Forms.Padding(2);
             this.grThongTinChiTiet.Size = new System.Drawing.Size(278, 405);
             this.grThongTinChiTiet.TabIndex = 7;
             this.grThongTinChiTiet.TabStop = false;
@@ -210,17 +210,17 @@ namespace csharp_winform
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.Location = new System.Drawing.Point(201, 258);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(54, 94);
             this.button1.TabIndex = 17;
-            this.button1.Text = "Chụp ảnh";
+            this.button1.Text = "Tải ảnh lên";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(123, 258);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(74, 94);
             this.pictureBox1.TabIndex = 16;
@@ -230,7 +230,7 @@ namespace csharp_winform
             // 
             this.textBox5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox5.Location = new System.Drawing.Point(123, 149);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(133, 23);
             this.textBox5.TabIndex = 15;
@@ -240,7 +240,7 @@ namespace csharp_winform
             this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(123, 216);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(74, 24);
             this.comboBox2.TabIndex = 14;
@@ -250,7 +250,7 @@ namespace csharp_winform
             this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(123, 113);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(74, 24);
             this.comboBox1.TabIndex = 13;
@@ -259,7 +259,7 @@ namespace csharp_winform
             // 
             this.textBox4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox4.Location = new System.Drawing.Point(122, 360);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(76, 23);
             this.textBox4.TabIndex = 12;
@@ -268,7 +268,7 @@ namespace csharp_winform
             // 
             this.textBox3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox3.Location = new System.Drawing.Point(123, 184);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(133, 23);
             this.textBox3.TabIndex = 11;
@@ -277,7 +277,7 @@ namespace csharp_winform
             // 
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox2.Location = new System.Drawing.Point(123, 77);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(133, 23);
             this.textBox2.TabIndex = 10;
@@ -286,7 +286,7 @@ namespace csharp_winform
             // 
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox1.Location = new System.Drawing.Point(123, 41);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(133, 23);
             this.textBox1.TabIndex = 9;
@@ -384,9 +384,9 @@ namespace csharp_winform
             this.grDanhSach.Controls.Add(this.dataGridView1);
             this.grDanhSach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.grDanhSach.Location = new System.Drawing.Point(310, 67);
-            this.grDanhSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grDanhSach.Margin = new System.Windows.Forms.Padding(2);
             this.grDanhSach.Name = "grDanhSach";
-            this.grDanhSach.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grDanhSach.Padding = new System.Windows.Forms.Padding(2);
             this.grDanhSach.Size = new System.Drawing.Size(370, 406);
             this.grDanhSach.TabIndex = 13;
             this.grDanhSach.TabStop = false;
@@ -404,7 +404,7 @@ namespace csharp_winform
             this.Controls.Add(this.btnNhap);
             this.Controls.Add(this.lblDSGV);
             this.Controls.Add(this.grThongTinChiTiet);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DSGiangVien";
             this.Text = "DSGiangVien";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -21,5 +21,61 @@ namespace csharp_winform
         {
             Environment.Exit(1);
         }
+
+        private void QuanLyDiemSinhVien_Load(object sender, EventArgs e)
+        {
+            sinhViênToolStripMenuItem_Click(sender, e);
+        }
+
+        private void khoaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = QuanLyDiemSinhVien.ActiveForm;
+            foreach (Form f in frm.MdiChildren)
+            {
+                if (f.Name == "QuanLyKhoa")
+                {
+                    f.Activate();
+                    return;
+                }
+            }
+
+            QuanLyKhoa quanLyKhoa = new QuanLyKhoa();
+            quanLyKhoa.MdiParent = this;
+            quanLyKhoa.Show();
+        }
+
+        private void sinhViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = QuanLyDiemSinhVien.ActiveForm;
+            foreach (Form f in frm.MdiChildren)
+            {
+                if (f.Name == "NhapSinhVien")
+                {
+                    f.Activate();
+                    return;
+                }
+            }
+
+            NhapSinhVien nhapSinhVien = new NhapSinhVien();
+            nhapSinhVien.MdiParent = this;
+            nhapSinhVien.Show();
+        }
+
+        private void diemSinhVienToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = QuanLyDiemSinhVien.ActiveForm;
+            foreach (Form f in frm.MdiChildren)
+            {
+                if (f.Name == "NhapDiemSinhVien")
+                {
+                    f.Activate();
+                    return;
+                }
+            }
+
+            NhapDiemSinhVien nhapDiemSinhVien = new NhapDiemSinhVien();
+            nhapDiemSinhVien.MdiParent = this;
+            nhapDiemSinhVien.Show();
+        }
     }
 }
