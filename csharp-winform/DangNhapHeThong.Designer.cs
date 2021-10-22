@@ -73,7 +73,7 @@ namespace csharp_winform
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(242, 20);
-            this.txtMatKhau.TabIndex = 5;
+            this.txtMatKhau.TabIndex = 1;
             this.txtMatKhau.UseSystemPasswordChar = true;
             // 
             // txtTenDN
@@ -82,7 +82,7 @@ namespace csharp_winform
             this.txtTenDN.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenDN.Name = "txtTenDN";
             this.txtTenDN.Size = new System.Drawing.Size(242, 20);
-            this.txtTenDN.TabIndex = 4;
+            this.txtTenDN.TabIndex = 0;
             // 
             // lblMatKhau
             // 
@@ -113,7 +113,7 @@ namespace csharp_winform
             this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(140, 50);
-            this.btnDangNhap.TabIndex = 2;
+            this.btnDangNhap.TabIndex = 0;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -125,7 +125,7 @@ namespace csharp_winform
             this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(140, 50);
-            this.btnThoat.TabIndex = 3;
+            this.btnThoat.TabIndex = 1;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);

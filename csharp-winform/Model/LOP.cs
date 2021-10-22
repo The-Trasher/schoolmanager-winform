@@ -16,7 +16,7 @@ namespace csharp_winform.Model
         }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(50)]
         public string MAKHOA { get; set; }
 
         [Key]

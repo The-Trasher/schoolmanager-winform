@@ -40,11 +40,23 @@ namespace csharp_winform.Model
 
             modelBuilder.Entity<DIEMSV>()
                 .Property(e => e.MAMH)
-                .IsFixedLength();
+                .IsUnicode(false);
+
+            modelBuilder.Entity<GIANGVIEN>()
+                .Property(e => e.MaGV)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<GIANGVIEN>()
+                .Property(e => e.Phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<GIANGVIEN>()
+                .Property(e => e.Email)
+                .IsUnicode(false);
 
             modelBuilder.Entity<KHOA>()
                 .Property(e => e.MAKHOA)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<KHOA>()
                 .HasMany(e => e.LOPs)
@@ -53,7 +65,7 @@ namespace csharp_winform.Model
 
             modelBuilder.Entity<LOP>()
                 .Property(e => e.MAKHOA)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<LOP>()
                 .Property(e => e.MALOP)
@@ -66,7 +78,7 @@ namespace csharp_winform.Model
 
             modelBuilder.Entity<MONHOC>()
                 .Property(e => e.MAMH)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<MONHOC>()
                 .HasMany(e => e.DIEMSVs)

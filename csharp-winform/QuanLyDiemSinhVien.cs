@@ -77,5 +77,22 @@ namespace csharp_winform
             nhapDiemSinhVien.MdiParent = this;
             nhapDiemSinhVien.Show();
         }
+
+        private void lớpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = QuanLyDiemSinhVien.ActiveForm;
+            foreach (Form f in frm.MdiChildren)
+            {
+                if (f.Name == "QuanLyLop")
+                {
+                    f.Activate();
+                    return;
+                }
+            }
+
+            QuanLyLop quanLyLop = new QuanLyLop();
+            quanLyLop.MdiParent = this;
+            quanLyLop.Show();
+        }
     }
 }

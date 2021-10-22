@@ -16,10 +16,9 @@ namespace csharp_winform.Model
 
         [Key]
         [Column(Order = 1)]
-        [StringLength(10)]
+        [StringLength(50)]
         public string MAMH { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string TENMH { get; set; }
 
@@ -27,9 +26,9 @@ namespace csharp_winform.Model
 
         public double? DIEMKTLAN2 { get; set; }
 
-        public double DIEMTHI { get; set; }
+        public double? DIEMTHI { get; set; }
 
-        public double DIEMTONGKET { get; set; }
+        public double? DIEMTONGKET { get; set; }
 
         public virtual MONHOC MONHOC { get; set; }
 

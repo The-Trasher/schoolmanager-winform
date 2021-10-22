@@ -39,12 +39,12 @@ namespace csharp_winform
             this.lớpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mônHọcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.khoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.diemSinhVienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.diemSinhVienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +63,7 @@ namespace csharp_winform
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(907, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(993, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -102,19 +102,20 @@ namespace csharp_winform
             // giảngViênToolStripMenuItem
             // 
             this.giảngViênToolStripMenuItem.Name = "giảngViênToolStripMenuItem";
-            this.giảngViênToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.giảngViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.giảngViênToolStripMenuItem.Text = "Giảng viên";
             // 
             // lớpToolStripMenuItem
             // 
             this.lớpToolStripMenuItem.Name = "lớpToolStripMenuItem";
-            this.lớpToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.lớpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.lớpToolStripMenuItem.Text = "Lớp";
+            this.lớpToolStripMenuItem.Click += new System.EventHandler(this.lớpToolStripMenuItem_Click);
             // 
             // mônHọcToolStripMenuItem
             // 
             this.mônHọcToolStripMenuItem.Name = "mônHọcToolStripMenuItem";
-            this.mônHọcToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.mônHọcToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mônHọcToolStripMenuItem.Text = "Môn học";
             // 
             // khoaToolStripMenuItem
@@ -123,6 +124,13 @@ namespace csharp_winform
             this.khoaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.khoaToolStripMenuItem.Text = "Khoa";
             this.khoaToolStripMenuItem.Click += new System.EventHandler(this.khoaToolStripMenuItem_Click);
+            // 
+            // diemSinhVienToolStripMenuItem
+            // 
+            this.diemSinhVienToolStripMenuItem.Name = "diemSinhVienToolStripMenuItem";
+            this.diemSinhVienToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.diemSinhVienToolStripMenuItem.Text = "Diem sinh vien";
+            this.diemSinhVienToolStripMenuItem.Click += new System.EventHandler(this.diemSinhVienToolStripMenuItem_Click);
             // 
             // tìmKiếmToolStripMenuItem
             // 
@@ -154,22 +162,15 @@ namespace csharp_winform
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(907, 83);
+            this.pictureBox1.Size = new System.Drawing.Size(993, 83);
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
-            // 
-            // diemSinhVienToolStripMenuItem
-            // 
-            this.diemSinhVienToolStripMenuItem.Name = "diemSinhVienToolStripMenuItem";
-            this.diemSinhVienToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.diemSinhVienToolStripMenuItem.Text = "Diem sinh vien";
-            this.diemSinhVienToolStripMenuItem.Click += new System.EventHandler(this.diemSinhVienToolStripMenuItem_Click);
             // 
             // QuanLyDiemSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 539);
+            this.ClientSize = new System.Drawing.Size(993, 608);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;

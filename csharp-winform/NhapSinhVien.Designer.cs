@@ -60,6 +60,7 @@ namespace csharp_winform
             this.label8 = new System.Windows.Forms.Label();
             this.txtFemale = new System.Windows.Forms.TextBox();
             this.txtMale = new System.Windows.Forms.TextBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.SuspendLayout();
@@ -100,11 +101,12 @@ namespace csharp_winform
             // 
             // dtpNgaySinh
             // 
-            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgaySinh.Location = new System.Drawing.Point(94, 140);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(102, 20);
-            this.dtpNgaySinh.TabIndex = 6;
+            this.dtpNgaySinh.TabIndex = 4;
             // 
             // cbbMaLop
             // 
@@ -113,7 +115,7 @@ namespace csharp_winform
             this.cbbMaLop.Location = new System.Drawing.Point(95, 220);
             this.cbbMaLop.Name = "cbbMaLop";
             this.cbbMaLop.Size = new System.Drawing.Size(163, 21);
-            this.cbbMaLop.TabIndex = 5;
+            this.cbbMaLop.TabIndex = 6;
             // 
             // optFemale
             // 
@@ -142,14 +144,14 @@ namespace csharp_winform
             this.txtDiaChi.Location = new System.Drawing.Point(95, 259);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(162, 20);
-            this.txtDiaChi.TabIndex = 4;
+            this.txtDiaChi.TabIndex = 7;
             // 
             // txtKhoaHoc
             // 
             this.txtKhoaHoc.Location = new System.Drawing.Point(94, 180);
             this.txtKhoaHoc.Name = "txtKhoaHoc";
             this.txtKhoaHoc.Size = new System.Drawing.Size(162, 20);
-            this.txtKhoaHoc.TabIndex = 4;
+            this.txtKhoaHoc.TabIndex = 5;
             // 
             // txtFullName
             // 
@@ -233,7 +235,7 @@ namespace csharp_winform
             this.btnUpdate.Location = new System.Drawing.Point(117, 419);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(83, 24);
-            this.btnUpdate.TabIndex = 2;
+            this.btnUpdate.TabIndex = 0;
             this.btnUpdate.Text = "Them / Sua";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -243,7 +245,7 @@ namespace csharp_winform
             this.btnDelete.Location = new System.Drawing.Point(225, 419);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(55, 24);
-            this.btnDelete.TabIndex = 2;
+            this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Xoa";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -341,12 +343,23 @@ namespace csharp_winform
             this.txtMale.TabIndex = 5;
             this.txtMale.Text = "0";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(23, 420);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 6;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // NhapSinhVien
             // 
             this.AcceptButton = this.btnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 488);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.txtMale);
             this.Controls.Add(this.txtFemale);
             this.Controls.Add(this.label8);
@@ -402,5 +415,6 @@ namespace csharp_winform
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvKhoaHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDiaChi;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

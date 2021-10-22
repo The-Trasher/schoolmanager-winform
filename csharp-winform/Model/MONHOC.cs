@@ -16,7 +16,7 @@ namespace csharp_winform.Model
         }
 
         [Key]
-        [StringLength(10)]
+        [StringLength(50)]
         public string MAMH { get; set; }
 
         [Required]
