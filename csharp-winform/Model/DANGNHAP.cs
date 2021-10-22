@@ -1,4 +1,4 @@
-namespace csharp_winform
+namespace csharp_winform.Model
 {
     using System;
     using System.Collections.Generic;

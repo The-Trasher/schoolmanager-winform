@@ -31,13 +31,17 @@ namespace csharp_winform
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.cbbMaLop = new System.Windows.Forms.ComboBox();
             this.optFemale = new System.Windows.Forms.RadioButton();
             this.optMale = new System.Windows.Forms.RadioButton();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtKhoaHoc = new System.Windows.Forms.TextBox();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.txtStudentID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,16 +52,14 @@ namespace csharp_winform
             this.dvgMSSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDiemTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtFemale = new System.Windows.Forms.TextBox();
             this.txtMale = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +76,7 @@ namespace csharp_winform
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtpNgaySinh);
             this.groupBox1.Controls.Add(this.cbbMaLop);
             this.groupBox1.Controls.Add(this.optFemale);
             this.groupBox1.Controls.Add(this.optMale);
@@ -96,8 +98,17 @@ namespace csharp_winform
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thong Tin Sinh Vien";
             // 
+            // dtpNgaySinh
+            // 
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(94, 140);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(102, 20);
+            this.dtpNgaySinh.TabIndex = 6;
+            // 
             // cbbMaLop
             // 
+            this.cbbMaLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMaLop.FormattingEnabled = true;
             this.cbbMaLop.Location = new System.Drawing.Point(95, 220);
             this.cbbMaLop.Name = "cbbMaLop";
@@ -126,13 +137,19 @@ namespace csharp_winform
             this.optMale.Text = "Nam";
             this.optMale.UseVisualStyleBackColor = true;
             // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(95, 259);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(162, 20);
+            this.txtDiaChi.TabIndex = 4;
+            // 
             // txtKhoaHoc
             // 
             this.txtKhoaHoc.Location = new System.Drawing.Point(94, 180);
             this.txtKhoaHoc.Name = "txtKhoaHoc";
             this.txtKhoaHoc.Size = new System.Drawing.Size(162, 20);
             this.txtKhoaHoc.TabIndex = 4;
-            this.txtKhoaHoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtFullName
             // 
@@ -156,6 +173,24 @@ namespace csharp_winform
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 0;
             this.label6.Text = "Ma Lop";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(7, 259);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Dia Chi";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 146);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Ngay Sinh";
             // 
             // label5
             // 
@@ -201,6 +236,7 @@ namespace csharp_winform
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Them / Sua";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -210,6 +246,7 @@ namespace csharp_winform
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Xoa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // dgvStudent
             // 
@@ -220,13 +257,18 @@ namespace csharp_winform
             this.dvgMSSV,
             this.dgvHoTen,
             this.dgvGioiTinh,
-            this.dgvDiemTB,
-            this.dgvKhoa});
+            this.dgvNgaySinh,
+            this.dgvKhoaHoc,
+            this.dgvMaLop,
+            this.dgvDiaChi});
             this.dgvStudent.Location = new System.Drawing.Point(314, 77);
             this.dgvStudent.Name = "dgvStudent";
             this.dgvStudent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStudent.Size = new System.Drawing.Size(647, 332);
             this.dgvStudent.TabIndex = 3;
+            this.dgvStudent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudent_CellClick);
+            this.dgvStudent.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudent_CellValueChanged);
+            this.dgvStudent.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvStudent_RowsRemoved);
             // 
             // dvgMSSV
             // 
@@ -243,15 +285,25 @@ namespace csharp_winform
             this.dgvGioiTinh.HeaderText = "Gioi Tinh";
             this.dgvGioiTinh.Name = "dgvGioiTinh";
             // 
-            // dgvDiemTB
+            // dgvNgaySinh
             // 
-            this.dgvDiemTB.HeaderText = "Diem TB";
-            this.dgvDiemTB.Name = "dgvDiemTB";
+            this.dgvNgaySinh.HeaderText = "Ngay Sinh";
+            this.dgvNgaySinh.Name = "dgvNgaySinh";
             // 
-            // dgvKhoa
+            // dgvKhoaHoc
             // 
-            this.dgvKhoa.HeaderText = "Khoa";
-            this.dgvKhoa.Name = "dgvKhoa";
+            this.dgvKhoaHoc.HeaderText = "Khoa Hoc";
+            this.dgvKhoaHoc.Name = "dgvKhoaHoc";
+            // 
+            // dgvMaLop
+            // 
+            this.dgvMaLop.HeaderText = "Ma Lop";
+            this.dgvMaLop.Name = "dgvMaLop";
+            // 
+            // dgvDiaChi
+            // 
+            this.dgvDiaChi.HeaderText = "Dia Chi";
+            this.dgvDiaChi.Name = "dgvDiaChi";
             // 
             // label7
             // 
@@ -289,42 +341,9 @@ namespace csharp_winform
             this.txtMale.TabIndex = 5;
             this.txtMale.Text = "0";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 259);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Dia Chi";
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Location = new System.Drawing.Point(95, 259);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(162, 20);
-            this.txtDiaChi.TabIndex = 4;
-            this.txtDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 146);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Ngay Sinh";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(94, 140);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(102, 20);
-            this.dateTimePicker1.TabIndex = 6;
-            // 
             // NhapSinhVien
             // 
+            this.AcceptButton = this.btnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 488);
@@ -341,6 +360,7 @@ namespace csharp_winform
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NhapSinhVien";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.NhapSinhVien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
@@ -367,18 +387,20 @@ namespace csharp_winform
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dgvStudent;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dvgMSSV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvHoTen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvGioiTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvDiemTB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvKhoa;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtFemale;
         private System.Windows.Forms.TextBox txtMale;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dvgMSSV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvHoTen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvGioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvNgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvKhoaHoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvDiaChi;
     }
 }

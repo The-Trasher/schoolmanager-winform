@@ -55,14 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\DANGNHAP.cs" />
     <Compile Include="DangNhapHeThong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DangNhapHeThong.Designer.cs">
       <DependentUpon>DangNhapHeThong.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\DIEMSV.cs" />
     <Compile Include="DoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,9 +79,14 @@
     <Compile Include="DSThiLai.Designer.cs">
       <DependentUpon>DSThiLai.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\DANGNHAP.cs" />
+    <Compile Include="Model\DIEMSV.cs" />
+    <Compile Include="Model\GIANGVIEN.cs" />
     <Compile Include="Model\KHOA.cs" />
     <Compile Include="Model\LOP.cs" />
     <Compile Include="Model\MONHOC.cs" />
+    <Compile Include="Model\SINHVIEN.cs" />
+    <Compile Include="Model\StudentDBContext.cs" />
     <Compile Include="NhapDiemSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,8 +137,6 @@
     <Compile Include="QuanLyMonHoc.Designer.cs">
       <DependentUpon>QuanLyMonHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\SINHVIEN.cs" />
-    <Compile Include="Model\StudentDBContext.cs" />
     <EmbeddedResource Include="DangNhapHeThong.resx">
       <DependentUpon>DangNhapHeThong.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,4 +1,4 @@
-namespace csharp_winform
+namespace csharp_winform.Model
 {
     using System;
     using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace csharp_winform
     {
         [Key]
         [Column(Order = 0)]
-        [StringLength(15)]
+        [StringLength(50)]
         public string MSSV { get; set; }
 
         [Key]

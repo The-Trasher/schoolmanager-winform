@@ -14,6 +14,7 @@ namespace csharp_winform.Model
 
         public virtual DbSet<DANGNHAP> DANGNHAPs { get; set; }
         public virtual DbSet<DIEMSV> DIEMSVs { get; set; }
+        public virtual DbSet<GIANGVIEN> GIANGVIENs { get; set; }
         public virtual DbSet<KHOA> KHOAs { get; set; }
         public virtual DbSet<LOP> LOPs { get; set; }
         public virtual DbSet<MONHOC> MONHOCs { get; set; }
@@ -35,7 +36,7 @@ namespace csharp_winform.Model
 
             modelBuilder.Entity<DIEMSV>()
                 .Property(e => e.MSSV)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<DIEMSV>()
                 .Property(e => e.MAMH)
@@ -56,7 +57,7 @@ namespace csharp_winform.Model
 
             modelBuilder.Entity<LOP>()
                 .Property(e => e.MALOP)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<LOP>()
                 .HasMany(e => e.SINHVIENs)
@@ -74,11 +75,11 @@ namespace csharp_winform.Model
 
             modelBuilder.Entity<SINHVIEN>()
                 .Property(e => e.MSSV)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<SINHVIEN>()
                 .Property(e => e.MALOP)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<SINHVIEN>()
                 .HasMany(e => e.DIEMSVs)
