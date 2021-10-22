@@ -37,12 +37,12 @@ namespace csharp_winform
             this.MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grLuaChon = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.txtTenKhoa = new System.Windows.Forms.TextBox();
             this.txtMaKhoa = new System.Windows.Forms.TextBox();
             this.lblTenKhoa = new System.Windows.Forms.Label();
             this.lblMaKhoa = new System.Windows.Forms.Label();
             this.lblQuanLyKhoa = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.grDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSKhoa)).BeginInit();
             this.grLuaChon.SuspendLayout();
@@ -150,6 +150,16 @@ namespace csharp_winform
             this.grLuaChon.TabStop = false;
             this.grLuaChon.Text = "Lực chọn";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(25, 324);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 27);
+            this.btnRefresh.TabIndex = 11;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // txtTenKhoa
             // 
             this.txtTenKhoa.Location = new System.Drawing.Point(90, 95);
@@ -199,16 +209,6 @@ namespace csharp_winform
             this.lblQuanLyKhoa.Size = new System.Drawing.Size(201, 26);
             this.lblQuanLyKhoa.TabIndex = 8;
             this.lblQuanLyKhoa.Text = "QUẢN LÝ KHOA";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(25, 324);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 11;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // QuanLyKhoa
             // 

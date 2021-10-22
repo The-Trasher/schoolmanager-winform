@@ -178,6 +178,7 @@ namespace csharp_winform
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             QuanLyKhoa_Load(sender, e);
+            LoadForm();
         }
     }
 }

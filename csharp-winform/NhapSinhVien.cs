@@ -69,7 +69,10 @@ namespace csharp_winform
                     newStudent.HOTEN = txtFullName.Text;
                     newStudent.GIOITINH = optFemale.Checked ? "Nữ" : "Nam";
                     newStudent.NGAYSINH = dtpNgaySinh.Value;
-                    newStudent.KHOAHOC = int.Parse(txtKhoaHoc.Text);
+                    if (txtKhoaHoc.Text != "")
+                        newStudent.KHOAHOC = int.Parse(txtKhoaHoc.Text);
+                    else
+                        newStudent.KHOAHOC = null;
                     newStudent.MALOP = cbbMaLop.SelectedValue.ToString();
                     newStudent.DIACHI = txtDiaChi.Text;
 
@@ -92,7 +95,10 @@ namespace csharp_winform
                         updateStudent.HOTEN = txtFullName.Text;
                         updateStudent.GIOITINH = optFemale.Checked ? "Nữ" : "Nam";
                         updateStudent.NGAYSINH = dtpNgaySinh.Value;
-                        updateStudent.KHOAHOC = int.Parse(txtKhoaHoc.Text);
+                        if (txtKhoaHoc.Text != "")
+                            updateStudent.KHOAHOC = int.Parse(txtKhoaHoc.Text);
+                        else
+                            updateStudent.KHOAHOC = null;
                         updateStudent.MALOP = cbbMaLop.SelectedValue.ToString();
                         updateStudent.DIACHI = txtDiaChi.Text;
 
@@ -127,7 +133,7 @@ namespace csharp_winform
                 MessageBox.Show("Vui long nhap ma so sinh vien!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            else if (txtKhoaHoc.Text != null)
+            else if (txtKhoaHoc.Text != "")
             {
                 int kq = 0;
                 bool ketQua = int.TryParse(txtKhoaHoc.Text, out kq);
@@ -252,6 +258,7 @@ namespace csharp_winform
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             NhapSinhVien_Load(sender, e);
+            LoadForm();
         }
     }
 }

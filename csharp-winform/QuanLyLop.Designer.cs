@@ -39,6 +39,7 @@ namespace csharp_winform
             this.MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSiSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grLuaChon = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.cbbKhoa = new System.Windows.Forms.ComboBox();
             this.lblMaKhoa = new System.Windows.Forms.Label();
             this.txtSiSo = new System.Windows.Forms.TextBox();
@@ -48,7 +49,6 @@ namespace csharp_winform
             this.lblTenLop = new System.Windows.Forms.Label();
             this.lblMaLop = new System.Windows.Forms.Label();
             this.lblQuanLyLop = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.grDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSLop)).BeginInit();
             this.grLuaChon.SuspendLayout();
@@ -176,6 +176,16 @@ namespace csharp_winform
             this.grLuaChon.TabStop = false;
             this.grLuaChon.Text = "Lực chọn";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(23, 332);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 27);
+            this.btnRefresh.TabIndex = 18;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // cbbKhoa
             // 
             this.cbbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -265,16 +275,6 @@ namespace csharp_winform
             this.lblQuanLyLop.Size = new System.Drawing.Size(177, 26);
             this.lblQuanLyLop.TabIndex = 15;
             this.lblQuanLyLop.Text = "QUẢN LÝ LỚP";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(23, 332);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 18;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // QuanLyLop
             // 

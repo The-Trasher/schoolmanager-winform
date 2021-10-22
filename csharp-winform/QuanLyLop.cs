@@ -68,7 +68,10 @@ namespace csharp_winform
                     newClass.MALOP = txtMaLop.Text;
                     newClass.TENLOP = txtTenLop.Text;
                     newClass.MAKHOA = cbbKhoa.SelectedValue.ToString();
-                    newClass.SISO = int.Parse(txtSiSo.Text);
+                    if (txtSiSo.Text != "")
+                        newClass.SISO = int.Parse(txtSiSo.Text);
+                    else
+                        newClass.SISO = null;
 
                     dBContext.LOPs.AddOrUpdate(newClass);
                     dBContext.SaveChanges();
@@ -88,7 +91,10 @@ namespace csharp_winform
                     {
                         updateClass.TENLOP = txtTenLop.Text;
                         updateClass.MAKHOA = cbbKhoa.SelectedValue.ToString();
-                        updateClass.SISO = int.Parse(txtSiSo.Text);
+                        if (txtSiSo.Text != "")
+                            updateClass.SISO = int.Parse(txtSiSo.Text);
+                        else
+                            updateClass.SISO = null;
 
                         dBContext.LOPs.AddOrUpdate(updateClass);
                         dBContext.SaveChanges();
@@ -121,7 +127,7 @@ namespace csharp_winform
                 MessageBox.Show("Vui long nhap ma lop!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            else if (txtSiSo.Text != null)
+            else if (txtSiSo.Text != "")
             {
                 int kq = 0;
                 bool ketQua = int.TryParse(txtSiSo.Text, out kq);
@@ -207,6 +213,7 @@ namespace csharp_winform
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             QuanLyLop_Load(sender, e);
+            LoadForm();
         }
     }
 }
