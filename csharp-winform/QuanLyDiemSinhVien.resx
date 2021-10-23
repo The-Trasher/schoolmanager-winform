@@ -121,6 +121,18 @@
     <value>169, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnCloseSideBar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAWRJREFUOE99kjFrwlAUhTMJLuLk4CDiIIKIuIji4uIo4uDmD3BwERxcHRxcnHX0
+        T7R0K6LSFioWSgktlEJbu5QOXTre5tzkPJJqeuEQXnK+e+57eRbrdbmUp9lMvGVo2ZOJPC8WQR/gw3wu
+        +05Htu12aBN7MBBoXa3K/Wjk+vzwql6XbaNxsokf3pRKKkxjYWzCEAyQvwlhgtSu13M9MBOkYMB7mOzh
+        UNdXhYJscjnV0ZRsAiOfTCFMHcEsfCBo5KSt02mjUJjFJjBfxmKyiseNds3m/zAKI8N4EY0G4NtkUg/Z
+        s50uwPpHHMCfDhi6S6X0N3v2YBFGMtOvEwkV4YdMRnW0lb+wSfcuFuHHbFbeikWVaYIrCfjcg5nu3y/M
+        gF/yeTk4B/xZLqvsft+9iWeRiMo0OHFYaIJkgN+1mup9OnV92AIb/HfS+1ZLvioV+XE8H+Nx0Iet3HS7
+        oTALY5tky7J+AXJEdtD8IM6XAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA+kAAABkCAYAAAD6+3HkAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
@@ -302,6 +314,6 @@
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>54</value>
   </metadata>
 </root>

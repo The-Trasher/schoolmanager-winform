@@ -84,6 +84,7 @@ namespace csharp_winform
             this.txtNhapLaiMK.Name = "txtNhapLaiMK";
             this.txtNhapLaiMK.Size = new System.Drawing.Size(225, 23);
             this.txtNhapLaiMK.TabIndex = 8;
+            this.txtNhapLaiMK.UseSystemPasswordChar = true;
             // 
             // txtMKMoi
             // 
@@ -93,6 +94,7 @@ namespace csharp_winform
             this.txtMKMoi.Name = "txtMKMoi";
             this.txtMKMoi.Size = new System.Drawing.Size(225, 23);
             this.txtMKMoi.TabIndex = 7;
+            this.txtMKMoi.UseSystemPasswordChar = true;
             // 
             // txtMKCu
             // 
@@ -102,6 +104,7 @@ namespace csharp_winform
             this.txtMKCu.Name = "txtMKCu";
             this.txtMKCu.Size = new System.Drawing.Size(225, 23);
             this.txtMKCu.TabIndex = 6;
+            this.txtMKCu.UseSystemPasswordChar = true;
             // 
             // txtTenTaiKhoan
             // 
@@ -164,8 +167,9 @@ namespace csharp_winform
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(102, 45);
             this.btnOK.TabIndex = 2;
-            this.btnOK.Text = "Ok";
+            this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnThoat
             // 
@@ -177,9 +181,11 @@ namespace csharp_winform
             this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // DoiMatKhau
             // 
+            this.AcceptButton = this.btnOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 404);
@@ -190,6 +196,7 @@ namespace csharp_winform
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DoiMatKhau";
             this.Text = "DoiMatKhau";
+            this.Load += new System.EventHandler(this.DoiMatKhau_Load);
             this.grThongTin.ResumeLayout(false);
             this.grThongTin.PerformLayout();
             this.ResumeLayout(false);

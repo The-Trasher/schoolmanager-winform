@@ -19,9 +19,6 @@ namespace csharp_winform.Model
         [StringLength(50)]
         public string MAMH { get; set; }
 
-        [StringLength(50)]
-        public string TENMH { get; set; }
-
         public double? DIEMKTLAN1 { get; set; }
 
         public double? DIEMKTLAN2 { get; set; }

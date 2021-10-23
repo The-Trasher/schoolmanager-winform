@@ -14,7 +14,6 @@ namespace csharp_winform.Model
 
         public virtual DbSet<DANGNHAP> DANGNHAPs { get; set; }
         public virtual DbSet<DIEMSV> DIEMSVs { get; set; }
-        public virtual DbSet<GIANGVIEN> GIANGVIENs { get; set; }
         public virtual DbSet<KHOA> KHOAs { get; set; }
         public virtual DbSet<LOP> LOPs { get; set; }
         public virtual DbSet<MONHOC> MONHOCs { get; set; }
@@ -40,18 +39,6 @@ namespace csharp_winform.Model
 
             modelBuilder.Entity<DIEMSV>()
                 .Property(e => e.MAMH)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<GIANGVIEN>()
-                .Property(e => e.MaGV)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<GIANGVIEN>()
-                .Property(e => e.Phone)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<GIANGVIEN>()
-                .Property(e => e.Email)
                 .IsUnicode(false);
 
             modelBuilder.Entity<KHOA>()

@@ -142,6 +142,7 @@ namespace csharp_winform
             this.Controls.Add(this.lblDangNhap);
             this.Name = "DangNhapHeThong";
             this.Text = "Đăng nhập hệ thống";
+            this.Load += new System.EventHandler(this.DangNhapHeThong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

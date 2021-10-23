@@ -30,6 +30,7 @@ namespace csharp_winform
 
             FillDataDGV(listSinhVien);
             FillDataCBB(listLop);
+            txtStudentID.Focus();
         }
 
         private void FillDataDGV(List<SINHVIEN> listSinhVien)

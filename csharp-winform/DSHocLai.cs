@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace csharp_winform
 {
-    public partial class QuanLyDiemHocLai : Form
+    public partial class DSHocLai : Form
     {
-        public QuanLyDiemHocLai()
+        public DSHocLai()
         {
             InitializeComponent();
         }

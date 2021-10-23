@@ -26,6 +26,8 @@ namespace csharp_winform
         {
             List<MONHOC> listMonHoc = dBContext.MONHOCs.ToList();
             FillDataDGV(listMonHoc);
+
+            txtMaMon.Focus();
         }
 
         private void FillDataDGV(List<MONHOC> listMonHoc)

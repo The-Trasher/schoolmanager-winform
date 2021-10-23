@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace csharp_winform
 {
-    public partial class DSGiangVien : Form
+    public partial class About : Form
     {
-        public DSGiangVien()
+        public About()
         {
             InitializeComponent();
         }

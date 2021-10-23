@@ -10,12 +10,10 @@ namespace csharp_winform.Model
     public partial class DANGNHAP
     {
         [Key]
-        [Column(Order = 0)]
         [StringLength(50)]
         public string TenDN { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
+        [Required]
         [StringLength(50)]
         public string MatKhau { get; set; }
 
@@ -31,6 +29,7 @@ namespace csharp_winform.Model
         [StringLength(50)]
         public string Email { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string Quyen { get; set; }
     }

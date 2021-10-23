@@ -71,5 +71,10 @@ namespace csharp_winform
 
             return true;
         }
+
+        private void DangNhapHeThong_Load(object sender, EventArgs e)
+        {
+            txtTenDN.Focus();
+        }
     }
 }

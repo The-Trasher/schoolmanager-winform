@@ -148,7 +148,7 @@ namespace csharp_winform
             this.grLuaChon.Size = new System.Drawing.Size(261, 374);
             this.grLuaChon.TabIndex = 9;
             this.grLuaChon.TabStop = false;
-            this.grLuaChon.Text = "Lực chọn";
+            this.grLuaChon.Text = "Lựa chọn";
             // 
             // btnRefresh
             // 
