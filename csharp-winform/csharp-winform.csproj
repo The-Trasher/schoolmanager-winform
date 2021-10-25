@@ -73,12 +73,6 @@
     <Compile Include="DoiMatKhau.Designer.cs">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="TimKiemSinhVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TimKiemSinhVien.Designer.cs">
-      <DependentUpon>TimKiemSinhVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\DANGNHAP.cs" />
     <Compile Include="Model\DIEMSV.cs" />
     <Compile Include="Model\KHOA.cs" />
@@ -86,6 +80,12 @@
     <Compile Include="Model\MONHOC.cs" />
     <Compile Include="Model\SINHVIEN.cs" />
     <Compile Include="Model\StudentDBContext.cs" />
+    <Compile Include="TimKiemSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimKiemSinhVien.Designer.cs">
+      <DependentUpon>TimKiemSinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhapDiemSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>

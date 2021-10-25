@@ -100,35 +100,35 @@ namespace csharp_winform
             // reloadToolStripMenuItem
             // 
             this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
-            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reloadToolStripMenuItem.Text = "Reload";
             this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
             // 
             // đổiMậtKhẩuToolStripMenuItem
             // 
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
             this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // dSTàiKhoảnToolStripMenuItem
             // 
             this.dSTàiKhoảnToolStripMenuItem.Name = "dSTàiKhoảnToolStripMenuItem";
-            this.dSTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.dSTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dSTàiKhoảnToolStripMenuItem.Text = "DS Tài khoản";
             this.dSTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.dSTàiKhoảnToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -190,7 +190,7 @@ namespace csharp_winform
             // tìmKiếmSinhViênToolStripMenuItem
             // 
             this.tìmKiếmSinhViênToolStripMenuItem.Name = "tìmKiếmSinhViênToolStripMenuItem";
-            this.tìmKiếmSinhViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tìmKiếmSinhViênToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.tìmKiếmSinhViênToolStripMenuItem.Text = "DS Sinh viên";
             this.tìmKiếmSinhViênToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmSinhViênToolStripMenuItem_Click);
             // 
@@ -425,7 +425,6 @@ namespace csharp_winform
         public System.Windows.Forms.PictureBox sideBar;
         private System.Windows.Forms.ToolStripMenuItem sideBarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dSTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dSSinhViênToolStripMenuItem;
@@ -434,5 +433,6 @@ namespace csharp_winform
         public System.Windows.Forms.Button btnTimKiem;
         public System.Windows.Forms.Button btnQLTK;
         private System.Windows.Forms.ToolStripMenuItem tìmKiếmSinhViênToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem dSTàiKhoảnToolStripMenuItem;
     }
 }

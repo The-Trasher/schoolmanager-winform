@@ -34,12 +34,16 @@ namespace csharp_winform
                         this.Hide();
                         QuanLyDiemSinhVien frmMain = new QuanLyDiemSinhVien();
                         frmMain.Show();
+                        frmMain.dSTàiKhoảnToolStripMenuItem.Enabled = true;
+                        frmMain.btnQLTK.Enabled = true;
                     }
                     else
                     {
                         this.Hide();
                         QuanLyDiemSinhVien frmMain = new QuanLyDiemSinhVien();
                         frmMain.Show();
+                        frmMain.dSTàiKhoảnToolStripMenuItem.Enabled = false;
+                        frmMain.btnQLTK.Enabled = false;
                     }
                 }
                 else

@@ -37,6 +37,8 @@ namespace csharp_winform.Model
         [StringLength(50)]
         public string DIACHI { get; set; }
 
+        public double? DIEMTB { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DIEMSV> DIEMSVs { get; set; }
 
