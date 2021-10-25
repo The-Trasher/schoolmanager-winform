@@ -1,4 +1,4 @@
-namespace csharp_winform
+namespace csharp_winform.Model
 {
     using System;
     using System.Collections.Generic;
@@ -16,10 +16,9 @@ namespace csharp_winform
         }
 
         [Key]
-        [StringLength(10)]
+        [StringLength(50)]
         public string MAKHOA { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string TENKHOA { get; set; }
 

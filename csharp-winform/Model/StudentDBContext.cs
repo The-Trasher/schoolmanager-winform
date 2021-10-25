@@ -35,15 +35,15 @@ namespace csharp_winform.Model
 
             modelBuilder.Entity<DIEMSV>()
                 .Property(e => e.MSSV)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<DIEMSV>()
                 .Property(e => e.MAMH)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<KHOA>()
                 .Property(e => e.MAKHOA)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<KHOA>()
                 .HasMany(e => e.LOPs)
@@ -52,11 +52,11 @@ namespace csharp_winform.Model
 
             modelBuilder.Entity<LOP>()
                 .Property(e => e.MAKHOA)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<LOP>()
                 .Property(e => e.MALOP)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<LOP>()
                 .HasMany(e => e.SINHVIENs)
@@ -65,7 +65,7 @@ namespace csharp_winform.Model
 
             modelBuilder.Entity<MONHOC>()
                 .Property(e => e.MAMH)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<MONHOC>()
                 .HasMany(e => e.DIEMSVs)
@@ -74,11 +74,11 @@ namespace csharp_winform.Model
 
             modelBuilder.Entity<SINHVIEN>()
                 .Property(e => e.MSSV)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<SINHVIEN>()
                 .Property(e => e.MALOP)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<SINHVIEN>()
                 .HasMany(e => e.DIEMSVs)

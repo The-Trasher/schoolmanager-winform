@@ -1,4 +1,4 @@
-namespace csharp_winform
+namespace csharp_winform.Model
 {
     using System;
     using System.Collections.Generic;
@@ -11,25 +11,21 @@ namespace csharp_winform
     {
         [Key]
         [Column(Order = 0)]
-        [StringLength(15)]
+        [StringLength(50)]
         public string MSSV { get; set; }
 
         [Key]
         [Column(Order = 1)]
-        [StringLength(10)]
-        public string MAMH { get; set; }
-
-        [Required]
         [StringLength(50)]
-        public string TENMH { get; set; }
+        public string MAMH { get; set; }
 
         public double? DIEMKTLAN1 { get; set; }
 
         public double? DIEMKTLAN2 { get; set; }
 
-        public double DIEMTHI { get; set; }
+        public double? DIEMTHI { get; set; }
 
-        public double DIEMTONGKET { get; set; }
+        public double? DIEMTONGKET { get; set; }
 
         public virtual MONHOC MONHOC { get; set; }
 

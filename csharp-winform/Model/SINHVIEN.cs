@@ -1,4 +1,4 @@
-namespace csharp_winform
+namespace csharp_winform.Model
 {
     using System;
     using System.Collections.Generic;
@@ -16,31 +16,28 @@ namespace csharp_winform
         }
 
         [Key]
-        [StringLength(15)]
+        [StringLength(50)]
         public string MSSV { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string HOTEN { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime NGAYSINH { get; set; }
+        public DateTime? NGAYSINH { get; set; }
 
-        [Required]
         [StringLength(10)]
         public string GIOITINH { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(50)]
         public string MALOP { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string KHOAHOC { get; set; }
+        public int? KHOAHOC { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string DIACHI { get; set; }
+
+        public double? DIEMTB { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DIEMSV> DIEMSVs { get; set; }

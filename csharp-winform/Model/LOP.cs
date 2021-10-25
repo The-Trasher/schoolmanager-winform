@@ -1,4 +1,4 @@
-namespace csharp_winform
+namespace csharp_winform.Model
 {
     using System;
     using System.Collections.Generic;
@@ -16,18 +16,17 @@ namespace csharp_winform
         }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(50)]
         public string MAKHOA { get; set; }
 
         [Key]
-        [StringLength(10)]
+        [StringLength(50)]
         public string MALOP { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string TENLOP { get; set; }
 
-        public int SISO { get; set; }
+        public int? SISO { get; set; }
 
         public virtual KHOA KHOA { get; set; }
 

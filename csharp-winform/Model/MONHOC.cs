@@ -1,4 +1,4 @@
-namespace csharp_winform
+namespace csharp_winform.Model
 {
     using System;
     using System.Collections.Generic;
@@ -16,16 +16,15 @@ namespace csharp_winform
         }
 
         [Key]
-        [StringLength(10)]
+        [StringLength(50)]
         public string MAMH { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string TENMH { get; set; }
 
-        public int TCLT { get; set; }
+        public int? TCLT { get; set; }
 
-        public int TCTH { get; set; }
+        public int? TCTH { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DIEMSV> DIEMSVs { get; set; }
