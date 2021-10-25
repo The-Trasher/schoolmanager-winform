@@ -250,5 +250,27 @@ namespace csharp_winform
         {
             dSTàiKhoảnToolStripMenuItem_Click(sender, e);
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            Form frm = QuanLyDiemSinhVien.ActiveForm;
+            foreach (Form f in frm.MdiChildren)
+            {
+                if (f.Name == "TimKiemSinhVien")
+                {
+                    f.Activate();
+                    return;
+                }
+            }
+
+            TimKiemSinhVien timKiemSinhVien = new TimKiemSinhVien();
+            timKiemSinhVien.MdiParent = this;
+            timKiemSinhVien.Show();
+        }
+
+        private void tìmKiếmSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnTimKiem_Click(sender, e);
+        }
     }
 }

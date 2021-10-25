@@ -35,25 +35,24 @@ namespace csharp_winform
             this.lblHoVaTen = new System.Windows.Forms.Label();
             this.lblDiemThiLan1 = new System.Windows.Forms.Label();
             this.grThongTinChiTiet = new System.Windows.Forms.GroupBox();
+            this.txtKTL1 = new System.Windows.Forms.TextBox();
             this.txtKTL2 = new System.Windows.Forms.TextBox();
             this.txtDiemThi = new System.Windows.Forms.TextBox();
+            this.txtMaMH = new System.Windows.Forms.TextBox();
             this.txtMaSV = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnNhap = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.btnInBangDiem = new System.Windows.Forms.Button();
             this.grDanhSach = new System.Windows.Forms.GroupBox();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.txtMaMH = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtKTL1 = new System.Windows.Forms.TextBox();
             this.dgvMaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvMaMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDiemKTL1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDiemKTL2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDiemThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDiemTongKet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.grThongTinChiTiet.SuspendLayout();
             this.grDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
@@ -137,6 +136,15 @@ namespace csharp_winform
             this.grThongTinChiTiet.TabStop = false;
             this.grThongTinChiTiet.Text = "Thông tin chi tiết";
             // 
+            // txtKTL1
+            // 
+            this.txtKTL1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtKTL1.Location = new System.Drawing.Point(129, 81);
+            this.txtKTL1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtKTL1.Name = "txtKTL1";
+            this.txtKTL1.Size = new System.Drawing.Size(76, 23);
+            this.txtKTL1.TabIndex = 2;
+            // 
             // txtKTL2
             // 
             this.txtKTL2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -155,6 +163,15 @@ namespace csharp_winform
             this.txtDiemThi.Size = new System.Drawing.Size(76, 23);
             this.txtDiemThi.TabIndex = 4;
             // 
+            // txtMaMH
+            // 
+            this.txtMaMH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMaMH.Location = new System.Drawing.Point(310, 34);
+            this.txtMaMH.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaMH.Name = "txtMaMH";
+            this.txtMaMH.Size = new System.Drawing.Size(116, 23);
+            this.txtMaMH.TabIndex = 1;
+            // 
             // txtMaSV
             // 
             this.txtMaSV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -164,13 +181,24 @@ namespace csharp_winform
             this.txtMaSV.Size = new System.Drawing.Size(116, 23);
             this.txtMaSV.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(5, 85);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Điểm KT lần 1";
+            // 
             // btnNhap
             // 
             this.btnNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnNhap.Location = new System.Drawing.Point(675, 62);
             this.btnNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhap.Name = "btnNhap";
-            this.btnNhap.Size = new System.Drawing.Size(76, 82);
+            this.btnNhap.Size = new System.Drawing.Size(162, 39);
             this.btnNhap.TabIndex = 0;
             this.btnNhap.Text = "Nhập / Sửa";
             this.btnNhap.UseVisualStyleBackColor = true;
@@ -179,10 +207,10 @@ namespace csharp_winform
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnXoa.Location = new System.Drawing.Point(675, 148);
+            this.btnXoa.Location = new System.Drawing.Point(675, 105);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(76, 39);
+            this.btnXoa.Size = new System.Drawing.Size(162, 39);
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -199,17 +227,6 @@ namespace csharp_winform
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // btnInBangDiem
-            // 
-            this.btnInBangDiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnInBangDiem.Location = new System.Drawing.Point(765, 62);
-            this.btnInBangDiem.Margin = new System.Windows.Forms.Padding(2);
-            this.btnInBangDiem.Name = "btnInBangDiem";
-            this.btnInBangDiem.Size = new System.Drawing.Size(76, 39);
-            this.btnInBangDiem.TabIndex = 2;
-            this.btnInBangDiem.Text = "In / Xem";
-            this.btnInBangDiem.UseVisualStyleBackColor = true;
             // 
             // grDanhSach
             // 
@@ -247,47 +264,6 @@ namespace csharp_winform
             this.dgvDanhSach.Size = new System.Drawing.Size(822, 379);
             this.dgvDanhSach.TabIndex = 0;
             this.dgvDanhSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSach_CellClick);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnRefresh.Location = new System.Drawing.Point(765, 105);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(76, 39);
-            this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // txtMaMH
-            // 
-            this.txtMaMH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaMH.Location = new System.Drawing.Point(310, 34);
-            this.txtMaMH.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMaMH.Name = "txtMaMH";
-            this.txtMaMH.Size = new System.Drawing.Size(116, 23);
-            this.txtMaMH.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(5, 85);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 16);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Điểm KT lần 1";
-            // 
-            // txtKTL1
-            // 
-            this.txtKTL1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtKTL1.Location = new System.Drawing.Point(129, 81);
-            this.txtKTL1.Margin = new System.Windows.Forms.Padding(2);
-            this.txtKTL1.Name = "txtKTL1";
-            this.txtKTL1.Size = new System.Drawing.Size(76, 23);
-            this.txtKTL1.TabIndex = 2;
             // 
             // dgvMaSV
             // 
@@ -331,6 +307,18 @@ namespace csharp_winform
             this.dgvDiemTongKet.Name = "dgvDiemTongKet";
             this.dgvDiemTongKet.ReadOnly = true;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnRefresh.Location = new System.Drawing.Point(675, 148);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(76, 39);
+            this.btnRefresh.TabIndex = 3;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // NhapDiemSinhVien
             // 
             this.AcceptButton = this.btnNhap;
@@ -338,7 +326,6 @@ namespace csharp_winform
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 605);
             this.Controls.Add(this.grDanhSach);
-            this.Controls.Add(this.btnInBangDiem);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnXoa);
@@ -374,7 +361,6 @@ namespace csharp_winform
         private System.Windows.Forms.Button btnNhap;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.Button btnInBangDiem;
         private System.Windows.Forms.GroupBox grDanhSach;
         private System.Windows.Forms.DataGridView dgvDanhSach;
         private System.Windows.Forms.TextBox txtKTL1;

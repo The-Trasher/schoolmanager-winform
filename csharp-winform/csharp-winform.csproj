@@ -73,11 +73,11 @@
     <Compile Include="DoiMatKhau.Designer.cs">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="DSHocLai.cs">
+    <Compile Include="TimKiemSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DSHocLai.Designer.cs">
-      <DependentUpon>DSHocLai.cs</DependentUpon>
+    <Compile Include="TimKiemSinhVien.Designer.cs">
+      <DependentUpon>TimKiemSinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\DANGNHAP.cs" />
     <Compile Include="Model\DIEMSV.cs" />
@@ -139,8 +139,8 @@
     <EmbeddedResource Include="DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DSHocLai.resx">
-      <DependentUpon>DSHocLai.cs</DependentUpon>
+    <EmbeddedResource Include="TimKiemSinhVien.resx">
+      <DependentUpon>TimKiemSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhapDiemSinhVien.resx">
       <DependentUpon>NhapDiemSinhVien.cs</DependentUpon>

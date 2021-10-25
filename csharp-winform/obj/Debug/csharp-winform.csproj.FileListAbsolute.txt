@@ -20,5 +20,5 @@ D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.QuanLyMonHoc.resources
 D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.NhapSinhVien.resources
 D:\csharp-winform\csharp-winform\obj\Debug\csharp-winform.csproj.AssemblyReference.cache
 D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.About.resources
-D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.DSHocLai.resources
 D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.QuanLyTaiKhoan.resources
+D:\csharp-winform\csharp-winform\obj\Debug\csharp_winform.TimKiemSinhVien.resources
