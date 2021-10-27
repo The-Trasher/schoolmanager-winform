@@ -82,7 +82,7 @@ namespace csharp_winform
 
                     dgvDSMonHoc.ClearSelection();
                     dgvDSMonHoc.Rows[CheckIDSubject(newSubject.MAMH)].Selected = true;
-                    MessageBox.Show($"Them mon {newSubject.MAMH} thanh cong!", "Thong bao");
+                    MessageBox.Show($"Them mon {newSubject.MAMH} thanh cong!", "Thông Báo!");
                 }
                 else
                 {
@@ -108,7 +108,7 @@ namespace csharp_winform
 
                         dgvDSMonHoc.ClearSelection();
                         dgvDSMonHoc.Rows[CheckIDSubject(updateSubject.MAMH)].Selected = true;
-                        MessageBox.Show($"Sua mon {updateSubject.MAMH} thanh cong!", "Thong bao");
+                        MessageBox.Show($"Sua mon {updateSubject.MAMH} thanh cong!", "Thông Báo!");
                     }
                 }
             }
@@ -128,7 +128,7 @@ namespace csharp_winform
         {
             if (txtMaMon.Text == "")
             {
-                MessageBox.Show("Vui long nhap ma mon hoc!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui long nhap ma mon hoc!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else if (txtTCLT.Text != "")
@@ -137,7 +137,7 @@ namespace csharp_winform
                 bool ketQua = int.TryParse(txtTCLT.Text, out kq);
                 if (!ketQua)
                 {
-                    MessageBox.Show("So tin chi ly thuyet phai la so!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("So tin chi ly thuyet phai la so!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
@@ -147,7 +147,7 @@ namespace csharp_winform
                 bool ketQua2 = int.TryParse(txtTCTH.Text, out kq2);
                 if (!ketQua2)
                 {
-                    MessageBox.Show("So tin chi thuc hanh phai la so!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("So tin chi thuc hanh phai la so!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
@@ -155,7 +155,7 @@ namespace csharp_winform
             var regexItem = new Regex("^[a-zA-Z0-9]*$");
             if (!regexItem.IsMatch(txtMaMon.Text))
             {
-                MessageBox.Show("Mã mon hoc chỉ bao gồm số và chữ viết không dấu!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã mon hoc chỉ bao gồm số và chữ viết không dấu!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -179,13 +179,20 @@ namespace csharp_winform
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            MONHOC updateSubject = dBContext.MONHOCs.Where(p => p.MAMH == txtMaMon.Text).FirstOrDefault();
+            var checkExist = dBContext.DIEMSVs.Where(p => p.MAMH == txtMaMon.Text).ToList();
+            if(checkExist.Count>0)
+            {
+                MessageBox.Show($"Không thể xoá môn học: {txtTenMon.Text}", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                return;
+            }
 
+            MONHOC updateSubject = dBContext.MONHOCs.Where(p => p.MAMH == txtMaMon.Text).FirstOrDefault();
             if (updateSubject != null)
             {
-                DialogResult dr = MessageBox.Show("Ban co muon xoa khong?", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dr = MessageBox.Show("Ban co muon xoa khong?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
+                    StudentDBContext dBContext = new StudentDBContext();
                     dBContext.MONHOCs.Remove(updateSubject);
                     dBContext.SaveChanges();
 
@@ -197,12 +204,12 @@ namespace csharp_winform
                     dgvDSMonHoc.ClearSelection();
                     if (i != 0)
                         dgvDSMonHoc.Rows[i - 1].Selected = true;
-                    MessageBox.Show($"Xoa mon {updateSubject.MAMH} thanh cong!", "Thong bao");
+                    MessageBox.Show($"Xoa mon {updateSubject.MAMH} thanh cong!", "Thông Báo!");
                 }
             }
             else
             {
-                MessageBox.Show($"Khong tim thay mon {txtMaMon.Text}!", "Thong bao");
+                MessageBox.Show($"Khong tim thay mon {txtMaMon.Text}!", "Thông Báo!");
             }
         }
 
@@ -221,7 +228,7 @@ namespace csharp_winform
             }
             catch (Exception)
             {
-                MessageBox.Show("Co loi xay ra!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Co loi xay ra!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -81,7 +81,7 @@ namespace csharp_winform
 
                     dgvDSLop.ClearSelection();
                     dgvDSLop.Rows[CheckIDClass(newClass.MALOP)].Selected = true;
-                    MessageBox.Show($"Them lop {newClass.MALOP} thanh cong!", "Thong bao");
+                    MessageBox.Show($"Them lop {newClass.MALOP} thành công", "Thông Báo!");
                 }
                 else
                 {
@@ -104,7 +104,7 @@ namespace csharp_winform
 
                         dgvDSLop.ClearSelection();
                         dgvDSLop.Rows[CheckIDClass(updateClass.MALOP)].Selected = true;
-                        MessageBox.Show($"Sua lop {updateClass.MALOP} thanh cong!", "Thong bao");
+                        MessageBox.Show($"Sua lop {updateClass.MALOP} thành công", "Thông Báo!");
                     }
                 }
             }
@@ -124,7 +124,7 @@ namespace csharp_winform
         {
             if (txtMaLop.Text == "")
             {
-                MessageBox.Show("Vui long nhap ma lop!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui long nhap ma lop!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else if (txtSiSo.Text != "")
@@ -133,7 +133,7 @@ namespace csharp_winform
                 bool ketQua = int.TryParse(txtSiSo.Text, out kq);
                 if (!ketQua)
                 {
-                    MessageBox.Show("Si so phai la so!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Si so phai la so!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
@@ -141,7 +141,7 @@ namespace csharp_winform
             var regexItem = new Regex("^[a-zA-Z0-9]*$");
             if (!regexItem.IsMatch(txtMaLop.Text))
             {
-                MessageBox.Show("Mã lớp chỉ bao gồm số và chữ viết không dấu!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã lớp chỉ bao gồm số và chữ viết không dấu!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -165,12 +165,19 @@ namespace csharp_winform
         private void btnXoa_Click(object sender, EventArgs e)
         {
             LOP updateClass = dBContext.LOPs.Where(p => p.MALOP == txtMaLop.Text).FirstOrDefault();
+            SINHVIEN checkExist = dBContext.SINHVIENs.Where(p => p.MALOP == updateClass.MALOP).FirstOrDefault();
+            if(checkExist != null)
+            {
+                MessageBox.Show($"Không thể xoá lớp: {txtTenLop.Text}!", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                return;
+            }
 
             if (updateClass != null)
             {
-                DialogResult dr = MessageBox.Show("Ban co muon xoa khong?", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dr = MessageBox.Show("Ban co muon xoa khong?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
+                    
                     dBContext.LOPs.Remove(updateClass);
                     dBContext.SaveChanges();
 
@@ -182,12 +189,12 @@ namespace csharp_winform
                     dgvDSLop.ClearSelection();
                     if (i != 0)
                         dgvDSLop.Rows[i - 1].Selected = true;
-                    MessageBox.Show($"Xoa lop {updateClass.MALOP} thanh cong!", "Thong bao");
+                    MessageBox.Show($"Xoa lop {updateClass.MALOP} thành công", "Thông Báo!");
                 }
             }
             else
             {
-                MessageBox.Show($"Khong tim thay lop {txtMaLop.Text}!", "Thong bao");
+                MessageBox.Show($"Khong tim thay lop {txtMaLop.Text}!", "Thông Báo!");
             }
         }
 
@@ -206,7 +213,7 @@ namespace csharp_winform
             }
             catch (Exception)
             {
-                MessageBox.Show("Co loi xay ra!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Co loi xay ra!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

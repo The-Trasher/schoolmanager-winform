@@ -37,8 +37,7 @@ namespace csharp_winform
             {
                 if (f.Name == "QuanLyKhoa")
                 {
-                    f.Activate();
-                    return;
+                    f.Close();
                 }
             }
 
@@ -49,14 +48,12 @@ namespace csharp_winform
 
         private void sinhViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             Form frm = QuanLyDiemSinhVien.ActiveForm;
             foreach (Form f in frm.MdiChildren)
             {
                 if (f.Name == "NhapSinhVien")
-                {
-                    f.Activate();
-                    return;
-                }
+                    f.Close();
             }
 
             NhapSinhVien nhapSinhVien = new NhapSinhVien();
@@ -70,13 +67,11 @@ namespace csharp_winform
             foreach (Form f in frm.MdiChildren)
             {
                 if (f.Name == "NhapDiemSinhVien")
-                {
-                    f.Activate();
-                    return;
-                }
+                    f.Close();
             }
 
             NhapDiemSinhVien nhapDiemSinhVien = new NhapDiemSinhVien();
+            nhapDiemSinhVien.NhapDiemSinhVien_Load(sender, e);
             nhapDiemSinhVien.MdiParent = this;
             nhapDiemSinhVien.Show();
         }
@@ -87,10 +82,7 @@ namespace csharp_winform
             foreach (Form f in frm.MdiChildren)
             {
                 if (f.Name == "QuanLyLop")
-                {
-                    f.Activate();
-                    return;
-                }
+                    f.Close();
             }
 
             QuanLyLop quanLyLop = new QuanLyLop();
@@ -104,10 +96,7 @@ namespace csharp_winform
             foreach (Form f in frm.MdiChildren)
             {
                 if (f.Name == "QuanLyMonHoc")
-                {
-                    f.Activate();
-                    return;
-                }
+                    f.Close();
             }
 
             QuanLyMonHoc quanLyMonHoc = new QuanLyMonHoc();
@@ -121,10 +110,7 @@ namespace csharp_winform
             foreach (Form f in frm.MdiChildren)
             {
                 if (f.Name == "About")
-                {
-                    f.Activate();
-                    return;
-                }
+                    f.Close();
             }
 
             About about = new About();
@@ -186,7 +172,7 @@ namespace csharp_winform
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Ban co chac chan muon thoat khong?", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("Ban co chac chan muon thoat khong?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dr == DialogResult.Yes)
             {
@@ -196,7 +182,7 @@ namespace csharp_winform
 
         public void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Ban co chac chan muon dang xuat khong?", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("Ban co chac chan muon dang xuat khong?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dr == DialogResult.Yes)
             {
@@ -213,10 +199,7 @@ namespace csharp_winform
             foreach (Form f in frm.MdiChildren)
             {
                 if (f.Name == "DoiMatKhau")
-                {
-                    f.Activate();
-                    return;
-                }
+                    f.Close();
             }
 
             DoiMatKhau doiMatKhau = new DoiMatKhau(this);
@@ -226,7 +209,7 @@ namespace csharp_winform
 
         private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Refresh();
+            QuanLyDiemSinhVien_Load(sender, e);
         }
 
         private void dSTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -235,10 +218,7 @@ namespace csharp_winform
             foreach (Form f in frm.MdiChildren)
             {
                 if (f.Name == "QuanLyTaiKhoan")
-                {
-                    f.Activate();
-                    return;
-                }
+                    f.Close();
             }
 
             QuanLyTaiKhoan quanLyTaiKhoan = new QuanLyTaiKhoan();
@@ -257,10 +237,7 @@ namespace csharp_winform
             foreach (Form f in frm.MdiChildren)
             {
                 if (f.Name == "TimKiemSinhVien")
-                {
-                    f.Activate();
-                    return;
-                }
+                    f.Close();
             }
 
             TimKiemSinhVien timKiemSinhVien = new TimKiemSinhVien();
@@ -271,6 +248,32 @@ namespace csharp_winform
         private void tìmKiếmSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             btnTimKiem_Click(sender, e);
+        }
+
+        private void dSSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = QuanLyDiemSinhVien.ActiveForm;
+            foreach (Form f in frm.MdiChildren)
+            {
+                if (f.Name == "RP_DanhSachSV")
+                    f.Close();
+            }
+            RP_DanhSachSV rP_DanhSachSV = new RP_DanhSachSV();
+            rP_DanhSachSV.MdiParent = this;
+            rP_DanhSachSV.Show();
+        }
+
+        private void dSDiemSinhVienToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = QuanLyDiemSinhVien.ActiveForm;
+            foreach (Form f in frm.MdiChildren)
+            {
+                if (f.Name == "RP_DiemSV")
+                    f.Close();
+            }
+            RP_DanhSachDiemSV rP_DiemSV = new RP_DanhSachDiemSV();
+            rP_DiemSV.MdiParent = this;
+            rP_DiemSV.Show();
         }
     }
 }

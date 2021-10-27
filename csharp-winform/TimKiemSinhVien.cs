@@ -133,6 +133,7 @@ namespace csharp_winform
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            dgvStudent.Rows.Clear();
             TimKiemSinhVien_Load(sender, e);
         }
 
@@ -181,7 +182,7 @@ namespace csharp_winform
                 }
                 else
                 {
-                    MessageBox.Show("Khoa hoc phai la so nguyen. VD: 19");
+                    MessageBox.Show("Khoá học phải là 1 số nguyên. ( VD: 19 )");
                 }
             }
         }

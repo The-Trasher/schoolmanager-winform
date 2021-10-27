@@ -22,7 +22,7 @@ namespace csharp_winform
             InitializeComponent();
         }
 
-        private void NhapDiemSinhVien_Load(object sender, EventArgs e)
+        public void NhapDiemSinhVien_Load(object sender, EventArgs e)
         {
             List<DIEMSV> listScore = dBContext.DIEMSVs.ToList();
             FillDataDGV(listScore);
@@ -39,10 +39,11 @@ namespace csharp_winform
                 int newRow = dgvDanhSach.Rows.Add();
                 dgvDanhSach.Rows[newRow].Cells[0].Value = item.MSSV;
                 dgvDanhSach.Rows[newRow].Cells[1].Value = item.MAMH;
-                dgvDanhSach.Rows[newRow].Cells[2].Value = item.DIEMKTLAN1;
-                dgvDanhSach.Rows[newRow].Cells[3].Value = item.DIEMKTLAN2;
-                dgvDanhSach.Rows[newRow].Cells[4].Value = item.DIEMTHI;
-                dgvDanhSach.Rows[newRow].Cells[5].Value = item.DIEMTONGKET;
+                dgvDanhSach.Rows[newRow].Cells[2].Value = item.MONHOC.TENMH;
+                dgvDanhSach.Rows[newRow].Cells[3].Value = Math.Round((double)item.DIEMKTLAN1, 1);
+                dgvDanhSach.Rows[newRow].Cells[4].Value = Math.Round((double)item.DIEMKTLAN2, 1);
+                dgvDanhSach.Rows[newRow].Cells[5].Value = Math.Round((double)item.DIEMTHI, 1);
+                dgvDanhSach.Rows[newRow].Cells[6].Value = Math.Round((double)item.DIEMTONGKET, 1);
             }
         }
 
@@ -50,6 +51,20 @@ namespace csharp_winform
         {
             if (CheckDataInput())
             {
+                SINHVIEN checkExist = dBContext.SINHVIENs.Where(p => p.MSSV == txtMaSV.Text).FirstOrDefault();
+                if (checkExist == null )
+                {
+                    MessageBox.Show($"Không tồn tại sinh viên có MSSV: {txtMaSV.Text}", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    return;
+                }
+
+                MONHOC checkMH = dBContext.MONHOCs.Where(p => p.MAMH == txtMaMH.Text).FirstOrDefault();
+                if (checkMH == null)
+                {
+                    MessageBox.Show($"Không tồn tại môn học có Mã MH: {txtMaMH.Text}", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    return;
+                }
+
                 if (CheckID(txtMaSV.Text, txtMaMH.Text) == -1)
                 {
                     DIEMSV newScore = new DIEMSV();
@@ -78,7 +93,7 @@ namespace csharp_winform
 
                     dgvDanhSach.ClearSelection();
                     dgvDanhSach.Rows[CheckID(newScore.MSSV, newScore.MAMH)].Selected = true;
-                    MessageBox.Show($"Them diem {newScore.MAMH} - {newScore.MSSV} thanh cong!", "Thong bao");
+                    MessageBox.Show($"Them diem {newScore.MAMH} - {newScore.MSSV} thanh cong!", "Thông Báo!");
                 }
                 else
                 {
@@ -108,7 +123,7 @@ namespace csharp_winform
 
                         dgvDanhSach.ClearSelection();
                         dgvDanhSach.Rows[CheckID(updateScore.MSSV, updateScore.MAMH)].Selected = true;
-                        MessageBox.Show($"Sua diem {updateScore.MAMH} - {updateScore.MSSV} thanh cong!", "Thong bao");
+                        MessageBox.Show($"Sua diem {updateScore.MAMH} - {updateScore.MSSV} thanh cong!", "Thông Báo!");
                     }
                 }
             }
@@ -128,54 +143,57 @@ namespace csharp_winform
         {
             if (txtMaMH.Text == "" || txtMaSV.Text == "")
             {
-                MessageBox.Show("Vui long nhap day du ma mon hoc va ma sinh vien!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui long nhap day du ma mon hoc va ma sinh vien!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            else if (txtKTL1.Text != "")
+            if (txtKTL1.Text != "")
             {
-                float kq = 0;
-                bool ketQua = float.TryParse(txtKTL1.Text, out kq);
+                bool ketQua = float.TryParse(txtKTL1.Text, out float kq1);
                 if (!ketQua)
                 {
-                    MessageBox.Show("Diem KT lan 1 phai la so!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Diem KT lan 1 phai la so!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
-            else if (txtKTL2.Text != "")
+            if (txtKTL2.Text != "")
             {
-                float kq = 0;
-                bool ketQua = float.TryParse(txtKTL2.Text, out kq);
+                bool ketQua = float.TryParse(txtKTL2.Text, out float kq2);
                 if (!ketQua)
                 {
-                    MessageBox.Show("Diem KT lan 2 phai la so!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Diem KT lan 2 phai la so!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
-            else if (txtDiemThi.Text != "")
+            if (txtDiemThi.Text != "")
             {
-                float kq = 0;
-                bool ketQua = float.TryParse(txtDiemThi.Text, out kq);
+                bool ketQua = float.TryParse(txtDiemThi.Text, out float kq3);
                 if (!ketQua)
                 {
-                    MessageBox.Show("Diem Thi phai la so!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Diem Thi phai la so!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
-            else if (txtDiemThi.Text != "")
+            if(float.Parse(txtKTL1.Text)<0 || float.Parse(txtKTL1.Text) > 10)
             {
-                float kq = 0;
-                bool ketQua = float.TryParse(txtDiemThi.Text, out kq);
-                if (!ketQua)
-                {
-                    MessageBox.Show("Diem Tong ket phai la so!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
+                MessageBox.Show("0<= Điểm KT lần 1 <= 10!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
+            if (float.Parse(txtKTL2.Text) < 0 || float.Parse(txtKTL2.Text) > 10)
+            {
+                MessageBox.Show("0<= Điểm KT lần 2 <= 10!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (float.Parse(txtDiemThi.Text) < 0 || float.Parse(txtDiemThi.Text) > 10)
+            {
+                MessageBox.Show("0<= Điểm thi <= 10!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
 
             var regexItem = new Regex("^[a-zA-Z0-9]*$");
             if (!regexItem.IsMatch(txtMaMH.Text) || !regexItem.IsMatch(txtMaSV.Text))
             {
-                MessageBox.Show("Mã chỉ bao gồm số và chữ viết không dấu!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã chỉ bao gồm số và chữ viết không dấu!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -204,7 +222,8 @@ namespace csharp_winform
 
             if (updateScore != null)
             {
-                DialogResult dr = MessageBox.Show("Ban co muon xoa khong?", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dr = MessageBox.Show($"Bạn thực sự muốn xoá điểm môn {updateScore.MONHOC.TENMH} " +
+                    $"\ncủa sinh viên: {updateScore.SINHVIEN.HOTEN}?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
                     dBContext.DIEMSVs.Remove(updateScore);
@@ -218,18 +237,20 @@ namespace csharp_winform
                     dgvDanhSach.ClearSelection();
                     if (i != 0)
                         dgvDanhSach.Rows[i - 1].Selected = true;
-                    MessageBox.Show($"Xoa diem {updateScore.MAMH} - {updateScore.MSSV} thanh cong!", "Thong bao");
+                    MessageBox.Show($"Xoa diem {updateScore.MAMH} - {updateScore.MSSV} thanh cong!", "Thông Báo!");
                 }
             }
             else
             {
-                MessageBox.Show($"Khong tim thay diem {txtMaSV.Text} - {txtMaMH.Text}!", "Thong bao");
+                MessageBox.Show($"Khong tim thay diem {txtMaSV.Text} - {txtMaMH.Text}!", "Thông Báo!");
             }
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+       public void btnRefresh_Click(object sender, EventArgs e)
         {
-            NhapDiemSinhVien_Load(sender, e);
+
+            LoadDGV();
+            LoadForm();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -246,14 +267,14 @@ namespace csharp_winform
                     dgvDanhSach.CurrentRow.Selected = true;
                     txtMaSV.Text = dgvDanhSach.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
                     txtMaMH.Text = dgvDanhSach.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
-                    txtKTL1.Text = dgvDanhSach.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
-                    txtKTL2.Text = dgvDanhSach.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
-                    txtDiemThi.Text = dgvDanhSach.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
+                    txtKTL1.Text = dgvDanhSach.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
+                    txtKTL2.Text = dgvDanhSach.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
+                    txtDiemThi.Text = dgvDanhSach.Rows[e.RowIndex].Cells[5].FormattedValue.ToString();
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Co loi xay ra!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Co loi xay ra!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
