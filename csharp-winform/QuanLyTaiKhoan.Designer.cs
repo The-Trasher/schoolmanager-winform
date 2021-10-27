@@ -31,8 +31,16 @@ namespace csharp_winform
         {
             this.grDanhSach = new System.Windows.Forms.GroupBox();
             this.dgvDSTaiKhoan = new System.Windows.Forms.DataGridView();
+            this.dgvUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grLuaChon = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbAdmin = new System.Windows.Forms.RadioButton();
             this.rbMember = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbNu = new System.Windows.Forms.RadioButton();
@@ -54,14 +62,6 @@ namespace csharp_winform
             this.lblTenKhoa = new System.Windows.Forms.Label();
             this.lblMaKhoa = new System.Windows.Forms.Label();
             this.lblQuanLyKhoa = new System.Windows.Forms.Label();
-            this.rbAdmin = new System.Windows.Forms.RadioButton();
-            this.dgvUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoan)).BeginInit();
             this.grLuaChon.SuspendLayout();
@@ -73,11 +73,11 @@ namespace csharp_winform
             // 
             this.grDanhSach.Controls.Add(this.dgvDSTaiKhoan);
             this.grDanhSach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.grDanhSach.Location = new System.Drawing.Point(283, 56);
-            this.grDanhSach.Margin = new System.Windows.Forms.Padding(2);
+            this.grDanhSach.Location = new System.Drawing.Point(377, 69);
+            this.grDanhSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grDanhSach.Name = "grDanhSach";
-            this.grDanhSach.Padding = new System.Windows.Forms.Padding(2);
-            this.grDanhSach.Size = new System.Drawing.Size(640, 456);
+            this.grDanhSach.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grDanhSach.Size = new System.Drawing.Size(853, 561);
             this.grDanhSach.TabIndex = 13;
             this.grDanhSach.TabStop = false;
             this.grDanhSach.Text = "Danh sách";
@@ -96,16 +96,65 @@ namespace csharp_winform
             this.dgvEmail,
             this.dgvSex,
             this.dgvRole});
-            this.dgvDSTaiKhoan.Location = new System.Drawing.Point(4, 25);
-            this.dgvDSTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDSTaiKhoan.Location = new System.Drawing.Point(5, 31);
+            this.dgvDSTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDSTaiKhoan.Name = "dgvDSTaiKhoan";
             this.dgvDSTaiKhoan.ReadOnly = true;
             this.dgvDSTaiKhoan.RowHeadersWidth = 51;
             this.dgvDSTaiKhoan.RowTemplate.Height = 24;
             this.dgvDSTaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSTaiKhoan.Size = new System.Drawing.Size(630, 419);
+            this.dgvDSTaiKhoan.Size = new System.Drawing.Size(840, 516);
             this.dgvDSTaiKhoan.TabIndex = 0;
             this.dgvDSTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTaiKhoan_CellClick);
+            // 
+            // dgvUsername
+            // 
+            this.dgvUsername.HeaderText = "Username";
+            this.dgvUsername.MinimumWidth = 6;
+            this.dgvUsername.Name = "dgvUsername";
+            this.dgvUsername.ReadOnly = true;
+            // 
+            // dgvPassword
+            // 
+            this.dgvPassword.HeaderText = "Password";
+            this.dgvPassword.MinimumWidth = 6;
+            this.dgvPassword.Name = "dgvPassword";
+            this.dgvPassword.ReadOnly = true;
+            // 
+            // dgvFullName
+            // 
+            this.dgvFullName.HeaderText = "FullName";
+            this.dgvFullName.MinimumWidth = 6;
+            this.dgvFullName.Name = "dgvFullName";
+            this.dgvFullName.ReadOnly = true;
+            // 
+            // dgvPhone
+            // 
+            this.dgvPhone.HeaderText = "Phone";
+            this.dgvPhone.MinimumWidth = 6;
+            this.dgvPhone.Name = "dgvPhone";
+            this.dgvPhone.ReadOnly = true;
+            // 
+            // dgvEmail
+            // 
+            this.dgvEmail.HeaderText = "Email";
+            this.dgvEmail.MinimumWidth = 6;
+            this.dgvEmail.Name = "dgvEmail";
+            this.dgvEmail.ReadOnly = true;
+            // 
+            // dgvSex
+            // 
+            this.dgvSex.HeaderText = "Sex";
+            this.dgvSex.MinimumWidth = 6;
+            this.dgvSex.Name = "dgvSex";
+            this.dgvSex.ReadOnly = true;
+            // 
+            // dgvRole
+            // 
+            this.dgvRole.HeaderText = "Role";
+            this.dgvRole.MinimumWidth = 6;
+            this.dgvRole.Name = "dgvRole";
+            this.dgvRole.ReadOnly = true;
             // 
             // grLuaChon
             // 
@@ -128,11 +177,11 @@ namespace csharp_winform
             this.grLuaChon.Controls.Add(this.lblTenKhoa);
             this.grLuaChon.Controls.Add(this.lblMaKhoa);
             this.grLuaChon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.grLuaChon.Location = new System.Drawing.Point(7, 56);
-            this.grLuaChon.Margin = new System.Windows.Forms.Padding(2);
+            this.grLuaChon.Location = new System.Drawing.Point(9, 69);
+            this.grLuaChon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grLuaChon.Name = "grLuaChon";
-            this.grLuaChon.Padding = new System.Windows.Forms.Padding(2);
-            this.grLuaChon.Size = new System.Drawing.Size(272, 444);
+            this.grLuaChon.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grLuaChon.Size = new System.Drawing.Size(363, 546);
             this.grLuaChon.TabIndex = 12;
             this.grLuaChon.TabStop = false;
             this.grLuaChon.Text = "Lựa chọn";
@@ -141,18 +190,33 @@ namespace csharp_winform
             // 
             this.groupBox2.Controls.Add(this.rbAdmin);
             this.groupBox2.Controls.Add(this.rbMember);
-            this.groupBox2.Location = new System.Drawing.Point(100, 292);
+            this.groupBox2.Location = new System.Drawing.Point(133, 359);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(161, 42);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(215, 52);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
+            // 
+            // rbAdmin
+            // 
+            this.rbAdmin.AutoSize = true;
+            this.rbAdmin.Location = new System.Drawing.Point(121, 16);
+            this.rbAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbAdmin.Name = "rbAdmin";
+            this.rbAdmin.Size = new System.Drawing.Size(84, 26);
+            this.rbAdmin.TabIndex = 0;
+            this.rbAdmin.TabStop = true;
+            this.rbAdmin.Text = "Admin";
+            this.rbAdmin.UseVisualStyleBackColor = true;
             // 
             // rbMember
             // 
             this.rbMember.AutoSize = true;
-            this.rbMember.Location = new System.Drawing.Point(6, 13);
+            this.rbMember.Location = new System.Drawing.Point(8, 16);
+            this.rbMember.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbMember.Name = "rbMember";
-            this.rbMember.Size = new System.Drawing.Size(79, 23);
+            this.rbMember.Size = new System.Drawing.Size(97, 26);
             this.rbMember.TabIndex = 0;
             this.rbMember.TabStop = true;
             this.rbMember.Text = "Member";
@@ -162,18 +226,21 @@ namespace csharp_winform
             // 
             this.groupBox1.Controls.Add(this.rbNu);
             this.groupBox1.Controls.Add(this.rbNam);
-            this.groupBox1.Location = new System.Drawing.Point(100, 246);
+            this.groupBox1.Location = new System.Drawing.Point(133, 303);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(161, 42);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(215, 52);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
             // rbNu
             // 
             this.rbNu.AutoSize = true;
-            this.rbNu.Location = new System.Drawing.Point(91, 14);
+            this.rbNu.Location = new System.Drawing.Point(121, 17);
+            this.rbNu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbNu.Name = "rbNu";
-            this.rbNu.Size = new System.Drawing.Size(48, 23);
+            this.rbNu.Size = new System.Drawing.Size(56, 26);
             this.rbNu.TabIndex = 1;
             this.rbNu.TabStop = true;
             this.rbNu.Text = "Nữ";
@@ -182,9 +249,10 @@ namespace csharp_winform
             // rbNam
             // 
             this.rbNam.AutoSize = true;
-            this.rbNam.Location = new System.Drawing.Point(6, 14);
+            this.rbNam.Location = new System.Drawing.Point(8, 17);
+            this.rbNam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbNam.Name = "rbNam";
-            this.rbNam.Size = new System.Drawing.Size(57, 23);
+            this.rbNam.Size = new System.Drawing.Size(68, 26);
             this.rbNam.TabIndex = 0;
             this.rbNam.TabStop = true;
             this.rbNam.Text = "Nam";
@@ -192,9 +260,10 @@ namespace csharp_winform
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(38, 411);
+            this.btnRefresh.Location = new System.Drawing.Point(51, 506);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 27);
+            this.btnRefresh.Size = new System.Drawing.Size(100, 33);
             this.btnRefresh.TabIndex = 11;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -203,10 +272,10 @@ namespace csharp_winform
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnThoat.Location = new System.Drawing.Point(181, 408);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThoat.Location = new System.Drawing.Point(241, 502);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(74, 33);
+            this.btnThoat.Size = new System.Drawing.Size(99, 41);
             this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -214,44 +283,43 @@ namespace csharp_winform
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(100, 215);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.Location = new System.Drawing.Point(133, 265);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(157, 26);
+            this.txtEmail.Size = new System.Drawing.Size(208, 30);
             this.txtEmail.TabIndex = 1;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(98, 171);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhone.Location = new System.Drawing.Point(131, 210);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(157, 26);
+            this.txtPhone.Size = new System.Drawing.Size(208, 30);
             this.txtPhone.TabIndex = 1;
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(100, 128);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(2);
+            this.txtHoTen.Location = new System.Drawing.Point(133, 158);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(157, 26);
+            this.txtHoTen.Size = new System.Drawing.Size(208, 30);
             this.txtHoTen.TabIndex = 1;
             // 
             // txtMK
             // 
-            this.txtMK.Location = new System.Drawing.Point(100, 81);
-            this.txtMK.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMK.Location = new System.Drawing.Point(133, 100);
+            this.txtMK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(157, 26);
+            this.txtMK.Size = new System.Drawing.Size(208, 30);
             this.txtMK.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(35, 264);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(47, 325);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 16);
+            this.label5.Size = new System.Drawing.Size(70, 19);
             this.label5.TabIndex = 2;
             this.label5.Text = "Giới tính";
             // 
@@ -259,10 +327,9 @@ namespace csharp_winform
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(47, 307);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(63, 378);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 16);
+            this.label4.Size = new System.Drawing.Size(53, 19);
             this.label4.TabIndex = 2;
             this.label4.Text = "Quyền";
             // 
@@ -270,20 +337,19 @@ namespace csharp_winform
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(53, 220);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(71, 271);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 16);
+            this.label3.Size = new System.Drawing.Size(49, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Email";
             // 
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnXoa.Location = new System.Drawing.Point(181, 370);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoa.Location = new System.Drawing.Point(241, 455);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(74, 33);
+            this.btnXoa.Size = new System.Drawing.Size(99, 41);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -293,39 +359,37 @@ namespace csharp_winform
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(51, 176);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(68, 217);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 16);
+            this.label2.Size = new System.Drawing.Size(52, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Phone";
             // 
             // txtTenDN
             // 
-            this.txtTenDN.Location = new System.Drawing.Point(100, 34);
-            this.txtTenDN.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTenDN.Location = new System.Drawing.Point(133, 42);
+            this.txtTenDN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenDN.Name = "txtTenDN";
-            this.txtTenDN.Size = new System.Drawing.Size(155, 26);
+            this.txtTenDN.Size = new System.Drawing.Size(205, 30);
             this.txtTenDN.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(51, 133);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(68, 164);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 16);
+            this.label1.Size = new System.Drawing.Size(55, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Họ tên";
             // 
             // btnNhap
             // 
             this.btnNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnNhap.Location = new System.Drawing.Point(20, 370);
-            this.btnNhap.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNhap.Location = new System.Drawing.Point(27, 455);
+            this.btnNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNhap.Name = "btnNhap";
-            this.btnNhap.Size = new System.Drawing.Size(121, 33);
+            this.btnNhap.Size = new System.Drawing.Size(161, 41);
             this.btnNhap.TabIndex = 2;
             this.btnNhap.Text = "Thêm / Sửa";
             this.btnNhap.UseVisualStyleBackColor = true;
@@ -335,10 +399,9 @@ namespace csharp_winform
             // 
             this.lblTenKhoa.AutoSize = true;
             this.lblTenKhoa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTenKhoa.Location = new System.Drawing.Point(35, 86);
-            this.lblTenKhoa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTenKhoa.Location = new System.Drawing.Point(47, 106);
             this.lblTenKhoa.Name = "lblTenKhoa";
-            this.lblTenKhoa.Size = new System.Drawing.Size(61, 16);
+            this.lblTenKhoa.Size = new System.Drawing.Size(71, 19);
             this.lblTenKhoa.TabIndex = 2;
             this.lblTenKhoa.Text = "Mật khẩu";
             // 
@@ -346,10 +409,9 @@ namespace csharp_winform
             // 
             this.lblMaKhoa.AutoSize = true;
             this.lblMaKhoa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMaKhoa.Location = new System.Drawing.Point(4, 39);
-            this.lblMaKhoa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMaKhoa.Location = new System.Drawing.Point(5, 48);
             this.lblMaKhoa.Name = "lblMaKhoa";
-            this.lblMaKhoa.Size = new System.Drawing.Size(92, 16);
+            this.lblMaKhoa.Size = new System.Drawing.Size(105, 19);
             this.lblMaKhoa.TabIndex = 1;
             this.lblMaKhoa.Text = "Tên đăng nhập";
             // 
@@ -358,78 +420,24 @@ namespace csharp_winform
             this.lblQuanLyKhoa.AutoSize = true;
             this.lblQuanLyKhoa.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblQuanLyKhoa.ForeColor = System.Drawing.Color.Red;
-            this.lblQuanLyKhoa.Location = new System.Drawing.Point(320, 9);
-            this.lblQuanLyKhoa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblQuanLyKhoa.Location = new System.Drawing.Point(427, 11);
             this.lblQuanLyKhoa.Name = "lblQuanLyKhoa";
-            this.lblQuanLyKhoa.Size = new System.Drawing.Size(265, 26);
+            this.lblQuanLyKhoa.Size = new System.Drawing.Size(335, 35);
             this.lblQuanLyKhoa.TabIndex = 11;
             this.lblQuanLyKhoa.Text = "QUẢN LÝ TÀI KHOẢN";
             // 
-            // rbAdmin
-            // 
-            this.rbAdmin.AutoSize = true;
-            this.rbAdmin.Location = new System.Drawing.Point(91, 13);
-            this.rbAdmin.Name = "rbAdmin";
-            this.rbAdmin.Size = new System.Drawing.Size(67, 23);
-            this.rbAdmin.TabIndex = 0;
-            this.rbAdmin.TabStop = true;
-            this.rbAdmin.Text = "Admin";
-            this.rbAdmin.UseVisualStyleBackColor = true;
-            // 
-            // dgvUsername
-            // 
-            this.dgvUsername.HeaderText = "Username";
-            this.dgvUsername.MinimumWidth = 6;
-            this.dgvUsername.Name = "dgvUsername";
-            this.dgvUsername.ReadOnly = true;
-            // 
-            // dgvPassword
-            // 
-            this.dgvPassword.HeaderText = "Password";
-            this.dgvPassword.MinimumWidth = 6;
-            this.dgvPassword.Name = "dgvPassword";
-            this.dgvPassword.ReadOnly = true;
-            // 
-            // dgvFullName
-            // 
-            this.dgvFullName.HeaderText = "FullName";
-            this.dgvFullName.Name = "dgvFullName";
-            this.dgvFullName.ReadOnly = true;
-            // 
-            // dgvPhone
-            // 
-            this.dgvPhone.HeaderText = "Phone";
-            this.dgvPhone.Name = "dgvPhone";
-            this.dgvPhone.ReadOnly = true;
-            // 
-            // dgvEmail
-            // 
-            this.dgvEmail.HeaderText = "Email";
-            this.dgvEmail.Name = "dgvEmail";
-            this.dgvEmail.ReadOnly = true;
-            // 
-            // dgvSex
-            // 
-            this.dgvSex.HeaderText = "Sex";
-            this.dgvSex.Name = "dgvSex";
-            this.dgvSex.ReadOnly = true;
-            // 
-            // dgvRole
-            // 
-            this.dgvRole.HeaderText = "Role";
-            this.dgvRole.Name = "dgvRole";
-            this.dgvRole.ReadOnly = true;
-            // 
             // QuanLyTaiKhoan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 511);
+            this.ClientSize = new System.Drawing.Size(1237, 629);
             this.Controls.Add(this.grDanhSach);
             this.Controls.Add(this.grLuaChon);
             this.Controls.Add(this.lblQuanLyKhoa);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "QuanLyTaiKhoan";
             this.Text = "QuanLyTaiKhoan";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.QuanLyTaiKhoan_Load);
             this.grDanhSach.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoan)).EndInit();

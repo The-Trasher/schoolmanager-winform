@@ -73,7 +73,7 @@ namespace csharp_winform
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message}", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{ex.Message}", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -111,7 +111,7 @@ namespace csharp_winform
 
                     dgvDSTaiKhoan.ClearSelection();
                     dgvDSTaiKhoan.Rows[CheckID(newAccount.TenDN)].Selected = true;
-                    MessageBox.Show($"Them tai khoan {newAccount.TenDN} thanh cong!", "Thong bao");
+                    MessageBox.Show($"Them tai khoan {newAccount.TenDN} thành công!", "Thông Báo!");
                 }
                 else
                 {
@@ -134,7 +134,7 @@ namespace csharp_winform
 
                         dgvDSTaiKhoan.ClearSelection();
                         dgvDSTaiKhoan.Rows[CheckID(updateAccount.TenDN)].Selected = true;
-                        MessageBox.Show($"Sua tai khoan {updateAccount.TenDN} thanh cong!", "Thong bao");
+                        MessageBox.Show($"Sua tai khoan {updateAccount.TenDN} thành công!", "Thông Báo!");
                     }
                 }
             }
@@ -154,14 +154,14 @@ namespace csharp_winform
         {
             if (txtTenDN.Text == "" || txtMK.Text == "")
             {
-                MessageBox.Show("Vui long nhap day du username va password!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui long nhap day du username va password!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             var regexItem = new Regex("^[a-zA-Z0-9]*$");
             if (!regexItem.IsMatch(txtTenDN.Text))
             {
-                MessageBox.Show("Tên đăng nhập chỉ bao gồm số và chữ viết không dấu!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Tên đăng nhập chỉ bao gồm số và chữ viết không dấu!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -190,7 +190,7 @@ namespace csharp_winform
 
             if (deleteAccount != null)
             {
-                DialogResult dr = MessageBox.Show("Ban co muon xoa khong?", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dr = MessageBox.Show("Ban co muon xoa khong?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
                     dBContext.DANGNHAPs.Remove(deleteAccount);
@@ -204,12 +204,12 @@ namespace csharp_winform
                     dgvDSTaiKhoan.ClearSelection();
                     if (i != 0)
                         dgvDSTaiKhoan.Rows[i - 1].Selected = true;
-                    MessageBox.Show($"Xoa tai khoan {deleteAccount.TenDN} thanh cong!", "Thong bao");
+                    MessageBox.Show($"Xoa tai khoan {deleteAccount.TenDN} thành công!", "Thông Báo!");
                 }
             }
             else
             {
-                MessageBox.Show($"Khong tim thay tai khoan {txtTenDN.Text}!", "Thong bao");
+                MessageBox.Show($"Khong tim thay tai khoan {txtTenDN.Text}!", "Thông Báo!");
             }
         }
     }

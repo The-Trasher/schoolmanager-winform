@@ -44,7 +44,7 @@ namespace csharp_winform
                 {
                     if (txtMKMoi.Text == txtNhapLaiMK.Text)
                     {
-                        DialogResult dr = MessageBox.Show("Ban co chac chan muon doi mat khau khong?", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        DialogResult dr = MessageBox.Show("Ban co chac chan muon doi mat khau khong?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                         if (dr == DialogResult.Yes)
                         {
@@ -53,19 +53,19 @@ namespace csharp_winform
                             dBContext.DANGNHAPs.AddOrUpdate(findAccount);
                             dBContext.SaveChanges();
 
-                            MessageBox.Show($"Đổi mật khẩu thành công. Vui lòng đăng nhập lại!", "Thong bao");
+                            MessageBox.Show($"Đổi mật khẩu thành công. Vui lòng đăng nhập lại!", "Thông Báo!");
 
                             mainForm.đăngXuấtToolStripMenuItem_Click(sender, e);
                         }
                     }
                     else
                     {
-                        MessageBox.Show($"Mật khẩu không trùng khớp!", "Thong bao");
+                        MessageBox.Show($"Mật khẩu không trùng khớp!", "Thông Báo!");
                     }
                 }
                 else
                 {
-                    MessageBox.Show($"Sai ten dang nhap hoac mat khau!", "Thong bao");
+                    MessageBox.Show($"Sai ten dang nhap hoac mat khau!", "Thông Báo!");
                 }
             }
         }
@@ -74,7 +74,7 @@ namespace csharp_winform
         {
             if (txtTenTaiKhoan.Text == "" || txtMKCu.Text == "" || txtMKMoi.Text == "" || txtNhapLaiMK.Text == "")
             {
-                MessageBox.Show("Vui long nhap day du thong tin!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui long nhap day du thong tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;

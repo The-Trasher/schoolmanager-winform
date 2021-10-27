@@ -51,10 +51,10 @@ namespace csharp_winform
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnThoat.Location = new System.Drawing.Point(171, 318);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThoat.Location = new System.Drawing.Point(228, 391);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(74, 33);
+            this.btnThoat.Size = new System.Drawing.Size(99, 41);
             this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -63,10 +63,10 @@ namespace csharp_winform
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnXoa.Location = new System.Drawing.Point(171, 146);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoa.Location = new System.Drawing.Point(228, 180);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(74, 33);
+            this.btnXoa.Size = new System.Drawing.Size(99, 41);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -75,10 +75,10 @@ namespace csharp_winform
             // btnNhap
             // 
             this.btnNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnNhap.Location = new System.Drawing.Point(25, 146);
-            this.btnNhap.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNhap.Location = new System.Drawing.Point(33, 180);
+            this.btnNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNhap.Name = "btnNhap";
-            this.btnNhap.Size = new System.Drawing.Size(121, 33);
+            this.btnNhap.Size = new System.Drawing.Size(161, 41);
             this.btnNhap.TabIndex = 2;
             this.btnNhap.Text = "Thêm / Sửa";
             this.btnNhap.UseVisualStyleBackColor = true;
@@ -88,11 +88,11 @@ namespace csharp_winform
             // 
             this.grDanhSach.Controls.Add(this.dgvDSKhoa);
             this.grDanhSach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.grDanhSach.Location = new System.Drawing.Point(287, 57);
-            this.grDanhSach.Margin = new System.Windows.Forms.Padding(2);
+            this.grDanhSach.Location = new System.Drawing.Point(383, 70);
+            this.grDanhSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grDanhSach.Name = "grDanhSach";
-            this.grDanhSach.Padding = new System.Windows.Forms.Padding(2);
-            this.grDanhSach.Size = new System.Drawing.Size(459, 374);
+            this.grDanhSach.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grDanhSach.Size = new System.Drawing.Size(612, 460);
             this.grDanhSach.TabIndex = 10;
             this.grDanhSach.TabStop = false;
             this.grDanhSach.Text = "Danh sách";
@@ -106,13 +106,13 @@ namespace csharp_winform
             this.dgvDSKhoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaKhoa,
             this.TenKhoa});
-            this.dgvDSKhoa.Location = new System.Drawing.Point(4, 25);
-            this.dgvDSKhoa.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDSKhoa.Location = new System.Drawing.Point(5, 31);
+            this.dgvDSKhoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDSKhoa.Name = "dgvDSKhoa";
             this.dgvDSKhoa.ReadOnly = true;
             this.dgvDSKhoa.RowHeadersWidth = 51;
             this.dgvDSKhoa.RowTemplate.Height = 24;
-            this.dgvDSKhoa.Size = new System.Drawing.Size(451, 345);
+            this.dgvDSKhoa.Size = new System.Drawing.Size(601, 425);
             this.dgvDSKhoa.TabIndex = 0;
             this.dgvDSKhoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSKhoa_CellClick);
             // 
@@ -141,20 +141,21 @@ namespace csharp_winform
             this.grLuaChon.Controls.Add(this.lblTenKhoa);
             this.grLuaChon.Controls.Add(this.lblMaKhoa);
             this.grLuaChon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.grLuaChon.Location = new System.Drawing.Point(11, 57);
-            this.grLuaChon.Margin = new System.Windows.Forms.Padding(2);
+            this.grLuaChon.Location = new System.Drawing.Point(15, 70);
+            this.grLuaChon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grLuaChon.Name = "grLuaChon";
-            this.grLuaChon.Padding = new System.Windows.Forms.Padding(2);
-            this.grLuaChon.Size = new System.Drawing.Size(261, 374);
+            this.grLuaChon.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grLuaChon.Size = new System.Drawing.Size(348, 460);
             this.grLuaChon.TabIndex = 9;
             this.grLuaChon.TabStop = false;
             this.grLuaChon.Text = "Lựa chọn";
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(25, 324);
+            this.btnRefresh.Location = new System.Drawing.Point(33, 399);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 27);
+            this.btnRefresh.Size = new System.Drawing.Size(100, 33);
             this.btnRefresh.TabIndex = 11;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -162,28 +163,27 @@ namespace csharp_winform
             // 
             // txtTenKhoa
             // 
-            this.txtTenKhoa.Location = new System.Drawing.Point(90, 95);
-            this.txtTenKhoa.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTenKhoa.Location = new System.Drawing.Point(120, 117);
+            this.txtTenKhoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenKhoa.Name = "txtTenKhoa";
-            this.txtTenKhoa.Size = new System.Drawing.Size(157, 26);
+            this.txtTenKhoa.Size = new System.Drawing.Size(208, 30);
             this.txtTenKhoa.TabIndex = 1;
             // 
             // txtMaKhoa
             // 
-            this.txtMaKhoa.Location = new System.Drawing.Point(90, 48);
-            this.txtMaKhoa.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaKhoa.Location = new System.Drawing.Point(120, 59);
+            this.txtMaKhoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaKhoa.Name = "txtMaKhoa";
-            this.txtMaKhoa.Size = new System.Drawing.Size(155, 26);
+            this.txtMaKhoa.Size = new System.Drawing.Size(205, 30);
             this.txtMaKhoa.TabIndex = 0;
             // 
             // lblTenKhoa
             // 
             this.lblTenKhoa.AutoSize = true;
             this.lblTenKhoa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTenKhoa.Location = new System.Drawing.Point(20, 95);
-            this.lblTenKhoa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTenKhoa.Location = new System.Drawing.Point(27, 117);
             this.lblTenKhoa.Name = "lblTenKhoa";
-            this.lblTenKhoa.Size = new System.Drawing.Size(61, 16);
+            this.lblTenKhoa.Size = new System.Drawing.Size(70, 19);
             this.lblTenKhoa.TabIndex = 2;
             this.lblTenKhoa.Text = "Tên khoa";
             // 
@@ -191,10 +191,9 @@ namespace csharp_winform
             // 
             this.lblMaKhoa.AutoSize = true;
             this.lblMaKhoa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMaKhoa.Location = new System.Drawing.Point(22, 48);
-            this.lblMaKhoa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMaKhoa.Location = new System.Drawing.Point(29, 59);
             this.lblMaKhoa.Name = "lblMaKhoa";
-            this.lblMaKhoa.Size = new System.Drawing.Size(57, 16);
+            this.lblMaKhoa.Size = new System.Drawing.Size(67, 19);
             this.lblMaKhoa.TabIndex = 1;
             this.lblMaKhoa.Text = "Mã khoa";
             // 
@@ -203,25 +202,25 @@ namespace csharp_winform
             this.lblQuanLyKhoa.AutoSize = true;
             this.lblQuanLyKhoa.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblQuanLyKhoa.ForeColor = System.Drawing.Color.Red;
-            this.lblQuanLyKhoa.Location = new System.Drawing.Point(269, 20);
-            this.lblQuanLyKhoa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblQuanLyKhoa.Location = new System.Drawing.Point(359, 25);
             this.lblQuanLyKhoa.Name = "lblQuanLyKhoa";
-            this.lblQuanLyKhoa.Size = new System.Drawing.Size(201, 26);
+            this.lblQuanLyKhoa.Size = new System.Drawing.Size(252, 35);
             this.lblQuanLyKhoa.TabIndex = 8;
             this.lblQuanLyKhoa.Text = "QUẢN LÝ KHOA";
             // 
             // QuanLyKhoa
             // 
             this.AcceptButton = this.btnNhap;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 462);
+            this.ClientSize = new System.Drawing.Size(1009, 569);
             this.Controls.Add(this.grDanhSach);
             this.Controls.Add(this.grLuaChon);
             this.Controls.Add(this.lblQuanLyKhoa);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QuanLyKhoa";
             this.Text = "QuanLyKhoa";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.QuanLyKhoa_Load);
             this.grDanhSach.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSKhoa)).EndInit();

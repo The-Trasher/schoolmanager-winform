@@ -32,13 +32,20 @@ namespace csharp_winform
             FillDataCBB(listLop);
             txtStudentID.Focus();
         }
-
         private void FillDataDGV(List<SINHVIEN> listSinhVien)
         {
             dgvStudent.Rows.Clear();
+            
 
             foreach (SINHVIEN item in listSinhVien)
             {
+
+                var DIEMTB = dBContext.DIEMSVs
+                                .Where(p => p.MSSV == item.MSSV)
+                                .Select(p => new { DiemTB = p.DIEMTONGKET })
+                                .Average(p => p.DiemTB);
+                if (DIEMTB == null)
+                    DIEMTB = 0;
                 int newRow = dgvStudent.Rows.Add();
                 dgvStudent.Rows[newRow].Cells[0].Value = item.MSSV;
                 dgvStudent.Rows[newRow].Cells[1].Value = item.HOTEN;
@@ -48,6 +55,15 @@ namespace csharp_winform
                 dgvStudent.Rows[newRow].Cells[4].Value = item.KHOAHOC;
                 dgvStudent.Rows[newRow].Cells[5].Value = item.MALOP;
                 dgvStudent.Rows[newRow].Cells[6].Value = item.DIACHI;
+                dgvStudent.Rows[newRow].Cells[7].Value = Math.Round((double)DIEMTB,2).ToString();
+                SINHVIEN updateStudent = dBContext.SINHVIENs.Where(p => p.MSSV == item.MSSV).FirstOrDefault();
+                if (updateStudent != null)
+                {
+                    updateStudent.DIEMTB = DIEMTB;
+                    dBContext.SINHVIENs.AddOrUpdate(updateStudent); 
+                    dBContext.SaveChanges();
+                }
+
             }
         }
 
@@ -77,6 +93,7 @@ namespace csharp_winform
                     newStudent.MALOP = cbbMaLop.SelectedValue.ToString();
                     newStudent.DIACHI = txtDiaChi.Text;
 
+
                     dBContext.SINHVIENs.AddOrUpdate(newStudent); //dua du lieu vo db va save
                     dBContext.SaveChanges();
 
@@ -85,7 +102,7 @@ namespace csharp_winform
 
                     dgvStudent.ClearSelection();
                     dgvStudent.Rows[CheckIDStudent(newStudent.MSSV)].Selected = true;
-                    MessageBox.Show($"Them sinh vien {newStudent.HOTEN} thanh cong!", "Thong bao");
+                    MessageBox.Show($"Them sinh vien {newStudent.HOTEN} thành công!", "Thông Báo!");
                 }
                 else
                 {
@@ -102,6 +119,10 @@ namespace csharp_winform
                             updateStudent.KHOAHOC = null;
                         updateStudent.MALOP = cbbMaLop.SelectedValue.ToString();
                         updateStudent.DIACHI = txtDiaChi.Text;
+                        updateStudent.DIEMTB = dBContext.DIEMSVs
+                                                .Where(p => p.MSSV == updateStudent.MSSV)
+                                                .Select(p => new { DiemTB = p.DIEMTONGKET })
+                                                .Average(p => p.DiemTB);
 
                         dBContext.SINHVIENs.AddOrUpdate(updateStudent); //dua du lieu vo db va save
                         dBContext.SaveChanges();
@@ -111,7 +132,7 @@ namespace csharp_winform
 
                         dgvStudent.ClearSelection();
                         dgvStudent.Rows[CheckIDStudent(updateStudent.MSSV)].Selected = true;
-                        MessageBox.Show($"Sua sinh vien {updateStudent.HOTEN} thanh cong!", "Thong bao");
+                        MessageBox.Show($"Sua sinh vien {updateStudent.HOTEN} thành công!", "Thông Báo!");
                     }
                 }
             }
@@ -131,7 +152,7 @@ namespace csharp_winform
         {
             if (txtStudentID.Text == "")
             {
-                MessageBox.Show("Vui long nhap ma so sinh vien!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui long nhap ma so sinh vien!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else if (txtKhoaHoc.Text != "")
@@ -140,7 +161,7 @@ namespace csharp_winform
                 bool ketQua = int.TryParse(txtKhoaHoc.Text, out kq);
                 if (!ketQua)
                 {
-                    MessageBox.Show("Khoa hoc phai la so!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Khoa hoc phai la so!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
@@ -148,7 +169,7 @@ namespace csharp_winform
             var regexItem = new Regex("^[a-zA-Z0-9]*$");
             if (!regexItem.IsMatch(txtStudentID.Text))
             {
-                MessageBox.Show("Mã sinh viên chỉ bao gồm số và chữ viết không dấu!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã sinh viên chỉ bao gồm số và chữ viết không dấu!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -173,12 +194,19 @@ namespace csharp_winform
         private void btnDelete_Click(object sender, EventArgs e)
         {
             SINHVIEN updateStudent = dBContext.SINHVIENs.Where(p => p.MSSV == txtStudentID.Text).FirstOrDefault(); //lay sv dua vao mssv
-
+            var updateDiemSV = dBContext.DIEMSVs.Where(p => p.MSSV == txtStudentID.Text).ToList();
             if (updateStudent != null) //sv co ton tai trong dgv
             {
-                DialogResult dr = MessageBox.Show("Ban co muon xoa khong?", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dr = MessageBox.Show($"Bạn thực sự muốn xoá thông tin sinh viên: {updateStudent.HOTEN}?" +
+                    $"\n(Lưu ý toàn bộ điểm của sinh viên này sẽ đều bị xoá!)", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
+                    foreach (var item in updateDiemSV)
+                    {
+                        dBContext.DIEMSVs.Remove(item); 
+                        dBContext.SaveChanges();
+                    }
+
                     dBContext.SINHVIENs.Remove(updateStudent); //xoa du lieu trong db va save
                     dBContext.SaveChanges();
 
@@ -190,12 +218,12 @@ namespace csharp_winform
                     dgvStudent.ClearSelection();
                     if (i != 0)
                         dgvStudent.Rows[i - 1].Selected = true;
-                    MessageBox.Show($"Xoa sinh vien {updateStudent.HOTEN} thanh cong!", "Thong bao");
+                    MessageBox.Show($"Xoa sinh vien {updateStudent.HOTEN} thành công!", "Thông Báo!");
                 }
             }
             else
             {
-                MessageBox.Show($"Khong tim thay sinh vien {txtStudentID.Text}!", "Thong bao");
+                MessageBox.Show($"Khong tim thay sinh vien {txtStudentID.Text}!", "Thông Báo!");
             }
         }
 
@@ -220,7 +248,7 @@ namespace csharp_winform
             }
             catch (Exception)
             {
-                MessageBox.Show("Co loi xay ra!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Co loi xay ra!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -64,7 +64,7 @@ namespace csharp_winform
 
                     dgvDSKhoa.ClearSelection();
                     dgvDSKhoa.Rows[CheckIDFaculty(newFaculty.MAKHOA)].Selected = true;
-                    MessageBox.Show($"Them khoa {newFaculty.MAKHOA} thanh cong!", "Thong bao");
+                    MessageBox.Show($"Them khoa {newFaculty.MAKHOA} thanh cong!", "Thông Báo!");
                 }
                 else
                 {
@@ -82,7 +82,7 @@ namespace csharp_winform
 
                         dgvDSKhoa.ClearSelection();
                         dgvDSKhoa.Rows[CheckIDFaculty(updateFaculty.MAKHOA)].Selected = true;
-                        MessageBox.Show($"Sua khoa {updateFaculty.MAKHOA} thanh cong!", "Thong bao");
+                        MessageBox.Show($"Sua khoa {updateFaculty.MAKHOA} thanh cong!", "Thông Báo!");
                     }
                 }
             }
@@ -102,14 +102,14 @@ namespace csharp_winform
         {
             if (txtMaKhoa.Text == "")
             {
-                MessageBox.Show("Vui long nhap ma khoa!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui long nhap ma khoa!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             var regexItem = new Regex("^[a-zA-Z0-9]*$");
             if (!regexItem.IsMatch(txtMaKhoa.Text))
             {
-                MessageBox.Show("Mã khoa chỉ bao gồm số và chữ viết không dấu!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã khoa chỉ bao gồm số và chữ viết không dấu!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -131,13 +131,21 @@ namespace csharp_winform
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            KHOA updateFaculty = dBContext.KHOAs.Where(p => p.MAKHOA == txtMaKhoa.Text).FirstOrDefault();
+           
+            LOP checkExist = dBContext.LOPs.Where(p => p.MAKHOA == txtMaKhoa.Text).FirstOrDefault();
+            if(checkExist != null)
+            {
+                MessageBox.Show($"Không thể xoá khoa: {txtTenKhoa.Text}!", "Thông Báo!");
+                return;
+            }
 
+            KHOA updateFaculty = dBContext.KHOAs.Where(p => p.MAKHOA == txtMaKhoa.Text).FirstOrDefault();
             if (updateFaculty != null)
             {
-                DialogResult dr = MessageBox.Show("Ban co muon xoa khong?", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dr = MessageBox.Show("Ban co muon xoa khong?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
+                    
                     dBContext.KHOAs.Remove(updateFaculty);
                     dBContext.SaveChanges();
 
@@ -149,12 +157,12 @@ namespace csharp_winform
                     dgvDSKhoa.ClearSelection();
                     if (i != 0)
                         dgvDSKhoa.Rows[i - 1].Selected = true;
-                    MessageBox.Show($"Xoa khoa {updateFaculty.MAKHOA} thanh cong!", "Thong bao");
+                    MessageBox.Show($"Xoa khoa {updateFaculty.MAKHOA} thanh cong!", "Thông Báo!");
                 }
             }
             else
             {
-                MessageBox.Show($"Khong tim thay khoa {txtMaKhoa.Text}!", "Thong bao");
+                MessageBox.Show($"Khong tim thay khoa {txtMaKhoa.Text}!", "Thông Báo!");
             }
         }
 
@@ -171,7 +179,7 @@ namespace csharp_winform
             }
             catch (Exception)
             {
-                MessageBox.Show("Co loi xay ra!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Co loi xay ra!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

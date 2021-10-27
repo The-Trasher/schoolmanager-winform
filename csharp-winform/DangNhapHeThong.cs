@@ -62,14 +62,14 @@ namespace csharp_winform
         {
             if (txtTenDN.Text == "" || txtMatKhau.Text == "")
             {
-                MessageBox.Show("Vui long nhap day du thong tin!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui long nhap day du thong tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             var regexItem = new Regex("^[a-zA-Z0-9]*$");
             if (!regexItem.IsMatch(txtTenDN.Text))
             {
-                MessageBox.Show("Tên đăng nhập chỉ bao gồm số và chữ viết không dấu!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Tên đăng nhập chỉ bao gồm số và chữ viết không dấu!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -79,6 +79,8 @@ namespace csharp_winform
         private void DangNhapHeThong_Load(object sender, EventArgs e)
         {
             txtTenDN.Focus();
+            txtTenDN.Text = "an";
+            txtMatKhau.Text = "123";
         }
     }
 }
