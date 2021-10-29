@@ -248,7 +248,7 @@ namespace csharp_winform
             }
             catch (Exception)
             {
-                MessageBox.Show("Có lỗi xảy ra!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
 

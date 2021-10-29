@@ -15,6 +15,6 @@ namespace csharp_winform
         public About()
         {
             InitializeComponent();
-        }
+        }             
     }
 }

@@ -48,7 +48,7 @@ namespace csharp_winform
                 }
                 else
                 {
-                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu","Thông Báo!",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
             }
         }

@@ -29,9 +29,12 @@ namespace csharp_winform
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grDanhSach = new System.Windows.Forms.GroupBox();
             this.dgvDSMonHoc = new System.Windows.Forms.DataGridView();
+            this.dgvMaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTCLT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTCTH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grThongTinChiTiet = new System.Windows.Forms.GroupBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -46,10 +49,6 @@ namespace csharp_winform
             this.lblTenMon = new System.Windows.Forms.Label();
             this.lblMaMon = new System.Windows.Forms.Label();
             this.lblDanhSachMonHoc = new System.Windows.Forms.Label();
-            this.dgvMaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTCLT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTCTH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSMonHoc)).BeginInit();
             this.grThongTinChiTiet.SuspendLayout();
@@ -59,6 +58,7 @@ namespace csharp_winform
             // 
             this.grDanhSach.Controls.Add(this.dgvDSMonHoc);
             this.grDanhSach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.grDanhSach.ForeColor = System.Drawing.Color.Black;
             this.grDanhSach.Location = new System.Drawing.Point(514, 64);
             this.grDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.grDanhSach.Name = "grDanhSach";
@@ -74,14 +74,6 @@ namespace csharp_winform
             this.dgvDSMonHoc.AllowUserToDeleteRows = false;
             this.dgvDSMonHoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDSMonHoc.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDSMonHoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDSMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSMonHoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvMaMon,
@@ -99,6 +91,34 @@ namespace csharp_winform
             this.dgvDSMonHoc.TabIndex = 0;
             this.dgvDSMonHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSMonHoc_CellClick);
             // 
+            // dgvMaMon
+            // 
+            this.dgvMaMon.HeaderText = "Mã Môn Học";
+            this.dgvMaMon.MinimumWidth = 6;
+            this.dgvMaMon.Name = "dgvMaMon";
+            this.dgvMaMon.ReadOnly = true;
+            // 
+            // dgvTenMon
+            // 
+            this.dgvTenMon.HeaderText = "Tên Môn Học";
+            this.dgvTenMon.MinimumWidth = 6;
+            this.dgvTenMon.Name = "dgvTenMon";
+            this.dgvTenMon.ReadOnly = true;
+            // 
+            // dgvTCLT
+            // 
+            this.dgvTCLT.HeaderText = "TCLT";
+            this.dgvTCLT.MinimumWidth = 6;
+            this.dgvTCLT.Name = "dgvTCLT";
+            this.dgvTCLT.ReadOnly = true;
+            // 
+            // dgvTCTH
+            // 
+            this.dgvTCTH.HeaderText = "TCTH";
+            this.dgvTCTH.MinimumWidth = 6;
+            this.dgvTCTH.Name = "dgvTCTH";
+            this.dgvTCTH.ReadOnly = true;
+            // 
             // grThongTinChiTiet
             // 
             this.grThongTinChiTiet.Controls.Add(this.btnRefresh);
@@ -114,6 +134,7 @@ namespace csharp_winform
             this.grThongTinChiTiet.Controls.Add(this.lblTenMon);
             this.grThongTinChiTiet.Controls.Add(this.lblMaMon);
             this.grThongTinChiTiet.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.grThongTinChiTiet.ForeColor = System.Drawing.Color.Blue;
             this.grThongTinChiTiet.Location = new System.Drawing.Point(13, 64);
             this.grThongTinChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.grThongTinChiTiet.Name = "grThongTinChiTiet";
@@ -125,6 +146,8 @@ namespace csharp_winform
             // 
             // btnRefresh
             // 
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.Black;
             this.btnRefresh.Location = new System.Drawing.Point(23, 252);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 27);
@@ -135,7 +158,8 @@ namespace csharp_winform
             // 
             // btnThoat
             // 
-            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.Black;
             this.btnThoat.Location = new System.Drawing.Point(255, 305);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
@@ -147,7 +171,8 @@ namespace csharp_winform
             // 
             // btnXoa
             // 
-            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Location = new System.Drawing.Point(255, 251);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
@@ -159,7 +184,8 @@ namespace csharp_winform
             // 
             // btnNhap
             // 
-            this.btnNhap.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhap.ForeColor = System.Drawing.Color.Black;
             this.btnNhap.Location = new System.Drawing.Point(121, 251);
             this.btnNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btnNhap.Name = "btnNhap";
@@ -204,44 +230,48 @@ namespace csharp_winform
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(2, 193);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 19);
+            this.label1.Size = new System.Drawing.Size(158, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Số tín chỉ thực hành:";
             // 
             // lblSoDVHT
             // 
             this.lblSoDVHT.AutoSize = true;
-            this.lblSoDVHT.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblSoDVHT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoDVHT.ForeColor = System.Drawing.Color.Black;
             this.lblSoDVHT.Location = new System.Drawing.Point(8, 144);
             this.lblSoDVHT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSoDVHT.Name = "lblSoDVHT";
-            this.lblSoDVHT.Size = new System.Drawing.Size(142, 19);
+            this.lblSoDVHT.Size = new System.Drawing.Size(148, 17);
             this.lblSoDVHT.TabIndex = 3;
             this.lblSoDVHT.Text = "Số tín chỉ lý thuyết:";
             // 
             // lblTenMon
             // 
             this.lblTenMon.AutoSize = true;
-            this.lblTenMon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenMon.ForeColor = System.Drawing.Color.Black;
             this.lblTenMon.Location = new System.Drawing.Point(48, 91);
             this.lblTenMon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTenMon.Name = "lblTenMon";
-            this.lblTenMon.Size = new System.Drawing.Size(102, 19);
+            this.lblTenMon.Size = new System.Drawing.Size(107, 17);
             this.lblTenMon.TabIndex = 2;
             this.lblTenMon.Text = "Tên môn học:";
             // 
             // lblMaMon
             // 
             this.lblMaMon.AutoSize = true;
-            this.lblMaMon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblMaMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaMon.ForeColor = System.Drawing.Color.Black;
             this.lblMaMon.Location = new System.Drawing.Point(51, 44);
             this.lblMaMon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMaMon.Name = "lblMaMon";
-            this.lblMaMon.Size = new System.Drawing.Size(99, 19);
+            this.lblMaMon.Size = new System.Drawing.Size(100, 17);
             this.lblMaMon.TabIndex = 1;
             this.lblMaMon.Text = "Mã môn học:";
             // 
@@ -257,39 +287,12 @@ namespace csharp_winform
             this.lblDanhSachMonHoc.TabIndex = 9;
             this.lblDanhSachMonHoc.Text = "DANH SÁCH MÔN HỌC";
             // 
-            // dgvMaMon
-            // 
-            this.dgvMaMon.HeaderText = "Mã Môn Học";
-            this.dgvMaMon.MinimumWidth = 6;
-            this.dgvMaMon.Name = "dgvMaMon";
-            this.dgvMaMon.ReadOnly = true;
-            // 
-            // dgvTenMon
-            // 
-            this.dgvTenMon.HeaderText = "Tên Môn Học";
-            this.dgvTenMon.MinimumWidth = 6;
-            this.dgvTenMon.Name = "dgvTenMon";
-            this.dgvTenMon.ReadOnly = true;
-            // 
-            // dgvTCLT
-            // 
-            this.dgvTCLT.HeaderText = "TCLT";
-            this.dgvTCLT.MinimumWidth = 6;
-            this.dgvTCLT.Name = "dgvTCLT";
-            this.dgvTCLT.ReadOnly = true;
-            // 
-            // dgvTCTH
-            // 
-            this.dgvTCTH.HeaderText = "TCTH";
-            this.dgvTCTH.MinimumWidth = 6;
-            this.dgvTCTH.Name = "dgvTCTH";
-            this.dgvTCTH.ReadOnly = true;
-            // 
             // QuanLyMonHoc
             // 
             this.AcceptButton = this.btnNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1202, 708);
             this.Controls.Add(this.grDanhSach);
             this.Controls.Add(this.grThongTinChiTiet);

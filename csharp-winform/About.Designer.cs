@@ -148,10 +148,11 @@ namespace csharp_winform
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(220, 89);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 17);
+            this.label9.Size = new System.Drawing.Size(114, 17);
             this.label9.TabIndex = 19;
             this.label9.Text = "Phiên bản: 1.0";
             // 
@@ -159,6 +160,7 @@ namespace csharp_winform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(608, 449);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
@@ -170,7 +172,7 @@ namespace csharp_winform
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "About";
             this.Text = "About";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
