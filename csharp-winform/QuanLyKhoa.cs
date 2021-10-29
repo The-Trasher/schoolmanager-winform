@@ -82,7 +82,7 @@ namespace csharp_winform
 
                         dgvDSKhoa.ClearSelection();
                         dgvDSKhoa.Rows[CheckIDFaculty(updateFaculty.MAKHOA)].Selected = true;
-                        MessageBox.Show($"Sua khoa {updateFaculty.MAKHOA} thanh cong!", "Thông Báo!");
+                        MessageBox.Show($"Sửa khoa {updateFaculty.MAKHOA} thành công!", "Thông Báo!");
                     }
                 }
             }
@@ -102,7 +102,7 @@ namespace csharp_winform
         {
             if (txtMaKhoa.Text == "")
             {
-                MessageBox.Show("Vui long nhap ma khoa!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập mã khoa!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -142,7 +142,7 @@ namespace csharp_winform
             KHOA updateFaculty = dBContext.KHOAs.Where(p => p.MAKHOA == txtMaKhoa.Text).FirstOrDefault();
             if (updateFaculty != null)
             {
-                DialogResult dr = MessageBox.Show("Ban co muon xoa khong?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dr = MessageBox.Show("Bạn có muốn xóa khoa ?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
                     
@@ -157,12 +157,12 @@ namespace csharp_winform
                     dgvDSKhoa.ClearSelection();
                     if (i != 0)
                         dgvDSKhoa.Rows[i - 1].Selected = true;
-                    MessageBox.Show($"Xoa khoa {updateFaculty.MAKHOA} thanh cong!", "Thông Báo!");
+                    MessageBox.Show($"Xóa khoa {updateFaculty.MAKHOA} thành công!", "Thông Báo!");
                 }
             }
             else
             {
-                MessageBox.Show($"Khong tim thay khoa {txtMaKhoa.Text}!", "Thông Báo!");
+                MessageBox.Show($"Không tìm thấy khoa {txtMaKhoa.Text}!", "Thông Báo!");
             }
         }
 
@@ -179,7 +179,7 @@ namespace csharp_winform
             }
             catch (Exception)
             {
-                MessageBox.Show("Co loi xay ra!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Có lỗi xảy ra!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -81,7 +81,7 @@ namespace csharp_winform
 
                     dgvDSLop.ClearSelection();
                     dgvDSLop.Rows[CheckIDClass(newClass.MALOP)].Selected = true;
-                    MessageBox.Show($"Them lop {newClass.MALOP} thành công", "Thông Báo!");
+                    MessageBox.Show($"Thêm lớp {newClass.MALOP} thành công", "Thông Báo!");
                 }
                 else
                 {
@@ -104,7 +104,7 @@ namespace csharp_winform
 
                         dgvDSLop.ClearSelection();
                         dgvDSLop.Rows[CheckIDClass(updateClass.MALOP)].Selected = true;
-                        MessageBox.Show($"Sua lop {updateClass.MALOP} thành công", "Thông Báo!");
+                        MessageBox.Show($"Sửa lớp {updateClass.MALOP} thành công", "Thông Báo!");
                     }
                 }
             }
@@ -124,7 +124,7 @@ namespace csharp_winform
         {
             if (txtMaLop.Text == "")
             {
-                MessageBox.Show("Vui long nhap ma lop!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập mã lớp!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else if (txtSiSo.Text != "")
@@ -133,7 +133,7 @@ namespace csharp_winform
                 bool ketQua = int.TryParse(txtSiSo.Text, out kq);
                 if (!ketQua)
                 {
-                    MessageBox.Show("Si so phai la so!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Sĩ số phải là số!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
@@ -174,7 +174,7 @@ namespace csharp_winform
 
             if (updateClass != null)
             {
-                DialogResult dr = MessageBox.Show("Ban co muon xoa khong?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dr = MessageBox.Show("Bạn có muốn xóa không ?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
                     
@@ -189,12 +189,12 @@ namespace csharp_winform
                     dgvDSLop.ClearSelection();
                     if (i != 0)
                         dgvDSLop.Rows[i - 1].Selected = true;
-                    MessageBox.Show($"Xoa lop {updateClass.MALOP} thành công", "Thông Báo!");
+                    MessageBox.Show($"Xóa lớp {updateClass.MALOP} thành công", "Thông Báo!");
                 }
             }
             else
             {
-                MessageBox.Show($"Khong tim thay lop {txtMaLop.Text}!", "Thông Báo!");
+                MessageBox.Show($"Không tìm thấy lớp {txtMaLop.Text}!", "Thông Báo!");
             }
         }
 
@@ -213,7 +213,7 @@ namespace csharp_winform
             }
             catch (Exception)
             {
-                MessageBox.Show("Co loi xay ra!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Có lỗi xảy ra!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -29,12 +29,9 @@ namespace csharp_winform
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grDanhSach = new System.Windows.Forms.GroupBox();
             this.dgvDSMonHoc = new System.Windows.Forms.DataGridView();
-            this.dgvMaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTCLT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTCTH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grThongTinChiTiet = new System.Windows.Forms.GroupBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -49,6 +46,10 @@ namespace csharp_winform
             this.lblTenMon = new System.Windows.Forms.Label();
             this.lblMaMon = new System.Windows.Forms.Label();
             this.lblDanhSachMonHoc = new System.Windows.Forms.Label();
+            this.dgvMaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTCLT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTCTH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSMonHoc)).BeginInit();
             this.grThongTinChiTiet.SuspendLayout();
@@ -62,7 +63,7 @@ namespace csharp_winform
             this.grDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.grDanhSach.Name = "grDanhSach";
             this.grDanhSach.Padding = new System.Windows.Forms.Padding(4);
-            this.grDanhSach.Size = new System.Drawing.Size(495, 440);
+            this.grDanhSach.Size = new System.Drawing.Size(659, 440);
             this.grDanhSach.TabIndex = 11;
             this.grDanhSach.TabStop = false;
             this.grDanhSach.Text = "Danh sách";
@@ -73,6 +74,14 @@ namespace csharp_winform
             this.dgvDSMonHoc.AllowUserToDeleteRows = false;
             this.dgvDSMonHoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDSMonHoc.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSMonHoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDSMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSMonHoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvMaMon,
@@ -86,37 +95,9 @@ namespace csharp_winform
             this.dgvDSMonHoc.RowHeadersWidth = 51;
             this.dgvDSMonHoc.RowTemplate.Height = 24;
             this.dgvDSMonHoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSMonHoc.Size = new System.Drawing.Size(479, 394);
+            this.dgvDSMonHoc.Size = new System.Drawing.Size(642, 394);
             this.dgvDSMonHoc.TabIndex = 0;
             this.dgvDSMonHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSMonHoc_CellClick);
-            // 
-            // dgvMaMon
-            // 
-            this.dgvMaMon.HeaderText = "MaMon";
-            this.dgvMaMon.MinimumWidth = 6;
-            this.dgvMaMon.Name = "dgvMaMon";
-            this.dgvMaMon.ReadOnly = true;
-            // 
-            // dgvTenMon
-            // 
-            this.dgvTenMon.HeaderText = "TenMon";
-            this.dgvTenMon.MinimumWidth = 6;
-            this.dgvTenMon.Name = "dgvTenMon";
-            this.dgvTenMon.ReadOnly = true;
-            // 
-            // dgvTCLT
-            // 
-            this.dgvTCLT.HeaderText = "TCLT";
-            this.dgvTCLT.MinimumWidth = 6;
-            this.dgvTCLT.Name = "dgvTCLT";
-            this.dgvTCLT.ReadOnly = true;
-            // 
-            // dgvTCTH
-            // 
-            this.dgvTCTH.HeaderText = "TCTH";
-            this.dgvTCTH.MinimumWidth = 6;
-            this.dgvTCTH.Name = "dgvTCTH";
-            this.dgvTCTH.ReadOnly = true;
             // 
             // grThongTinChiTiet
             // 
@@ -267,14 +248,42 @@ namespace csharp_winform
             // lblDanhSachMonHoc
             // 
             this.lblDanhSachMonHoc.AutoSize = true;
-            this.lblDanhSachMonHoc.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDanhSachMonHoc.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblDanhSachMonHoc.ForeColor = System.Drawing.Color.Red;
             this.lblDanhSachMonHoc.Location = new System.Drawing.Point(271, 21);
             this.lblDanhSachMonHoc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDanhSachMonHoc.Name = "lblDanhSachMonHoc";
-            this.lblDanhSachMonHoc.Size = new System.Drawing.Size(342, 34);
+            this.lblDanhSachMonHoc.Size = new System.Drawing.Size(352, 35);
             this.lblDanhSachMonHoc.TabIndex = 9;
             this.lblDanhSachMonHoc.Text = "DANH SÁCH MÔN HỌC";
+            // 
+            // dgvMaMon
+            // 
+            this.dgvMaMon.HeaderText = "Mã Môn Học";
+            this.dgvMaMon.MinimumWidth = 6;
+            this.dgvMaMon.Name = "dgvMaMon";
+            this.dgvMaMon.ReadOnly = true;
+            // 
+            // dgvTenMon
+            // 
+            this.dgvTenMon.HeaderText = "Tên Môn Học";
+            this.dgvTenMon.MinimumWidth = 6;
+            this.dgvTenMon.Name = "dgvTenMon";
+            this.dgvTenMon.ReadOnly = true;
+            // 
+            // dgvTCLT
+            // 
+            this.dgvTCLT.HeaderText = "TCLT";
+            this.dgvTCLT.MinimumWidth = 6;
+            this.dgvTCLT.Name = "dgvTCLT";
+            this.dgvTCLT.ReadOnly = true;
+            // 
+            // dgvTCTH
+            // 
+            this.dgvTCTH.HeaderText = "TCTH";
+            this.dgvTCTH.MinimumWidth = 6;
+            this.dgvTCTH.Name = "dgvTCTH";
+            this.dgvTCTH.ReadOnly = true;
             // 
             // QuanLyMonHoc
             // 

@@ -29,16 +29,10 @@ namespace csharp_winform
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.grThongTinChiTiet = new System.Windows.Forms.GroupBox();
             this.dgvStudent = new System.Windows.Forms.DataGridView();
-            this.dvgMSSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblDSSVThiLai = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.rbKhoa = new System.Windows.Forms.RadioButton();
@@ -52,6 +46,13 @@ namespace csharp_winform
             this.rbKhoaHoc = new System.Windows.Forms.RadioButton();
             this.txtKhoaHoc = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.dvgMSSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grThongTinChiTiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +85,16 @@ namespace csharp_winform
             // dgvStudent
             // 
             this.dgvStudent.AllowUserToAddRows = false;
+            this.dgvStudent.AllowUserToResizeRows = false;
             this.dgvStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dvgMSSV,
@@ -95,54 +105,12 @@ namespace csharp_winform
             this.dgvMaLop,
             this.dgvDiaChi});
             this.dgvStudent.Location = new System.Drawing.Point(7, 30);
-            this.dgvStudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvStudent.Margin = new System.Windows.Forms.Padding(4);
             this.dgvStudent.Name = "dgvStudent";
             this.dgvStudent.RowHeadersWidth = 51;
             this.dgvStudent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStudent.Size = new System.Drawing.Size(1143, 414);
             this.dgvStudent.TabIndex = 4;
-            // 
-            // dvgMSSV
-            // 
-            this.dvgMSSV.HeaderText = "MSSV";
-            this.dvgMSSV.MinimumWidth = 6;
-            this.dvgMSSV.Name = "dvgMSSV";
-            // 
-            // dgvHoTen
-            // 
-            this.dgvHoTen.HeaderText = "Ho Ten";
-            this.dgvHoTen.MinimumWidth = 6;
-            this.dgvHoTen.Name = "dgvHoTen";
-            // 
-            // dgvGioiTinh
-            // 
-            this.dgvGioiTinh.HeaderText = "Gioi Tinh";
-            this.dgvGioiTinh.MinimumWidth = 6;
-            this.dgvGioiTinh.Name = "dgvGioiTinh";
-            // 
-            // dgvNgaySinh
-            // 
-            this.dgvNgaySinh.HeaderText = "Ngay Sinh";
-            this.dgvNgaySinh.MinimumWidth = 6;
-            this.dgvNgaySinh.Name = "dgvNgaySinh";
-            // 
-            // dgvKhoaHoc
-            // 
-            this.dgvKhoaHoc.HeaderText = "Khoa Hoc";
-            this.dgvKhoaHoc.MinimumWidth = 6;
-            this.dgvKhoaHoc.Name = "dgvKhoaHoc";
-            // 
-            // dgvMaLop
-            // 
-            this.dgvMaLop.HeaderText = "Ma Lop";
-            this.dgvMaLop.MinimumWidth = 6;
-            this.dgvMaLop.Name = "dgvMaLop";
-            // 
-            // dgvDiaChi
-            // 
-            this.dgvDiaChi.HeaderText = "Dia Chi";
-            this.dgvDiaChi.MinimumWidth = 6;
-            this.dgvDiaChi.Name = "dgvDiaChi";
             // 
             // lblDSSVThiLai
             // 
@@ -171,7 +139,7 @@ namespace csharp_winform
             // 
             this.rbKhoa.AutoSize = true;
             this.rbKhoa.Location = new System.Drawing.Point(172, 124);
-            this.rbKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.rbKhoa.Name = "rbKhoa";
             this.rbKhoa.Size = new System.Drawing.Size(121, 21);
             this.rbKhoa.TabIndex = 14;
@@ -184,7 +152,7 @@ namespace csharp_winform
             // 
             this.rbMSSV.AutoSize = true;
             this.rbMSSV.Location = new System.Drawing.Point(172, 80);
-            this.rbMSSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbMSSV.Margin = new System.Windows.Forms.Padding(4);
             this.rbMSSV.Name = "rbMSSV";
             this.rbMSSV.Size = new System.Drawing.Size(126, 21);
             this.rbMSSV.TabIndex = 14;
@@ -196,7 +164,7 @@ namespace csharp_winform
             // txtMSSV
             // 
             this.txtMSSV.Location = new System.Drawing.Point(341, 76);
-            this.txtMSSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMSSV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMSSV.Name = "txtMSSV";
             this.txtMSSV.Size = new System.Drawing.Size(201, 22);
             this.txtMSSV.TabIndex = 1;
@@ -238,7 +206,7 @@ namespace csharp_winform
             // 
             this.rbLop.AutoSize = true;
             this.rbLop.Location = new System.Drawing.Point(172, 172);
-            this.rbLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbLop.Margin = new System.Windows.Forms.Padding(4);
             this.rbLop.Name = "rbLop";
             this.rbLop.Size = new System.Drawing.Size(112, 21);
             this.rbLop.TabIndex = 14;
@@ -251,7 +219,7 @@ namespace csharp_winform
             // 
             this.rbMonHoc.AutoSize = true;
             this.rbMonHoc.Location = new System.Drawing.Point(575, 80);
-            this.rbMonHoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbMonHoc.Margin = new System.Windows.Forms.Padding(4);
             this.rbMonHoc.Name = "rbMonHoc";
             this.rbMonHoc.Size = new System.Drawing.Size(142, 21);
             this.rbMonHoc.TabIndex = 14;
@@ -264,7 +232,7 @@ namespace csharp_winform
             // 
             this.rbKhoaHoc.AutoSize = true;
             this.rbKhoaHoc.Location = new System.Drawing.Point(575, 121);
-            this.rbKhoaHoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbKhoaHoc.Margin = new System.Windows.Forms.Padding(4);
             this.rbKhoaHoc.Name = "rbKhoaHoc";
             this.rbKhoaHoc.Size = new System.Drawing.Size(148, 21);
             this.rbKhoaHoc.TabIndex = 14;
@@ -276,7 +244,7 @@ namespace csharp_winform
             // txtKhoaHoc
             // 
             this.txtKhoaHoc.Location = new System.Drawing.Point(737, 119);
-            this.txtKhoaHoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKhoaHoc.Margin = new System.Windows.Forms.Padding(4);
             this.txtKhoaHoc.Name = "txtKhoaHoc";
             this.txtKhoaHoc.Size = new System.Drawing.Size(201, 22);
             this.txtKhoaHoc.TabIndex = 1;
@@ -289,9 +257,51 @@ namespace csharp_winform
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(133, 47);
             this.btnThoat.TabIndex = 13;
-            this.btnThoat.Text = "Thoat";
+            this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // dvgMSSV
+            // 
+            this.dvgMSSV.HeaderText = "MSSV";
+            this.dvgMSSV.MinimumWidth = 6;
+            this.dvgMSSV.Name = "dvgMSSV";
+            // 
+            // dgvHoTen
+            // 
+            this.dgvHoTen.HeaderText = "Họ Tên";
+            this.dgvHoTen.MinimumWidth = 6;
+            this.dgvHoTen.Name = "dgvHoTen";
+            // 
+            // dgvGioiTinh
+            // 
+            this.dgvGioiTinh.HeaderText = "Giới Tính";
+            this.dgvGioiTinh.MinimumWidth = 6;
+            this.dgvGioiTinh.Name = "dgvGioiTinh";
+            // 
+            // dgvNgaySinh
+            // 
+            this.dgvNgaySinh.HeaderText = "Ngày Sinh";
+            this.dgvNgaySinh.MinimumWidth = 6;
+            this.dgvNgaySinh.Name = "dgvNgaySinh";
+            // 
+            // dgvKhoaHoc
+            // 
+            this.dgvKhoaHoc.HeaderText = "Khóa Học";
+            this.dgvKhoaHoc.MinimumWidth = 6;
+            this.dgvKhoaHoc.Name = "dgvKhoaHoc";
+            // 
+            // dgvMaLop
+            // 
+            this.dgvMaLop.HeaderText = "Mã Lớp";
+            this.dgvMaLop.MinimumWidth = 6;
+            this.dgvMaLop.Name = "dgvMaLop";
+            // 
+            // dgvDiaChi
+            // 
+            this.dgvDiaChi.HeaderText = "Địa Chỉ";
+            this.dgvDiaChi.MinimumWidth = 6;
+            this.dgvDiaChi.Name = "dgvDiaChi";
             // 
             // TimKiemSinhVien
             // 
@@ -314,7 +324,7 @@ namespace csharp_winform
             this.Controls.Add(this.grThongTinChiTiet);
             this.Controls.Add(this.lblDSSVThiLai);
             this.Controls.Add(this.cbbKhoa);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TimKiemSinhVien";
             this.Text = "TimKiemSinhVien";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -341,6 +351,8 @@ namespace csharp_winform
         private System.Windows.Forms.RadioButton rbMonHoc;
         private System.Windows.Forms.RadioButton rbKhoaHoc;
         private System.Windows.Forms.DataGridView dgvStudent;
+        private System.Windows.Forms.TextBox txtKhoaHoc;
+        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.DataGridViewTextBoxColumn dvgMSSV;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvHoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvGioiTinh;
@@ -348,7 +360,5 @@ namespace csharp_winform
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvKhoaHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDiaChi;
-        private System.Windows.Forms.TextBox txtKhoaHoc;
-        private System.Windows.Forms.Button btnThoat;
     }
 }

@@ -111,7 +111,7 @@ namespace csharp_winform
 
                     dgvDSTaiKhoan.ClearSelection();
                     dgvDSTaiKhoan.Rows[CheckID(newAccount.TenDN)].Selected = true;
-                    MessageBox.Show($"Them tai khoan {newAccount.TenDN} thành công!", "Thông Báo!");
+                    MessageBox.Show($"Thêm tài khoản {newAccount.TenDN} thành công!", "Thông Báo!");
                 }
                 else
                 {
@@ -134,7 +134,7 @@ namespace csharp_winform
 
                         dgvDSTaiKhoan.ClearSelection();
                         dgvDSTaiKhoan.Rows[CheckID(updateAccount.TenDN)].Selected = true;
-                        MessageBox.Show($"Sua tai khoan {updateAccount.TenDN} thành công!", "Thông Báo!");
+                        MessageBox.Show($"Sửa tài khoản {updateAccount.TenDN} thành công!", "Thông Báo!");
                     }
                 }
             }
@@ -154,7 +154,7 @@ namespace csharp_winform
         {
             if (txtTenDN.Text == "" || txtMK.Text == "")
             {
-                MessageBox.Show("Vui long nhap day du username va password!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu !", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -190,7 +190,7 @@ namespace csharp_winform
 
             if (deleteAccount != null)
             {
-                DialogResult dr = MessageBox.Show("Ban co muon xoa khong?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dr = MessageBox.Show("Bạn có muốn xóa không ?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
                     dBContext.DANGNHAPs.Remove(deleteAccount);
@@ -204,12 +204,12 @@ namespace csharp_winform
                     dgvDSTaiKhoan.ClearSelection();
                     if (i != 0)
                         dgvDSTaiKhoan.Rows[i - 1].Selected = true;
-                    MessageBox.Show($"Xoa tai khoan {deleteAccount.TenDN} thành công!", "Thông Báo!");
+                    MessageBox.Show($"Xóa tài khoản {deleteAccount.TenDN} thành công!", "Thông Báo!");
                 }
             }
             else
             {
-                MessageBox.Show($"Khong tim thay tai khoan {txtTenDN.Text}!", "Thông Báo!");
+                MessageBox.Show($"Không tìm thấy tài khoản {txtTenDN.Text}!", "Thông Báo!");
             }
         }
     }

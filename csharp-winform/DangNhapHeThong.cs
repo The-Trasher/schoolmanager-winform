@@ -48,7 +48,7 @@ namespace csharp_winform
                 }
                 else
                 {
-                    MessageBox.Show("Sai ten dang nhap hoac mat khau");
+                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
                 }
             }
         }
@@ -62,7 +62,7 @@ namespace csharp_winform
         {
             if (txtTenDN.Text == "" || txtMatKhau.Text == "")
             {
-                MessageBox.Show("Vui long nhap day du thong tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 

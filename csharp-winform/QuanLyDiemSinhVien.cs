@@ -172,7 +172,7 @@ namespace csharp_winform
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Ban co chac chan muon thoat khong?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn thoát không ?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dr == DialogResult.Yes)
             {
@@ -182,7 +182,7 @@ namespace csharp_winform
 
         public void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Ban co chac chan muon dang xuat khong?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không ?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dr == DialogResult.Yes)
             {
