@@ -86,6 +86,7 @@ namespace csharp_winform
             this.dgvStudent.AllowUserToAddRows = false;
             this.dgvStudent.AllowUserToResizeRows = false;
             this.dgvStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvStudent.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dvgMSSV,
@@ -323,7 +324,7 @@ namespace csharp_winform
             this.Controls.Add(this.cbbKhoa);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TimKiemSinhVien";
-            this.Text = "TimKiemSinhVien";
+            this.Text = "Tìm Kiếm Sinh Viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TimKiemSinhVien_Load);
             this.grThongTinChiTiet.ResumeLayout(false);

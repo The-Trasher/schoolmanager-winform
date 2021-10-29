@@ -300,7 +300,7 @@ namespace csharp_winform
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLyMonHoc";
-            this.Text = "QuanLyMonHoc";
+            this.Text = "Quản Lý Môn Học";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.QuanLyMonHoc_Load);
             this.grDanhSach.ResumeLayout(false);

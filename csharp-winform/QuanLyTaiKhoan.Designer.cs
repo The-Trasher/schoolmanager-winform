@@ -88,6 +88,7 @@ namespace csharp_winform
             this.dgvDSTaiKhoan.AllowUserToAddRows = false;
             this.dgvDSTaiKhoan.AllowUserToDeleteRows = false;
             this.dgvDSTaiKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDSTaiKhoan.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvDSTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSTaiKhoan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvUsername,
@@ -459,7 +460,7 @@ namespace csharp_winform
             this.Controls.Add(this.lblQuanLyKhoa);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLyTaiKhoan";
-            this.Text = "QuanLyTaiKhoan";
+            this.Text = "Quản Lý Tài Khoản";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.QuanLyTaiKhoan_Load);
             this.grDanhSach.ResumeLayout(false);

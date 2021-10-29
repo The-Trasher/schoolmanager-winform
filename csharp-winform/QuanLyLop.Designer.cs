@@ -112,6 +112,7 @@ namespace csharp_winform
             this.dgvDSLop.AllowUserToAddRows = false;
             this.dgvDSLop.AllowUserToDeleteRows = false;
             this.dgvDSLop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDSLop.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvDSLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSLop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLop,
@@ -297,7 +298,7 @@ namespace csharp_winform
             this.Controls.Add(this.lblQuanLyLop);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QuanLyLop";
-            this.Text = "QuanLyLop";
+            this.Text = "Quản Lý Lớp";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.QuanLyLop_Load);
             this.grDanhSach.ResumeLayout(false);

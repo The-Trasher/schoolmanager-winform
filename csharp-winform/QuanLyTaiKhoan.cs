@@ -73,7 +73,7 @@ namespace csharp_winform
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message}", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
 
