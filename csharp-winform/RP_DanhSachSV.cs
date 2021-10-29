@@ -62,7 +62,7 @@ namespace csharp_winform
             grbDiemTB.Enabled = true;
             cbbLop.Enabled = false;
             cbbKhoa.Enabled = false;
-
+            rdbMiss.Checked = true;
         }
 
         
@@ -111,7 +111,7 @@ namespace csharp_winform
                 }
                 else
                 {
-                    this.RP_DSSV.LocalReport.ReportPath = "./Report/RP_DSSV_TheoLop.rdlc";
+                    this.RP_DSSV.LocalReport.ReportPath = "./Report/RP_DSSV_TheoKhoa.rdlc";
                     this.RP_DSSV.LocalReport.SetParameters(param);
                     var reportDataSource = new ReportDataSource("DataSetThongKe", listRP);
                     this.RP_DSSV.LocalReport.DataSources.Clear();

@@ -45,9 +45,11 @@ namespace csharp_winform
             // rdbLop
             // 
             this.rdbLop.AutoSize = true;
+            this.rdbLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbLop.ForeColor = System.Drawing.Color.Black;
             this.rdbLop.Location = new System.Drawing.Point(26, 93);
             this.rdbLop.Name = "rdbLop";
-            this.rdbLop.Size = new System.Drawing.Size(90, 21);
+            this.rdbLop.Size = new System.Drawing.Size(98, 21);
             this.rdbLop.TabIndex = 0;
             this.rdbLop.TabStop = true;
             this.rdbLop.Text = "Theo Lớp";
@@ -57,9 +59,11 @@ namespace csharp_winform
             // rdbMonHoc
             // 
             this.rdbMonHoc.AutoSize = true;
+            this.rdbMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbMonHoc.ForeColor = System.Drawing.Color.Black;
             this.rdbMonHoc.Location = new System.Drawing.Point(26, 136);
             this.rdbMonHoc.Name = "rdbMonHoc";
-            this.rdbMonHoc.Size = new System.Drawing.Size(122, 21);
+            this.rdbMonHoc.Size = new System.Drawing.Size(134, 21);
             this.rdbMonHoc.TabIndex = 1;
             this.rdbMonHoc.TabStop = true;
             this.rdbMonHoc.Text = "Theo Môn Học";
@@ -76,6 +80,7 @@ namespace csharp_winform
             this.groupBox1.Controls.Add(this.rdbMSSV);
             this.groupBox1.Controls.Add(this.rdbLop);
             this.groupBox1.Controls.Add(this.rdbMonHoc);
+            this.groupBox1.ForeColor = System.Drawing.Color.Blue;
             this.groupBox1.Location = new System.Drawing.Point(188, 25);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(784, 199);
@@ -86,6 +91,7 @@ namespace csharp_winform
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Location = new System.Drawing.Point(502, 119);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(106, 38);
@@ -132,9 +138,11 @@ namespace csharp_winform
             // rdbMSSV
             // 
             this.rdbMSSV.AutoSize = true;
+            this.rdbMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbMSSV.ForeColor = System.Drawing.Color.Black;
             this.rdbMSSV.Location = new System.Drawing.Point(26, 48);
             this.rdbMSSV.Name = "rdbMSSV";
-            this.rdbMSSV.Size = new System.Drawing.Size(104, 21);
+            this.rdbMSSV.Size = new System.Drawing.Size(113, 21);
             this.rdbMSSV.TabIndex = 0;
             this.rdbMSSV.TabStop = true;
             this.rdbMSSV.Text = "Theo MSSV";
@@ -156,9 +164,11 @@ namespace csharp_winform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1138, 745);
             this.Controls.Add(this.RP_Diem);
             this.Controls.Add(this.groupBox1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "RP_DanhSachDiemSV";
             this.Text = "Thống Kê Điểm Sinh viên";
             this.Load += new System.EventHandler(this.RP_DiemSV_Load);

@@ -132,14 +132,15 @@ namespace csharp_winform
             this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(821, 487);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblDangNhap);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DangNhapHeThong";
-            this.Text = "Đăng nhập hệ thống";
+            this.Text = "Đăng Nhập Hệ Thống";
             this.Load += new System.EventHandler(this.DangNhapHeThong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

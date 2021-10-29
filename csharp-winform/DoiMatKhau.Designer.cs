@@ -66,6 +66,7 @@ namespace csharp_winform
             this.grThongTin.Controls.Add(this.lblMkCu);
             this.grThongTin.Controls.Add(this.lblTenTaiKhoan);
             this.grThongTin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.grThongTin.ForeColor = System.Drawing.Color.Blue;
             this.grThongTin.Location = new System.Drawing.Point(91, 92);
             this.grThongTin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grThongTin.Name = "grThongTin";
@@ -117,40 +118,44 @@ namespace csharp_winform
             // lblNhapLaiMK
             // 
             this.lblNhapLaiMK.AutoSize = true;
-            this.lblNhapLaiMK.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblNhapLaiMK.Location = new System.Drawing.Point(73, 208);
+            this.lblNhapLaiMK.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblNhapLaiMK.ForeColor = System.Drawing.Color.Black;
+            this.lblNhapLaiMK.Location = new System.Drawing.Point(89, 204);
             this.lblNhapLaiMK.Name = "lblNhapLaiMK";
-            this.lblNhapLaiMK.Size = new System.Drawing.Size(129, 19);
+            this.lblNhapLaiMK.Size = new System.Drawing.Size(142, 19);
             this.lblNhapLaiMK.TabIndex = 4;
             this.lblNhapLaiMK.Text = "Nhập lại mật khẩu";
             // 
             // lblMKMoi
             // 
             this.lblMKMoi.AutoSize = true;
-            this.lblMKMoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMKMoi.Location = new System.Drawing.Point(73, 161);
+            this.lblMKMoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblMKMoi.ForeColor = System.Drawing.Color.Black;
+            this.lblMKMoi.Location = new System.Drawing.Point(89, 157);
             this.lblMKMoi.Name = "lblMKMoi";
-            this.lblMKMoi.Size = new System.Drawing.Size(102, 19);
+            this.lblMKMoi.Size = new System.Drawing.Size(111, 19);
             this.lblMKMoi.TabIndex = 2;
             this.lblMKMoi.Text = "Mật khẩu mới";
             // 
             // lblMkCu
             // 
             this.lblMkCu.AutoSize = true;
-            this.lblMkCu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMkCu.Location = new System.Drawing.Point(73, 117);
+            this.lblMkCu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblMkCu.ForeColor = System.Drawing.Color.Black;
+            this.lblMkCu.Location = new System.Drawing.Point(89, 113);
             this.lblMkCu.Name = "lblMkCu";
-            this.lblMkCu.Size = new System.Drawing.Size(91, 19);
+            this.lblMkCu.Size = new System.Drawing.Size(99, 19);
             this.lblMkCu.TabIndex = 1;
             this.lblMkCu.Text = "Mật khẩu cũ";
             // 
             // lblTenTaiKhoan
             // 
             this.lblTenTaiKhoan.AutoSize = true;
-            this.lblTenTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTenTaiKhoan.Location = new System.Drawing.Point(73, 70);
+            this.lblTenTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTenTaiKhoan.ForeColor = System.Drawing.Color.Black;
+            this.lblTenTaiKhoan.Location = new System.Drawing.Point(89, 66);
             this.lblTenTaiKhoan.Name = "lblTenTaiKhoan";
-            this.lblTenTaiKhoan.Size = new System.Drawing.Size(99, 19);
+            this.lblTenTaiKhoan.Size = new System.Drawing.Size(108, 19);
             this.lblTenTaiKhoan.TabIndex = 0;
             this.lblTenTaiKhoan.Text = "Tên tài khoản";
             // 
@@ -183,14 +188,16 @@ namespace csharp_winform
             this.AcceptButton = this.btnOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 497);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.grThongTin);
             this.Controls.Add(this.lblThongTinTaiKhoan);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DoiMatKhau";
-            this.Text = "DoiMatKhau";
+            this.Text = "Đổi Mật Khẩu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DoiMatKhau_Load);
             this.grThongTin.ResumeLayout(false);

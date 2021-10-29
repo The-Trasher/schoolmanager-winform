@@ -49,11 +49,6 @@ namespace csharp_winform
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgvStudent = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtFemale = new System.Windows.Forms.TextBox();
-            this.txtMale = new System.Windows.Forms.TextBox();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.dvgMSSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +57,11 @@ namespace csharp_winform
             this.dgvMaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDiemTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtFemale = new System.Windows.Forms.TextBox();
+            this.txtMale = new System.Windows.Forms.TextBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +96,7 @@ namespace csharp_winform
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Blue;
             this.groupBox1.Location = new System.Drawing.Point(29, 86);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -129,10 +130,12 @@ namespace csharp_winform
             // 
             this.optFemale.AutoSize = true;
             this.optFemale.Checked = true;
+            this.optFemale.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.optFemale.ForeColor = System.Drawing.Color.Black;
             this.optFemale.Location = new System.Drawing.Point(228, 133);
             this.optFemale.Margin = new System.Windows.Forms.Padding(4);
             this.optFemale.Name = "optFemale";
-            this.optFemale.Size = new System.Drawing.Size(51, 23);
+            this.optFemale.Size = new System.Drawing.Size(52, 23);
             this.optFemale.TabIndex = 3;
             this.optFemale.TabStop = true;
             this.optFemale.Text = "Nữ";
@@ -141,10 +144,12 @@ namespace csharp_winform
             // optMale
             // 
             this.optMale.AutoSize = true;
+            this.optMale.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.optMale.ForeColor = System.Drawing.Color.Black;
             this.optMale.Location = new System.Drawing.Point(125, 133);
             this.optMale.Margin = new System.Windows.Forms.Padding(4);
             this.optMale.Name = "optMale";
-            this.optMale.Size = new System.Drawing.Size(62, 23);
+            this.optMale.Size = new System.Drawing.Size(64, 23);
             this.optMale.TabIndex = 2;
             this.optMale.Text = "Nam";
             this.optMale.UseVisualStyleBackColor = true;
@@ -184,76 +189,90 @@ namespace csharp_winform
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(9, 271);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 19);
+            this.label6.Size = new System.Drawing.Size(66, 19);
             this.label6.TabIndex = 0;
             this.label6.Text = "Mã Lớp";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(9, 319);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 19);
+            this.label9.Size = new System.Drawing.Size(66, 19);
             this.label9.TabIndex = 0;
             this.label9.Text = "Địa Chỉ";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(9, 180);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 19);
+            this.label10.Size = new System.Drawing.Size(83, 19);
             this.label10.TabIndex = 0;
             this.label10.Text = "Ngày Sinh";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(9, 225);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 19);
+            this.label5.Size = new System.Drawing.Size(81, 19);
             this.label5.TabIndex = 0;
             this.label5.Text = "Khóa Học";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(8, 133);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 19);
+            this.label4.Size = new System.Drawing.Size(82, 19);
             this.label4.TabIndex = 0;
             this.label4.Text = "Giới Tính";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(8, 87);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 19);
+            this.label3.Size = new System.Drawing.Size(62, 19);
             this.label3.TabIndex = 0;
             this.label3.Text = "Họ Tên";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(8, 48);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 19);
+            this.label2.Size = new System.Drawing.Size(107, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Sinh Viên";
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnUpdate.Location = new System.Drawing.Point(156, 516);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
@@ -265,7 +284,7 @@ namespace csharp_winform
             // 
             // btnDelete
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDelete.Location = new System.Drawing.Point(300, 516);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
@@ -301,60 +320,6 @@ namespace csharp_winform
             this.dgvStudent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudent_CellClick);
             this.dgvStudent.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudent_CellValueChanged);
             this.dgvStudent.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvStudent_RowsRemoved);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(920, 529);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 19);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Tổng SV Nam:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(1153, 529);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 19);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Nữ:";
-            // 
-            // txtFemale
-            // 
-            this.txtFemale.Enabled = false;
-            this.txtFemale.Location = new System.Drawing.Point(1194, 526);
-            this.txtFemale.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFemale.Name = "txtFemale";
-            this.txtFemale.Size = new System.Drawing.Size(88, 22);
-            this.txtFemale.TabIndex = 5;
-            this.txtFemale.Text = "0";
-            // 
-            // txtMale
-            // 
-            this.txtMale.Enabled = false;
-            this.txtMale.Location = new System.Drawing.Point(1040, 526);
-            this.txtMale.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMale.Name = "txtMale";
-            this.txtMale.Size = new System.Drawing.Size(88, 22);
-            this.txtMale.TabIndex = 5;
-            this.txtMale.Text = "0";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnRefresh.Location = new System.Drawing.Point(31, 517);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(100, 28);
-            this.btnRefresh.TabIndex = 6;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // dvgMSSV
             // 
@@ -404,11 +369,66 @@ namespace csharp_winform
             this.dgvDiemTB.MinimumWidth = 6;
             this.dgvDiemTB.Name = "dgvDiemTB";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label7.Location = new System.Drawing.Point(920, 529);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 19);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Tổng SV Nam:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.Location = new System.Drawing.Point(1153, 529);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 19);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Nữ:";
+            // 
+            // txtFemale
+            // 
+            this.txtFemale.Enabled = false;
+            this.txtFemale.Location = new System.Drawing.Point(1194, 526);
+            this.txtFemale.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFemale.Name = "txtFemale";
+            this.txtFemale.Size = new System.Drawing.Size(88, 22);
+            this.txtFemale.TabIndex = 5;
+            this.txtFemale.Text = "0";
+            // 
+            // txtMale
+            // 
+            this.txtMale.Enabled = false;
+            this.txtMale.Location = new System.Drawing.Point(1040, 526);
+            this.txtMale.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMale.Name = "txtMale";
+            this.txtMale.Size = new System.Drawing.Size(88, 22);
+            this.txtMale.TabIndex = 5;
+            this.txtMale.Text = "0";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnRefresh.Location = new System.Drawing.Point(31, 517);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(100, 28);
+            this.btnRefresh.TabIndex = 6;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // NhapSinhVien
             // 
             this.AcceptButton = this.btnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1297, 601);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.txtMale);

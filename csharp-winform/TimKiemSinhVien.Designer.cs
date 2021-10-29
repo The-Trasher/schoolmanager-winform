@@ -29,10 +29,16 @@ namespace csharp_winform
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.grThongTinChiTiet = new System.Windows.Forms.GroupBox();
             this.dgvStudent = new System.Windows.Forms.DataGridView();
+            this.dvgMSSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblDSSVThiLai = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.rbKhoa = new System.Windows.Forms.RadioButton();
@@ -46,13 +52,6 @@ namespace csharp_winform
             this.rbKhoaHoc = new System.Windows.Forms.RadioButton();
             this.txtKhoaHoc = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.dvgMSSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grThongTinChiTiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.SuspendLayout();
@@ -87,14 +86,6 @@ namespace csharp_winform
             this.dgvStudent.AllowUserToAddRows = false;
             this.dgvStudent.AllowUserToResizeRows = false;
             this.dgvStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dvgMSSV,
@@ -111,6 +102,48 @@ namespace csharp_winform
             this.dgvStudent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStudent.Size = new System.Drawing.Size(1143, 414);
             this.dgvStudent.TabIndex = 4;
+            // 
+            // dvgMSSV
+            // 
+            this.dvgMSSV.HeaderText = "MSSV";
+            this.dvgMSSV.MinimumWidth = 6;
+            this.dvgMSSV.Name = "dvgMSSV";
+            // 
+            // dgvHoTen
+            // 
+            this.dgvHoTen.HeaderText = "Họ Tên";
+            this.dgvHoTen.MinimumWidth = 6;
+            this.dgvHoTen.Name = "dgvHoTen";
+            // 
+            // dgvGioiTinh
+            // 
+            this.dgvGioiTinh.HeaderText = "Giới Tính";
+            this.dgvGioiTinh.MinimumWidth = 6;
+            this.dgvGioiTinh.Name = "dgvGioiTinh";
+            // 
+            // dgvNgaySinh
+            // 
+            this.dgvNgaySinh.HeaderText = "Ngày Sinh";
+            this.dgvNgaySinh.MinimumWidth = 6;
+            this.dgvNgaySinh.Name = "dgvNgaySinh";
+            // 
+            // dgvKhoaHoc
+            // 
+            this.dgvKhoaHoc.HeaderText = "Khóa Học";
+            this.dgvKhoaHoc.MinimumWidth = 6;
+            this.dgvKhoaHoc.Name = "dgvKhoaHoc";
+            // 
+            // dgvMaLop
+            // 
+            this.dgvMaLop.HeaderText = "Mã Lớp";
+            this.dgvMaLop.MinimumWidth = 6;
+            this.dgvMaLop.Name = "dgvMaLop";
+            // 
+            // dgvDiaChi
+            // 
+            this.dgvDiaChi.HeaderText = "Địa Chỉ";
+            this.dgvDiaChi.MinimumWidth = 6;
+            this.dgvDiaChi.Name = "dgvDiaChi";
             // 
             // lblDSSVThiLai
             // 
@@ -138,10 +171,11 @@ namespace csharp_winform
             // rbKhoa
             // 
             this.rbKhoa.AutoSize = true;
+            this.rbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbKhoa.Location = new System.Drawing.Point(172, 124);
             this.rbKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.rbKhoa.Name = "rbKhoa";
-            this.rbKhoa.Size = new System.Drawing.Size(121, 21);
+            this.rbKhoa.Size = new System.Drawing.Size(134, 21);
             this.rbKhoa.TabIndex = 14;
             this.rbKhoa.TabStop = true;
             this.rbKhoa.Text = "Tìm theo Khoa";
@@ -151,10 +185,11 @@ namespace csharp_winform
             // rbMSSV
             // 
             this.rbMSSV.AutoSize = true;
+            this.rbMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbMSSV.Location = new System.Drawing.Point(172, 80);
             this.rbMSSV.Margin = new System.Windows.Forms.Padding(4);
             this.rbMSSV.Name = "rbMSSV";
-            this.rbMSSV.Size = new System.Drawing.Size(126, 21);
+            this.rbMSSV.Size = new System.Drawing.Size(139, 21);
             this.rbMSSV.TabIndex = 14;
             this.rbMSSV.TabStop = true;
             this.rbMSSV.Text = "Tìm theo MSSV";
@@ -205,10 +240,11 @@ namespace csharp_winform
             // rbLop
             // 
             this.rbLop.AutoSize = true;
+            this.rbLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbLop.Location = new System.Drawing.Point(172, 172);
             this.rbLop.Margin = new System.Windows.Forms.Padding(4);
             this.rbLop.Name = "rbLop";
-            this.rbLop.Size = new System.Drawing.Size(112, 21);
+            this.rbLop.Size = new System.Drawing.Size(124, 21);
             this.rbLop.TabIndex = 14;
             this.rbLop.TabStop = true;
             this.rbLop.Text = "Tìm theo Lớp";
@@ -218,10 +254,11 @@ namespace csharp_winform
             // rbMonHoc
             // 
             this.rbMonHoc.AutoSize = true;
+            this.rbMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbMonHoc.Location = new System.Drawing.Point(575, 80);
             this.rbMonHoc.Margin = new System.Windows.Forms.Padding(4);
             this.rbMonHoc.Name = "rbMonHoc";
-            this.rbMonHoc.Size = new System.Drawing.Size(142, 21);
+            this.rbMonHoc.Size = new System.Drawing.Size(158, 21);
             this.rbMonHoc.TabIndex = 14;
             this.rbMonHoc.TabStop = true;
             this.rbMonHoc.Text = "Tìm theo Môn học";
@@ -231,10 +268,11 @@ namespace csharp_winform
             // rbKhoaHoc
             // 
             this.rbKhoaHoc.AutoSize = true;
+            this.rbKhoaHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbKhoaHoc.Location = new System.Drawing.Point(575, 121);
             this.rbKhoaHoc.Margin = new System.Windows.Forms.Padding(4);
             this.rbKhoaHoc.Name = "rbKhoaHoc";
-            this.rbKhoaHoc.Size = new System.Drawing.Size(148, 21);
+            this.rbKhoaHoc.Size = new System.Drawing.Size(165, 21);
             this.rbKhoaHoc.TabIndex = 14;
             this.rbKhoaHoc.TabStop = true;
             this.rbKhoaHoc.Text = "Tìm theo Khóa học";
@@ -261,53 +299,12 @@ namespace csharp_winform
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // dvgMSSV
-            // 
-            this.dvgMSSV.HeaderText = "MSSV";
-            this.dvgMSSV.MinimumWidth = 6;
-            this.dvgMSSV.Name = "dvgMSSV";
-            // 
-            // dgvHoTen
-            // 
-            this.dgvHoTen.HeaderText = "Họ Tên";
-            this.dgvHoTen.MinimumWidth = 6;
-            this.dgvHoTen.Name = "dgvHoTen";
-            // 
-            // dgvGioiTinh
-            // 
-            this.dgvGioiTinh.HeaderText = "Giới Tính";
-            this.dgvGioiTinh.MinimumWidth = 6;
-            this.dgvGioiTinh.Name = "dgvGioiTinh";
-            // 
-            // dgvNgaySinh
-            // 
-            this.dgvNgaySinh.HeaderText = "Ngày Sinh";
-            this.dgvNgaySinh.MinimumWidth = 6;
-            this.dgvNgaySinh.Name = "dgvNgaySinh";
-            // 
-            // dgvKhoaHoc
-            // 
-            this.dgvKhoaHoc.HeaderText = "Khóa Học";
-            this.dgvKhoaHoc.MinimumWidth = 6;
-            this.dgvKhoaHoc.Name = "dgvKhoaHoc";
-            // 
-            // dgvMaLop
-            // 
-            this.dgvMaLop.HeaderText = "Mã Lớp";
-            this.dgvMaLop.MinimumWidth = 6;
-            this.dgvMaLop.Name = "dgvMaLop";
-            // 
-            // dgvDiaChi
-            // 
-            this.dgvDiaChi.HeaderText = "Địa Chỉ";
-            this.dgvDiaChi.MinimumWidth = 6;
-            this.dgvDiaChi.Name = "dgvDiaChi";
-            // 
             // TimKiemSinhVien
             // 
             this.AcceptButton = this.btnTimKiem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1185, 699);
             this.Controls.Add(this.txtKhoaHoc);
             this.Controls.Add(this.txtMSSV);
