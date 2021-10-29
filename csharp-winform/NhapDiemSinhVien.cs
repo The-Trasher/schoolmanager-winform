@@ -93,7 +93,7 @@ namespace csharp_winform
 
                     dgvDanhSach.ClearSelection();
                     dgvDanhSach.Rows[CheckID(newScore.MSSV, newScore.MAMH)].Selected = true;
-                    MessageBox.Show($"Them diem {newScore.MAMH} - {newScore.MSSV} thanh cong!", "Thông Báo!");
+                    MessageBox.Show($"Thêm điểm {newScore.MAMH} - {newScore.MSSV} thành công!", "Thông Báo!");
                 }
                 else
                 {
@@ -123,7 +123,7 @@ namespace csharp_winform
 
                         dgvDanhSach.ClearSelection();
                         dgvDanhSach.Rows[CheckID(updateScore.MSSV, updateScore.MAMH)].Selected = true;
-                        MessageBox.Show($"Sua diem {updateScore.MAMH} - {updateScore.MSSV} thanh cong!", "Thông Báo!");
+                        MessageBox.Show($"Sửa điểm {updateScore.MAMH} - {updateScore.MSSV} thành công!", "Thông Báo!");
                     }
                 }
             }
@@ -143,7 +143,7 @@ namespace csharp_winform
         {
             if (txtMaMH.Text == "" || txtMaSV.Text == "")
             {
-                MessageBox.Show("Vui long nhap day du ma mon hoc va ma sinh vien!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ mã môn học và mã sinh viên!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (txtKTL1.Text != "")
@@ -151,7 +151,7 @@ namespace csharp_winform
                 bool ketQua = float.TryParse(txtKTL1.Text, out float kq1);
                 if (!ketQua)
                 {
-                    MessageBox.Show("Diem KT lan 1 phai la so!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Điểm kiểm tra lần 1 phải là số!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
@@ -160,7 +160,7 @@ namespace csharp_winform
                 bool ketQua = float.TryParse(txtKTL2.Text, out float kq2);
                 if (!ketQua)
                 {
-                    MessageBox.Show("Diem KT lan 2 phai la so!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Điểm kiểm tra lần 2 phải là số!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
@@ -169,18 +169,18 @@ namespace csharp_winform
                 bool ketQua = float.TryParse(txtDiemThi.Text, out float kq3);
                 if (!ketQua)
                 {
-                    MessageBox.Show("Diem Thi phai la so!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Điểm Thi phải là số!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
             if(float.Parse(txtKTL1.Text)<0 || float.Parse(txtKTL1.Text) > 10)
             {
-                MessageBox.Show("0<= Điểm KT lần 1 <= 10!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("0<= Điểm kiểm tra lần 1 <= 10!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (float.Parse(txtKTL2.Text) < 0 || float.Parse(txtKTL2.Text) > 10)
             {
-                MessageBox.Show("0<= Điểm KT lần 2 <= 10!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("0<= Điểm kiểm tra lần 2 <= 10!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (float.Parse(txtDiemThi.Text) < 0 || float.Parse(txtDiemThi.Text) > 10)
@@ -237,12 +237,12 @@ namespace csharp_winform
                     dgvDanhSach.ClearSelection();
                     if (i != 0)
                         dgvDanhSach.Rows[i - 1].Selected = true;
-                    MessageBox.Show($"Xoa diem {updateScore.MAMH} - {updateScore.MSSV} thanh cong!", "Thông Báo!");
+                    MessageBox.Show($"Xóa điểm {updateScore.MAMH} - {updateScore.MSSV} thành công!", "Thông Báo!");
                 }
             }
             else
             {
-                MessageBox.Show($"Khong tim thay diem {txtMaSV.Text} - {txtMaMH.Text}!", "Thông Báo!");
+                MessageBox.Show($"Không tìm thấy điểm {txtMaSV.Text} - {txtMaMH.Text}!", "Thông Báo!");
             }
         }
 
@@ -274,7 +274,7 @@ namespace csharp_winform
             }
             catch (Exception)
             {
-                MessageBox.Show("Co loi xay ra!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Có lỗi xảy ra!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

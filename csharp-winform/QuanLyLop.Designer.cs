@@ -29,15 +29,12 @@ namespace csharp_winform
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnNhap = new System.Windows.Forms.Button();
             this.grDanhSach = new System.Windows.Forms.GroupBox();
             this.dgvDSLop = new System.Windows.Forms.DataGridView();
-            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSiSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grLuaChon = new System.Windows.Forms.GroupBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.cbbKhoa = new System.Windows.Forms.ComboBox();
@@ -49,6 +46,10 @@ namespace csharp_winform
             this.lblTenLop = new System.Windows.Forms.Label();
             this.lblMaLop = new System.Windows.Forms.Label();
             this.lblQuanLyLop = new System.Windows.Forms.Label();
+            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSiSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSLop)).BeginInit();
             this.grLuaChon.SuspendLayout();
@@ -108,6 +109,14 @@ namespace csharp_winform
             this.dgvDSLop.AllowUserToAddRows = false;
             this.dgvDSLop.AllowUserToDeleteRows = false;
             this.dgvDSLop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSLop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDSLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSLop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLop,
@@ -124,34 +133,6 @@ namespace csharp_winform
             this.dgvDSLop.Size = new System.Drawing.Size(607, 425);
             this.dgvDSLop.TabIndex = 0;
             this.dgvDSLop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSLop_CellClick);
-            // 
-            // MaLop
-            // 
-            this.MaLop.HeaderText = "MaLop";
-            this.MaLop.MinimumWidth = 6;
-            this.MaLop.Name = "MaLop";
-            this.MaLop.ReadOnly = true;
-            // 
-            // TenLop
-            // 
-            this.TenLop.HeaderText = "TenLop";
-            this.TenLop.MinimumWidth = 6;
-            this.TenLop.Name = "TenLop";
-            this.TenLop.ReadOnly = true;
-            // 
-            // MaKhoa
-            // 
-            this.MaKhoa.HeaderText = "MaKhoa";
-            this.MaKhoa.MinimumWidth = 6;
-            this.MaKhoa.Name = "MaKhoa";
-            this.MaKhoa.ReadOnly = true;
-            // 
-            // dgvSiSo
-            // 
-            this.dgvSiSo.HeaderText = "SiSo";
-            this.dgvSiSo.MinimumWidth = 6;
-            this.dgvSiSo.Name = "dgvSiSo";
-            this.dgvSiSo.ReadOnly = true;
             // 
             // grLuaChon
             // 
@@ -180,7 +161,7 @@ namespace csharp_winform
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(31, 409);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(100, 33);
             this.btnRefresh.TabIndex = 18;
@@ -232,7 +213,7 @@ namespace csharp_winform
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 19);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Sỉ số";
+            this.label1.Text = "Sĩ số";
             // 
             // txtMaLop
             // 
@@ -273,6 +254,34 @@ namespace csharp_winform
             this.lblQuanLyLop.TabIndex = 15;
             this.lblQuanLyLop.Text = "QUẢN LÝ LỚP";
             // 
+            // MaLop
+            // 
+            this.MaLop.HeaderText = "Mã Lớp";
+            this.MaLop.MinimumWidth = 6;
+            this.MaLop.Name = "MaLop";
+            this.MaLop.ReadOnly = true;
+            // 
+            // TenLop
+            // 
+            this.TenLop.HeaderText = "Tên Lớp";
+            this.TenLop.MinimumWidth = 6;
+            this.TenLop.Name = "TenLop";
+            this.TenLop.ReadOnly = true;
+            // 
+            // MaKhoa
+            // 
+            this.MaKhoa.HeaderText = "Mã Khoa";
+            this.MaKhoa.MinimumWidth = 6;
+            this.MaKhoa.Name = "MaKhoa";
+            this.MaKhoa.ReadOnly = true;
+            // 
+            // dgvSiSo
+            // 
+            this.dgvSiSo.HeaderText = "Sĩ Số";
+            this.dgvSiSo.MinimumWidth = 6;
+            this.dgvSiSo.Name = "dgvSiSo";
+            this.dgvSiSo.ReadOnly = true;
+            // 
             // QuanLyLop
             // 
             this.AcceptButton = this.btnNhap;
@@ -311,12 +320,12 @@ namespace csharp_winform
         private System.Windows.Forms.Label lblTenLop;
         private System.Windows.Forms.Label lblMaLop;
         private System.Windows.Forms.Label lblQuanLyLop;
+        private System.Windows.Forms.TextBox txtSiSo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSiSo;
-        private System.Windows.Forms.TextBox txtSiSo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnRefresh;
     }
 }

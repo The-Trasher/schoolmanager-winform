@@ -81,7 +81,7 @@ namespace csharp_winform
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1324, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1266, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -206,14 +206,14 @@ namespace csharp_winform
             // dSSinhViênToolStripMenuItem
             // 
             this.dSSinhViênToolStripMenuItem.Name = "dSSinhViênToolStripMenuItem";
-            this.dSSinhViênToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dSSinhViênToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.dSSinhViênToolStripMenuItem.Text = "DS Sinh viên";
             this.dSSinhViênToolStripMenuItem.Click += new System.EventHandler(this.dSSinhViênToolStripMenuItem_Click);
             // 
             // dSDiemSinhVienToolStripMenuItem
             // 
             this.dSDiemSinhVienToolStripMenuItem.Name = "dSDiemSinhVienToolStripMenuItem";
-            this.dSDiemSinhVienToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dSDiemSinhVienToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.dSDiemSinhVienToolStripMenuItem.Text = "DS Điểm Sinh viên";
             this.dSDiemSinhVienToolStripMenuItem.Click += new System.EventHandler(this.dSDiemSinhVienToolStripMenuItem_Click);
             // 
@@ -254,7 +254,7 @@ namespace csharp_winform
             // 
             this.btlQLMH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btlQLMH.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btlQLMH.Location = new System.Drawing.Point(1204, 482);
+            this.btlQLMH.Location = new System.Drawing.Point(1146, 482);
             this.btlQLMH.Margin = new System.Windows.Forms.Padding(4);
             this.btlQLMH.Name = "btlQLMH";
             this.btlQLMH.Size = new System.Drawing.Size(112, 70);
@@ -267,7 +267,7 @@ namespace csharp_winform
             // 
             this.btlQLK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btlQLK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btlQLK.Location = new System.Drawing.Point(1204, 404);
+            this.btlQLK.Location = new System.Drawing.Point(1146, 404);
             this.btlQLK.Margin = new System.Windows.Forms.Padding(4);
             this.btlQLK.Name = "btlQLK";
             this.btlQLK.Size = new System.Drawing.Size(112, 70);
@@ -280,7 +280,7 @@ namespace csharp_winform
             // 
             this.btlQLL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btlQLL.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btlQLL.Location = new System.Drawing.Point(1204, 326);
+            this.btlQLL.Location = new System.Drawing.Point(1146, 326);
             this.btlQLL.Margin = new System.Windows.Forms.Padding(4);
             this.btlQLL.Name = "btlQLL";
             this.btlQLL.Size = new System.Drawing.Size(112, 70);
@@ -293,7 +293,7 @@ namespace csharp_winform
             // 
             this.btlQLDSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btlQLDSV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btlQLDSV.Location = new System.Drawing.Point(1204, 250);
+            this.btlQLDSV.Location = new System.Drawing.Point(1146, 250);
             this.btlQLDSV.Margin = new System.Windows.Forms.Padding(4);
             this.btlQLDSV.Name = "btlQLDSV";
             this.btlQLDSV.Size = new System.Drawing.Size(112, 70);
@@ -306,7 +306,7 @@ namespace csharp_winform
             // 
             this.btlQLSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btlQLSV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btlQLSV.Location = new System.Drawing.Point(1204, 172);
+            this.btlQLSV.Location = new System.Drawing.Point(1146, 172);
             this.btlQLSV.Margin = new System.Windows.Forms.Padding(4);
             this.btlQLSV.Name = "btlQLSV";
             this.btlQLSV.Size = new System.Drawing.Size(112, 70);
@@ -321,7 +321,7 @@ namespace csharp_winform
             this.btnCloseSideBar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseSideBar.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseSideBar.Image")));
             this.btnCloseSideBar.InitialImage = null;
-            this.btnCloseSideBar.Location = new System.Drawing.Point(1187, 130);
+            this.btnCloseSideBar.Location = new System.Drawing.Point(1129, 130);
             this.btnCloseSideBar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCloseSideBar.Name = "btnCloseSideBar";
             this.btnCloseSideBar.Size = new System.Drawing.Size(23, 20);
@@ -334,7 +334,7 @@ namespace csharp_winform
             this.sideBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sideBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.sideBar.InitialImage = null;
-            this.sideBar.Location = new System.Drawing.Point(1187, 130);
+            this.sideBar.Location = new System.Drawing.Point(1129, 130);
             this.sideBar.Margin = new System.Windows.Forms.Padding(4);
             this.sideBar.Name = "sideBar";
             this.sideBar.Size = new System.Drawing.Size(137, 615);
@@ -348,7 +348,7 @@ namespace csharp_winform
             this.pictureBox1.Location = new System.Drawing.Point(0, 28);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1324, 102);
+            this.pictureBox1.Size = new System.Drawing.Size(1266, 102);
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
@@ -356,7 +356,7 @@ namespace csharp_winform
             // 
             this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTimKiem.Location = new System.Drawing.Point(1204, 560);
+            this.btnTimKiem.Location = new System.Drawing.Point(1146, 560);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(112, 70);
@@ -369,7 +369,7 @@ namespace csharp_winform
             // 
             this.btnQLTK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQLTK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLTK.Location = new System.Drawing.Point(1204, 638);
+            this.btnQLTK.Location = new System.Drawing.Point(1146, 638);
             this.btnQLTK.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLTK.Name = "btnQLTK";
             this.btnQLTK.Size = new System.Drawing.Size(112, 70);
@@ -382,7 +382,7 @@ namespace csharp_winform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1324, 748);
+            this.ClientSize = new System.Drawing.Size(1266, 719);
             this.Controls.Add(this.btnCloseSideBar);
             this.Controls.Add(this.btlQLMH);
             this.Controls.Add(this.btnQLTK);

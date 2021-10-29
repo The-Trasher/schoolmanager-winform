@@ -29,15 +29,9 @@ namespace csharp_winform
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grDanhSach = new System.Windows.Forms.GroupBox();
             this.dgvDSTaiKhoan = new System.Windows.Forms.DataGridView();
-            this.dgvUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grLuaChon = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rbAdmin = new System.Windows.Forms.RadioButton();
@@ -62,6 +56,13 @@ namespace csharp_winform
             this.lblTenKhoa = new System.Windows.Forms.Label();
             this.lblMaKhoa = new System.Windows.Forms.Label();
             this.lblQuanLyKhoa = new System.Windows.Forms.Label();
+            this.dgvUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoan)).BeginInit();
             this.grLuaChon.SuspendLayout();
@@ -87,6 +88,14 @@ namespace csharp_winform
             this.dgvDSTaiKhoan.AllowUserToAddRows = false;
             this.dgvDSTaiKhoan.AllowUserToDeleteRows = false;
             this.dgvDSTaiKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSTaiKhoan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDSTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSTaiKhoan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvUsername,
@@ -106,55 +115,6 @@ namespace csharp_winform
             this.dgvDSTaiKhoan.Size = new System.Drawing.Size(840, 516);
             this.dgvDSTaiKhoan.TabIndex = 0;
             this.dgvDSTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTaiKhoan_CellClick);
-            // 
-            // dgvUsername
-            // 
-            this.dgvUsername.HeaderText = "Username";
-            this.dgvUsername.MinimumWidth = 6;
-            this.dgvUsername.Name = "dgvUsername";
-            this.dgvUsername.ReadOnly = true;
-            // 
-            // dgvPassword
-            // 
-            this.dgvPassword.HeaderText = "Password";
-            this.dgvPassword.MinimumWidth = 6;
-            this.dgvPassword.Name = "dgvPassword";
-            this.dgvPassword.ReadOnly = true;
-            // 
-            // dgvFullName
-            // 
-            this.dgvFullName.HeaderText = "FullName";
-            this.dgvFullName.MinimumWidth = 6;
-            this.dgvFullName.Name = "dgvFullName";
-            this.dgvFullName.ReadOnly = true;
-            // 
-            // dgvPhone
-            // 
-            this.dgvPhone.HeaderText = "Phone";
-            this.dgvPhone.MinimumWidth = 6;
-            this.dgvPhone.Name = "dgvPhone";
-            this.dgvPhone.ReadOnly = true;
-            // 
-            // dgvEmail
-            // 
-            this.dgvEmail.HeaderText = "Email";
-            this.dgvEmail.MinimumWidth = 6;
-            this.dgvEmail.Name = "dgvEmail";
-            this.dgvEmail.ReadOnly = true;
-            // 
-            // dgvSex
-            // 
-            this.dgvSex.HeaderText = "Sex";
-            this.dgvSex.MinimumWidth = 6;
-            this.dgvSex.Name = "dgvSex";
-            this.dgvSex.ReadOnly = true;
-            // 
-            // dgvRole
-            // 
-            this.dgvRole.HeaderText = "Role";
-            this.dgvRole.MinimumWidth = 6;
-            this.dgvRole.Name = "dgvRole";
-            this.dgvRole.ReadOnly = true;
             // 
             // grLuaChon
             // 
@@ -191,9 +151,9 @@ namespace csharp_winform
             this.groupBox2.Controls.Add(this.rbAdmin);
             this.groupBox2.Controls.Add(this.rbMember);
             this.groupBox2.Location = new System.Drawing.Point(133, 359);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(215, 52);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
@@ -202,7 +162,7 @@ namespace csharp_winform
             // 
             this.rbAdmin.AutoSize = true;
             this.rbAdmin.Location = new System.Drawing.Point(121, 16);
-            this.rbAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbAdmin.Margin = new System.Windows.Forms.Padding(4);
             this.rbAdmin.Name = "rbAdmin";
             this.rbAdmin.Size = new System.Drawing.Size(84, 26);
             this.rbAdmin.TabIndex = 0;
@@ -214,7 +174,7 @@ namespace csharp_winform
             // 
             this.rbMember.AutoSize = true;
             this.rbMember.Location = new System.Drawing.Point(8, 16);
-            this.rbMember.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbMember.Margin = new System.Windows.Forms.Padding(4);
             this.rbMember.Name = "rbMember";
             this.rbMember.Size = new System.Drawing.Size(97, 26);
             this.rbMember.TabIndex = 0;
@@ -227,9 +187,9 @@ namespace csharp_winform
             this.groupBox1.Controls.Add(this.rbNu);
             this.groupBox1.Controls.Add(this.rbNam);
             this.groupBox1.Location = new System.Drawing.Point(133, 303);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(215, 52);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
@@ -238,7 +198,7 @@ namespace csharp_winform
             // 
             this.rbNu.AutoSize = true;
             this.rbNu.Location = new System.Drawing.Point(121, 17);
-            this.rbNu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbNu.Margin = new System.Windows.Forms.Padding(4);
             this.rbNu.Name = "rbNu";
             this.rbNu.Size = new System.Drawing.Size(56, 26);
             this.rbNu.TabIndex = 1;
@@ -250,7 +210,7 @@ namespace csharp_winform
             // 
             this.rbNam.AutoSize = true;
             this.rbNam.Location = new System.Drawing.Point(8, 17);
-            this.rbNam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbNam.Margin = new System.Windows.Forms.Padding(4);
             this.rbNam.Name = "rbNam";
             this.rbNam.Size = new System.Drawing.Size(68, 26);
             this.rbNam.TabIndex = 0;
@@ -261,7 +221,7 @@ namespace csharp_winform
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(51, 506);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(100, 33);
             this.btnRefresh.TabIndex = 11;
@@ -426,6 +386,55 @@ namespace csharp_winform
             this.lblQuanLyKhoa.TabIndex = 11;
             this.lblQuanLyKhoa.Text = "QUẢN LÝ TÀI KHOẢN";
             // 
+            // dgvUsername
+            // 
+            this.dgvUsername.HeaderText = "Tên Đăng Nhập";
+            this.dgvUsername.MinimumWidth = 6;
+            this.dgvUsername.Name = "dgvUsername";
+            this.dgvUsername.ReadOnly = true;
+            // 
+            // dgvPassword
+            // 
+            this.dgvPassword.HeaderText = "Mật Khẩu";
+            this.dgvPassword.MinimumWidth = 6;
+            this.dgvPassword.Name = "dgvPassword";
+            this.dgvPassword.ReadOnly = true;
+            // 
+            // dgvFullName
+            // 
+            this.dgvFullName.HeaderText = "Họ Tên";
+            this.dgvFullName.MinimumWidth = 6;
+            this.dgvFullName.Name = "dgvFullName";
+            this.dgvFullName.ReadOnly = true;
+            // 
+            // dgvPhone
+            // 
+            this.dgvPhone.HeaderText = "Phone";
+            this.dgvPhone.MinimumWidth = 6;
+            this.dgvPhone.Name = "dgvPhone";
+            this.dgvPhone.ReadOnly = true;
+            // 
+            // dgvEmail
+            // 
+            this.dgvEmail.HeaderText = "Email";
+            this.dgvEmail.MinimumWidth = 6;
+            this.dgvEmail.Name = "dgvEmail";
+            this.dgvEmail.ReadOnly = true;
+            // 
+            // dgvSex
+            // 
+            this.dgvSex.HeaderText = "Giới Tính";
+            this.dgvSex.MinimumWidth = 6;
+            this.dgvSex.Name = "dgvSex";
+            this.dgvSex.ReadOnly = true;
+            // 
+            // dgvRole
+            // 
+            this.dgvRole.HeaderText = "Quyền";
+            this.dgvRole.MinimumWidth = 6;
+            this.dgvRole.Name = "dgvRole";
+            this.dgvRole.ReadOnly = true;
+            // 
             // QuanLyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -434,7 +443,7 @@ namespace csharp_winform
             this.Controls.Add(this.grDanhSach);
             this.Controls.Add(this.grLuaChon);
             this.Controls.Add(this.lblQuanLyKhoa);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLyTaiKhoan";
             this.Text = "QuanLyTaiKhoan";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -479,6 +488,7 @@ namespace csharp_winform
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RadioButton rbAdmin;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsername;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvPassword;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvFullName;
@@ -486,6 +496,5 @@ namespace csharp_winform
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSex;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvRole;
-        private System.Windows.Forms.RadioButton rbAdmin;
     }
 }

@@ -90,7 +90,7 @@ namespace csharp_winform
                     param[1] = new ReportParameter("MSSV", txtMSSV.Text);
                     if (listRP.Count==0)
                     {
-                        MessageBox.Show($"Không có sinh viên nào có MSSV: {txtMSSV.Text}", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"Không có điểm của sinh viên có MSSV: {txtMSSV.Text}", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
                     else
@@ -166,16 +166,15 @@ namespace csharp_winform
 
                 var listRP = dBContext.SINHVIENs.Where(p => p.MALOP == cbbLop.SelectedValue.ToString()).ToList();
                 param[0] = new ReportParameter("NgayTK", string.Format(today.ToString("dd/MM/yyyy")));
-                param[1] = new ReportParameter("MaLop", cbbMonHoc.SelectedValue.ToString());
+                param[1] = new ReportParameter("MaLop", cbbLop.SelectedValue.ToString());
                 param[2] = new ReportParameter("TongSo", listRP.Count().ToString());
                 if (listRP.Count == 0)
                 {
-                    MessageBox.Show($"Không có điểm của sinh viên nào cho môn: {cbbMonHoc.Text}", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Không có điểm của sinh viên nào cho lớp: {cbbLop.Text}", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 else
                 {       
-
                     this.RP_Diem.LocalReport.ReportPath = "./Report/RP_Diem_TheoLop.rdlc";
                     this.RP_Diem.LocalReport.SetParameters(param);
                     var reportDataSource = new ReportDataSource("DataSetThongKe", listRP);
@@ -183,10 +182,7 @@ namespace csharp_winform
                     this.RP_Diem.LocalReport.DataSources.Add(reportDataSource);
                     this.RP_Diem.RefreshReport();
                 }
-
-
             }
-
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
