@@ -84,7 +84,6 @@ D:\csharp-winform\csharp-winform\obj\Debug\csharp-winform.csproj.GenerateResourc
 D:\csharp-winform\csharp-winform\obj\Debug\RdlCompile.cache
 D:\csharp-winform\csharp-winform\obj\Debug\RdlCompile.compiled
 D:\csharp-winform\csharp-winform\obj\Debug\csharp-winform.csproj.CoreCompileInputs.cache
-D:\csharp-winform\csharp-winform\obj\Debug\csharp-winform.csproj.CopyComplete
 D:\csharp-winform\csharp-winform\obj\Debug\csharp-winform.exe
 D:\csharp-winform\csharp-winform\obj\Debug\csharp-winform.pdb
 D:\csharp-winform\csharp-winform\obj\Debug\csharp-winform.csproj.AssemblyReference.cache

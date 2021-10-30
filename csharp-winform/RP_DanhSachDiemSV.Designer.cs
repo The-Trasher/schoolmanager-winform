@@ -47,9 +47,10 @@ namespace csharp_winform
             this.rdbLop.AutoSize = true;
             this.rdbLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbLop.ForeColor = System.Drawing.Color.Black;
-            this.rdbLop.Location = new System.Drawing.Point(26, 93);
+            this.rdbLop.Location = new System.Drawing.Point(20, 76);
+            this.rdbLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbLop.Name = "rdbLop";
-            this.rdbLop.Size = new System.Drawing.Size(98, 21);
+            this.rdbLop.Size = new System.Drawing.Size(79, 17);
             this.rdbLop.TabIndex = 0;
             this.rdbLop.TabStop = true;
             this.rdbLop.Text = "Theo Lớp";
@@ -61,9 +62,10 @@ namespace csharp_winform
             this.rdbMonHoc.AutoSize = true;
             this.rdbMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbMonHoc.ForeColor = System.Drawing.Color.Black;
-            this.rdbMonHoc.Location = new System.Drawing.Point(26, 136);
+            this.rdbMonHoc.Location = new System.Drawing.Point(20, 110);
+            this.rdbMonHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbMonHoc.Name = "rdbMonHoc";
-            this.rdbMonHoc.Size = new System.Drawing.Size(134, 21);
+            this.rdbMonHoc.Size = new System.Drawing.Size(109, 17);
             this.rdbMonHoc.TabIndex = 1;
             this.rdbMonHoc.TabStop = true;
             this.rdbMonHoc.Text = "Theo Môn Học";
@@ -81,9 +83,11 @@ namespace csharp_winform
             this.groupBox1.Controls.Add(this.rdbLop);
             this.groupBox1.Controls.Add(this.rdbMonHoc);
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox1.Location = new System.Drawing.Point(188, 25);
+            this.groupBox1.Location = new System.Drawing.Point(141, 20);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(784, 199);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(588, 162);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Các Lựa Chọn";
@@ -92,9 +96,10 @@ namespace csharp_winform
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
-            this.btnXoa.Location = new System.Drawing.Point(502, 119);
+            this.btnXoa.Location = new System.Drawing.Point(376, 97);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(106, 38);
+            this.btnXoa.Size = new System.Drawing.Size(80, 31);
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -104,9 +109,10 @@ namespace csharp_winform
             // 
             this.btnXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXuat.ForeColor = System.Drawing.Color.Blue;
-            this.btnXuat.Location = new System.Drawing.Point(502, 47);
+            this.btnXuat.Location = new System.Drawing.Point(376, 38);
+            this.btnXuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXuat.Name = "btnXuat";
-            this.btnXuat.Size = new System.Drawing.Size(106, 54);
+            this.btnXuat.Size = new System.Drawing.Size(80, 44);
             this.btnXuat.TabIndex = 4;
             this.btnXuat.Text = "Xuất / In";
             this.btnXuat.UseVisualStyleBackColor = true;
@@ -114,25 +120,28 @@ namespace csharp_winform
             // 
             // txtMSSV
             // 
-            this.txtMSSV.Location = new System.Drawing.Point(171, 47);
+            this.txtMSSV.Location = new System.Drawing.Point(128, 38);
+            this.txtMSSV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMSSV.Name = "txtMSSV";
-            this.txtMSSV.Size = new System.Drawing.Size(204, 22);
+            this.txtMSSV.Size = new System.Drawing.Size(154, 20);
             this.txtMSSV.TabIndex = 3;
             // 
             // cbbMonHoc
             // 
             this.cbbMonHoc.FormattingEnabled = true;
-            this.cbbMonHoc.Location = new System.Drawing.Point(171, 135);
+            this.cbbMonHoc.Location = new System.Drawing.Point(128, 110);
+            this.cbbMonHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbbMonHoc.Name = "cbbMonHoc";
-            this.cbbMonHoc.Size = new System.Drawing.Size(205, 24);
+            this.cbbMonHoc.Size = new System.Drawing.Size(155, 21);
             this.cbbMonHoc.TabIndex = 2;
             // 
             // cbbLop
             // 
             this.cbbLop.FormattingEnabled = true;
-            this.cbbLop.Location = new System.Drawing.Point(171, 92);
+            this.cbbLop.Location = new System.Drawing.Point(128, 75);
+            this.cbbLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbbLop.Name = "cbbLop";
-            this.cbbLop.Size = new System.Drawing.Size(205, 24);
+            this.cbbLop.Size = new System.Drawing.Size(155, 21);
             this.cbbLop.TabIndex = 2;
             // 
             // rdbMSSV
@@ -140,9 +149,10 @@ namespace csharp_winform
             this.rdbMSSV.AutoSize = true;
             this.rdbMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbMSSV.ForeColor = System.Drawing.Color.Black;
-            this.rdbMSSV.Location = new System.Drawing.Point(26, 48);
+            this.rdbMSSV.Location = new System.Drawing.Point(20, 39);
+            this.rdbMSSV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbMSSV.Name = "rdbMSSV";
-            this.rdbMSSV.Size = new System.Drawing.Size(113, 21);
+            this.rdbMSSV.Size = new System.Drawing.Size(92, 17);
             this.rdbMSSV.TabIndex = 0;
             this.rdbMSSV.TabStop = true;
             this.rdbMSSV.Text = "Theo MSSV";
@@ -154,21 +164,24 @@ namespace csharp_winform
             this.RP_Diem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RP_Diem.Location = new System.Drawing.Point(12, 245);
+            this.RP_Diem.Location = new System.Drawing.Point(9, 199);
+            this.RP_Diem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RP_Diem.Name = "RP_Diem";
             this.RP_Diem.ServerReport.BearerToken = null;
-            this.RP_Diem.Size = new System.Drawing.Size(1114, 488);
+            this.RP_Diem.Size = new System.Drawing.Size(836, 397);
             this.RP_Diem.TabIndex = 3;
             // 
             // RP_DanhSachDiemSV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AcceptButton = this.btnXuat;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1138, 745);
+            this.ClientSize = new System.Drawing.Size(854, 605);
             this.Controls.Add(this.RP_Diem);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.Black;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RP_DanhSachDiemSV";
             this.Text = "Thống Kê Điểm Sinh viên";
             this.Load += new System.EventHandler(this.RP_DiemSV_Load);

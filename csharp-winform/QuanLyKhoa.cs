@@ -64,7 +64,7 @@ namespace csharp_winform
 
                     dgvDSKhoa.ClearSelection();
                     dgvDSKhoa.Rows[CheckIDFaculty(newFaculty.MAKHOA)].Selected = true;
-                    MessageBox.Show($"Them khoa {newFaculty.MAKHOA} thanh cong!", "Thông Báo!");
+                    MessageBox.Show($"Thêm khoa {newFaculty.MAKHOA} thành công!", "Thông Báo!");
                 }
                 else
                 {
@@ -100,9 +100,9 @@ namespace csharp_winform
 
         private bool CheckDataInput()
         {
-            if (txtMaKhoa.Text == "")
+            if (txtMaKhoa.Text == "" || txtTenKhoa.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập mã khoa!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ mã và tên khoa!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -131,9 +131,9 @@ namespace csharp_winform
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-           
+
             LOP checkExist = dBContext.LOPs.Where(p => p.MAKHOA == txtMaKhoa.Text).FirstOrDefault();
-            if(checkExist != null)
+            if (checkExist != null)
             {
                 MessageBox.Show($"Không thể xoá khoa: {txtTenKhoa.Text}!", "Thông Báo!");
                 return;
@@ -145,7 +145,7 @@ namespace csharp_winform
                 DialogResult dr = MessageBox.Show("Bạn có muốn xóa khoa ?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
-                    
+
                     dBContext.KHOAs.Remove(updateFaculty);
                     dBContext.SaveChanges();
 

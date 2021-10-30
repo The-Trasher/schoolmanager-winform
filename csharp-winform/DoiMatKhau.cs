@@ -17,7 +17,6 @@ namespace csharp_winform
         StudentDBContext dBContext = new StudentDBContext();
         private QuanLyDiemSinhVien mainForm;
 
-
         public DoiMatKhau(QuanLyDiemSinhVien mainForm)
         {
             InitializeComponent();
@@ -44,7 +43,7 @@ namespace csharp_winform
                 {
                     if (txtMKMoi.Text == txtNhapLaiMK.Text)
                     {
-                        DialogResult dr = MessageBox.Show("Ban co chac chan muon doi mat khau khong?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn đổi mật khẩu không?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                         if (dr == DialogResult.Yes)
                         {

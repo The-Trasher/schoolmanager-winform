@@ -15,6 +15,7 @@ namespace csharp_winform
     public partial class RP_DanhSachDiemSV : Form
     {
         StudentDBContext dBContext = new StudentDBContext();
+
         public RP_DanhSachDiemSV()
         {
             InitializeComponent();
@@ -26,13 +27,11 @@ namespace csharp_winform
             List<MONHOC> listMH = dBContext.MONHOCs.ToList();
             FillDataCBBLop(listLop);
             FillDataCBBMH(listMH);
-            
+
             rdbMSSV.Checked = true;
             RP_Diem.Visible = false;
             this.RP_Diem.RefreshReport();
         }
-
-       
 
         private void FillDataCBBLop(List<LOP> listLop)
         {
@@ -40,6 +39,7 @@ namespace csharp_winform
             cbbLop.ValueMember = "MALOP";
             cbbLop.DisplayMember = "TENLOP";
         }
+
         private void FillDataCBBMH(List<MONHOC> listMH)
         {
             cbbMonHoc.DataSource = listMH;
@@ -72,9 +72,9 @@ namespace csharp_winform
         {
             ReportParameter[] param = new ReportParameter[3];
             RP_Diem.Visible = true;
-            if(rdbMSSV.Checked)
+            if (rdbMSSV.Checked)
             {
-                if(txtMSSV.Text =="")
+                if (txtMSSV.Text == "")
                 {
                     MessageBox.Show("Vui lòng nhập MSSV !", "Thông Báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                     return;
@@ -88,7 +88,7 @@ namespace csharp_winform
                     var listRP = dBContext.DIEMSVs.Where(p => p.MSSV == txtMSSV.Text).ToList();
                     param[0] = new ReportParameter("NgayTK", string.Format(today.ToString("dd/MM/yyyy")));
                     param[1] = new ReportParameter("MSSV", txtMSSV.Text);
-                    if (listRP.Count==0)
+                    if (listRP.Count == 0)
                     {
                         MessageBox.Show($"Không có điểm của sinh viên có MSSV: {txtMSSV.Text}", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
@@ -100,14 +100,14 @@ namespace csharp_winform
                             RP_DiemSV temp = new RP_DiemSV();
                             temp.MaMH = item.MAMH;
                             temp.TenMH = item.MONHOC.TENMH;
-                            temp.DiemKT1 =(double) item.DIEMKTLAN1;
+                            temp.DiemKT1 = (double)item.DIEMKTLAN1;
                             temp.DiemKT2 = (double)item.DIEMKTLAN2;
                             temp.DiemThi = (double)item.DIEMTHI;
                             temp.DiemTongKet = (double)item.DIEMTONGKET;
                             listDiem.Add(temp);
                             HT = item.SINHVIEN.HOTEN;
                         }
-                        param[2] = new ReportParameter("HoTen",HT);
+                        param[2] = new ReportParameter("HoTen", HT);
 
                         this.RP_Diem.LocalReport.ReportPath = "./Report/RP_Diem_TheoMSSV.rdlc";
                         this.RP_Diem.LocalReport.SetParameters(param);
@@ -119,7 +119,7 @@ namespace csharp_winform
                 }
             }
 
-            //============================================================================================================================================================
+            //=====================================================================================================================
 
             if (rdbMonHoc.Checked)
             {
@@ -158,7 +158,7 @@ namespace csharp_winform
                 }
             }
 
-            //============================================================================================================================================================
+            //=====================================================================================================================
 
             if (rdbLop.Checked)
             {
@@ -174,7 +174,7 @@ namespace csharp_winform
                     return;
                 }
                 else
-                {       
+                {
                     this.RP_Diem.LocalReport.ReportPath = "./Report/RP_Diem_TheoLop.rdlc";
                     this.RP_Diem.LocalReport.SetParameters(param);
                     var reportDataSource = new ReportDataSource("DataSetThongKe", listRP);

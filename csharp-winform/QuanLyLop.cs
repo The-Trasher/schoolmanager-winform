@@ -122,9 +122,9 @@ namespace csharp_winform
 
         private bool CheckDataInput()
         {
-            if (txtMaLop.Text == "")
+            if (txtMaLop.Text == "" || txtTenLop.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập mã lớp!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập mã và tên lớp!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else if (txtSiSo.Text != "")
@@ -166,7 +166,7 @@ namespace csharp_winform
         {
             LOP updateClass = dBContext.LOPs.Where(p => p.MALOP == txtMaLop.Text).FirstOrDefault();
             SINHVIEN checkExist = dBContext.SINHVIENs.Where(p => p.MALOP == updateClass.MALOP).FirstOrDefault();
-            if(checkExist != null)
+            if (checkExist != null)
             {
                 MessageBox.Show($"Không thể xoá lớp: {txtTenLop.Text}!", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 return;
@@ -177,7 +177,7 @@ namespace csharp_winform
                 DialogResult dr = MessageBox.Show("Bạn có muốn xóa không ?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
-                    
+
                     dBContext.LOPs.Remove(updateClass);
                     dBContext.SaveChanges();
 

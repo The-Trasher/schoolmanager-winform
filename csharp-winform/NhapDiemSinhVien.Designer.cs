@@ -64,9 +64,10 @@ namespace csharp_winform
             this.lblThongTinDiemSinhVien.AutoSize = true;
             this.lblThongTinDiemSinhVien.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblThongTinDiemSinhVien.ForeColor = System.Drawing.Color.Red;
-            this.lblThongTinDiemSinhVien.Location = new System.Drawing.Point(379, 11);
+            this.lblThongTinDiemSinhVien.Location = new System.Drawing.Point(284, 9);
+            this.lblThongTinDiemSinhVien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblThongTinDiemSinhVien.Name = "lblThongTinDiemSinhVien";
-            this.lblThongTinDiemSinhVien.Size = new System.Drawing.Size(441, 35);
+            this.lblThongTinDiemSinhVien.Size = new System.Drawing.Size(347, 26);
             this.lblThongTinDiemSinhVien.TabIndex = 0;
             this.lblThongTinDiemSinhVien.Text = "THÔNG TIN ĐIỂM SINH VIÊN";
             // 
@@ -75,9 +76,10 @@ namespace csharp_winform
             this.lblMaSV.AutoSize = true;
             this.lblMaSV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblMaSV.ForeColor = System.Drawing.Color.Black;
-            this.lblMaSV.Location = new System.Drawing.Point(7, 46);
+            this.lblMaSV.Location = new System.Drawing.Point(5, 37);
+            this.lblMaSV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaSV.Name = "lblMaSV";
-            this.lblMaSV.Size = new System.Drawing.Size(103, 19);
+            this.lblMaSV.Size = new System.Drawing.Size(86, 17);
             this.lblMaSV.TabIndex = 5;
             this.lblMaSV.Text = "Mã sinh viên";
             // 
@@ -86,9 +88,10 @@ namespace csharp_winform
             this.lblDiemTB.AutoSize = true;
             this.lblDiemTB.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblDiemTB.ForeColor = System.Drawing.Color.Black;
-            this.lblDiemTB.Location = new System.Drawing.Point(611, 103);
+            this.lblDiemTB.Location = new System.Drawing.Point(458, 84);
+            this.lblDiemTB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiemTB.Name = "lblDiemTB";
-            this.lblDiemTB.Size = new System.Drawing.Size(78, 19);
+            this.lblDiemTB.Size = new System.Drawing.Size(65, 17);
             this.lblDiemTB.TabIndex = 6;
             this.lblDiemTB.Text = "Điểm Thi";
             // 
@@ -97,9 +100,10 @@ namespace csharp_winform
             this.lblHoVaTen.AutoSize = true;
             this.lblHoVaTen.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblHoVaTen.ForeColor = System.Drawing.Color.Black;
-            this.lblHoVaTen.Location = new System.Drawing.Point(301, 46);
+            this.lblHoVaTen.Location = new System.Drawing.Point(226, 37);
+            this.lblHoVaTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHoVaTen.Name = "lblHoVaTen";
-            this.lblHoVaTen.Size = new System.Drawing.Size(99, 19);
+            this.lblHoVaTen.Size = new System.Drawing.Size(83, 17);
             this.lblHoVaTen.TabIndex = 7;
             this.lblHoVaTen.Text = "Mã môn học";
             // 
@@ -108,9 +112,10 @@ namespace csharp_winform
             this.lblDiemThiLan1.AutoSize = true;
             this.lblDiemThiLan1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblDiemThiLan1.ForeColor = System.Drawing.Color.Black;
-            this.lblDiemThiLan1.Location = new System.Drawing.Point(301, 105);
+            this.lblDiemThiLan1.Location = new System.Drawing.Point(226, 85);
+            this.lblDiemThiLan1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiemThiLan1.Name = "lblDiemThiLan1";
-            this.lblDiemThiLan1.Size = new System.Drawing.Size(115, 19);
+            this.lblDiemThiLan1.Size = new System.Drawing.Size(97, 17);
             this.lblDiemThiLan1.TabIndex = 8;
             this.lblDiemThiLan1.Text = "Điểm KT lần 2";
             // 
@@ -128,11 +133,11 @@ namespace csharp_winform
             this.grThongTinChiTiet.Controls.Add(this.lblMaSV);
             this.grThongTinChiTiet.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.grThongTinChiTiet.ForeColor = System.Drawing.Color.Blue;
-            this.grThongTinChiTiet.Location = new System.Drawing.Point(12, 59);
-            this.grThongTinChiTiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grThongTinChiTiet.Location = new System.Drawing.Point(9, 48);
+            this.grThongTinChiTiet.Margin = new System.Windows.Forms.Padding(2);
             this.grThongTinChiTiet.Name = "grThongTinChiTiet";
-            this.grThongTinChiTiet.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grThongTinChiTiet.Size = new System.Drawing.Size(856, 162);
+            this.grThongTinChiTiet.Padding = new System.Windows.Forms.Padding(2);
+            this.grThongTinChiTiet.Size = new System.Drawing.Size(642, 132);
             this.grThongTinChiTiet.TabIndex = 19;
             this.grThongTinChiTiet.TabStop = false;
             this.grThongTinChiTiet.Text = "Thông tin chi tiết";
@@ -140,46 +145,46 @@ namespace csharp_winform
             // txtKTL1
             // 
             this.txtKTL1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtKTL1.Location = new System.Drawing.Point(133, 100);
-            this.txtKTL1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtKTL1.Location = new System.Drawing.Point(100, 81);
+            this.txtKTL1.Margin = new System.Windows.Forms.Padding(2);
             this.txtKTL1.Name = "txtKTL1";
-            this.txtKTL1.Size = new System.Drawing.Size(100, 27);
+            this.txtKTL1.Size = new System.Drawing.Size(76, 23);
             this.txtKTL1.TabIndex = 2;
             // 
             // txtKTL2
             // 
             this.txtKTL2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtKTL2.Location = new System.Drawing.Point(425, 100);
-            this.txtKTL2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtKTL2.Location = new System.Drawing.Point(327, 81);
+            this.txtKTL2.Margin = new System.Windows.Forms.Padding(2);
             this.txtKTL2.Name = "txtKTL2";
-            this.txtKTL2.Size = new System.Drawing.Size(100, 27);
+            this.txtKTL2.Size = new System.Drawing.Size(76, 23);
             this.txtKTL2.TabIndex = 3;
             // 
             // txtDiemThi
             // 
             this.txtDiemThi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtDiemThi.Location = new System.Drawing.Point(712, 100);
-            this.txtDiemThi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDiemThi.Location = new System.Drawing.Point(534, 81);
+            this.txtDiemThi.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiemThi.Name = "txtDiemThi";
-            this.txtDiemThi.Size = new System.Drawing.Size(100, 27);
+            this.txtDiemThi.Size = new System.Drawing.Size(76, 23);
             this.txtDiemThi.TabIndex = 4;
             // 
             // txtMaMH
             // 
             this.txtMaMH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaMH.Location = new System.Drawing.Point(413, 42);
-            this.txtMaMH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaMH.Location = new System.Drawing.Point(327, 35);
+            this.txtMaMH.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaMH.Name = "txtMaMH";
-            this.txtMaMH.Size = new System.Drawing.Size(153, 27);
+            this.txtMaMH.Size = new System.Drawing.Size(116, 23);
             this.txtMaMH.TabIndex = 1;
             // 
             // txtMaSV
             // 
             this.txtMaSV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaSV.Location = new System.Drawing.Point(119, 42);
-            this.txtMaSV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaSV.Location = new System.Drawing.Point(100, 35);
+            this.txtMaSV.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaSV.Name = "txtMaSV";
-            this.txtMaSV.Size = new System.Drawing.Size(153, 27);
+            this.txtMaSV.Size = new System.Drawing.Size(116, 23);
             this.txtMaSV.TabIndex = 0;
             // 
             // label1
@@ -187,19 +192,20 @@ namespace csharp_winform
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(7, 105);
+            this.label1.Location = new System.Drawing.Point(5, 85);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 19);
+            this.label1.Size = new System.Drawing.Size(97, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "Điểm KT lần 1";
             // 
             // btnNhap
             // 
             this.btnNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnNhap.Location = new System.Drawing.Point(900, 76);
-            this.btnNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNhap.Location = new System.Drawing.Point(675, 62);
+            this.btnNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhap.Name = "btnNhap";
-            this.btnNhap.Size = new System.Drawing.Size(216, 48);
+            this.btnNhap.Size = new System.Drawing.Size(162, 39);
             this.btnNhap.TabIndex = 0;
             this.btnNhap.Text = "Nhập / Sửa";
             this.btnNhap.UseVisualStyleBackColor = true;
@@ -208,10 +214,10 @@ namespace csharp_winform
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnXoa.Location = new System.Drawing.Point(900, 129);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXoa.Location = new System.Drawing.Point(675, 105);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(216, 48);
+            this.btnXoa.Size = new System.Drawing.Size(162, 39);
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -220,10 +226,10 @@ namespace csharp_winform
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnThoat.Location = new System.Drawing.Point(1020, 182);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThoat.Location = new System.Drawing.Point(765, 148);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(101, 48);
+            this.btnThoat.Size = new System.Drawing.Size(76, 39);
             this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -233,11 +239,11 @@ namespace csharp_winform
             // 
             this.grDanhSach.Controls.Add(this.dgvDanhSach);
             this.grDanhSach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.grDanhSach.Location = new System.Drawing.Point(15, 235);
-            this.grDanhSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grDanhSach.Location = new System.Drawing.Point(11, 191);
+            this.grDanhSach.Margin = new System.Windows.Forms.Padding(2);
             this.grDanhSach.Name = "grDanhSach";
-            this.grDanhSach.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grDanhSach.Size = new System.Drawing.Size(1107, 496);
+            this.grDanhSach.Padding = new System.Windows.Forms.Padding(2);
+            this.grDanhSach.Size = new System.Drawing.Size(830, 386);
             this.grDanhSach.TabIndex = 26;
             this.grDanhSach.TabStop = false;
             this.grDanhSach.Text = "Danh Sách";
@@ -256,14 +262,14 @@ namespace csharp_winform
             this.dgvDiemKTL2,
             this.dgvDiemThi,
             this.dgvDiemTongKet});
-            this.dgvDanhSach.Location = new System.Drawing.Point(5, 25);
-            this.dgvDanhSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDanhSach.Location = new System.Drawing.Point(4, 23);
+            this.dgvDanhSach.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDanhSach.Name = "dgvDanhSach";
             this.dgvDanhSach.ReadOnly = true;
             this.dgvDanhSach.RowHeadersWidth = 51;
             this.dgvDanhSach.RowTemplate.Height = 24;
             this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDanhSach.Size = new System.Drawing.Size(1096, 466);
+            this.dgvDanhSach.Size = new System.Drawing.Size(822, 347);
             this.dgvDanhSach.TabIndex = 0;
             this.dgvDanhSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSach_CellClick);
             // 
@@ -326,10 +332,10 @@ namespace csharp_winform
             // btnRefresh
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnRefresh.Location = new System.Drawing.Point(900, 182);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRefresh.Location = new System.Drawing.Point(675, 148);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(101, 48);
+            this.btnRefresh.Size = new System.Drawing.Size(76, 39);
             this.btnRefresh.TabIndex = 3;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -338,10 +344,10 @@ namespace csharp_winform
             // NhapDiemSinhVien
             // 
             this.AcceptButton = this.btnNhap;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1133, 745);
+            this.ClientSize = new System.Drawing.Size(850, 588);
             this.Controls.Add(this.grDanhSach);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnRefresh);
@@ -349,7 +355,7 @@ namespace csharp_winform
             this.Controls.Add(this.btnNhap);
             this.Controls.Add(this.grThongTinChiTiet);
             this.Controls.Add(this.lblThongTinDiemSinhVien);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NhapDiemSinhVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Quản Lý Điểm Sinh VIên";

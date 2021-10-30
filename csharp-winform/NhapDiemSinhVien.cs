@@ -52,7 +52,7 @@ namespace csharp_winform
             if (CheckDataInput())
             {
                 SINHVIEN checkExist = dBContext.SINHVIENs.Where(p => p.MSSV == txtMaSV.Text).FirstOrDefault();
-                if (checkExist == null )
+                if (checkExist == null)
                 {
                     MessageBox.Show($"Không tồn tại sinh viên có MSSV: {txtMaSV.Text}", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                     return;
@@ -173,7 +173,7 @@ namespace csharp_winform
                     return false;
                 }
             }
-            if(float.Parse(txtKTL1.Text)<0 || float.Parse(txtKTL1.Text) > 10)
+            if (float.Parse(txtKTL1.Text) < 0 || float.Parse(txtKTL1.Text) > 10)
             {
                 MessageBox.Show("0<= Điểm kiểm tra lần 1 <= 10!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -246,7 +246,7 @@ namespace csharp_winform
             }
         }
 
-       public void btnRefresh_Click(object sender, EventArgs e)
+        public void btnRefresh_Click(object sender, EventArgs e)
         {
 
             LoadDGV();

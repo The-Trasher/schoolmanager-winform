@@ -35,7 +35,7 @@ namespace csharp_winform
         private void FillDataDGV(List<SINHVIEN> listSinhVien)
         {
             dgvStudent.Rows.Clear();
-            
+
 
             foreach (SINHVIEN item in listSinhVien)
             {
@@ -55,12 +55,12 @@ namespace csharp_winform
                 dgvStudent.Rows[newRow].Cells[4].Value = item.KHOAHOC;
                 dgvStudent.Rows[newRow].Cells[5].Value = item.MALOP;
                 dgvStudent.Rows[newRow].Cells[6].Value = item.DIACHI;
-                dgvStudent.Rows[newRow].Cells[7].Value = Math.Round((double)DIEMTB,2).ToString();
+                dgvStudent.Rows[newRow].Cells[7].Value = Math.Round((double)DIEMTB, 2).ToString();
                 SINHVIEN updateStudent = dBContext.SINHVIENs.Where(p => p.MSSV == item.MSSV).FirstOrDefault();
                 if (updateStudent != null)
                 {
                     updateStudent.DIEMTB = DIEMTB;
-                    dBContext.SINHVIENs.AddOrUpdate(updateStudent); 
+                    dBContext.SINHVIENs.AddOrUpdate(updateStudent);
                     dBContext.SaveChanges();
                 }
 
@@ -78,7 +78,7 @@ namespace csharp_winform
         {
             if (CheckDataInput())
             {
-                if (CheckIDStudent(txtStudentID.Text) == -1) //sv chua ton tai trong dgv
+                if (CheckIDStudent(txtStudentID.Text) == -1)
                 {
                     SINHVIEN newStudent = new SINHVIEN();
 
@@ -94,7 +94,7 @@ namespace csharp_winform
                     newStudent.DIACHI = txtDiaChi.Text;
 
 
-                    dBContext.SINHVIENs.AddOrUpdate(newStudent); //dua du lieu vo db va save
+                    dBContext.SINHVIENs.AddOrUpdate(newStudent);
                     dBContext.SaveChanges();
 
                     LoadForm();
@@ -106,9 +106,9 @@ namespace csharp_winform
                 }
                 else
                 {
-                    SINHVIEN updateStudent = dBContext.SINHVIENs.Where(p => p.MSSV == txtStudentID.Text).FirstOrDefault(); //lay sv dua vao mssv
+                    SINHVIEN updateStudent = dBContext.SINHVIENs.Where(p => p.MSSV == txtStudentID.Text).FirstOrDefault();
 
-                    if (updateStudent != null) //sv co ton tai trong db
+                    if (updateStudent != null)
                     {
                         updateStudent.HOTEN = txtFullName.Text;
                         updateStudent.GIOITINH = optFemale.Checked ? "Nữ" : "Nam";
@@ -124,7 +124,7 @@ namespace csharp_winform
                                                 .Select(p => new { DiemTB = p.DIEMTONGKET })
                                                 .Average(p => p.DiemTB);
 
-                        dBContext.SINHVIENs.AddOrUpdate(updateStudent); //dua du lieu vo db va save
+                        dBContext.SINHVIENs.AddOrUpdate(updateStudent);
                         dBContext.SaveChanges();
 
                         LoadForm();
@@ -150,9 +150,9 @@ namespace csharp_winform
 
         private bool CheckDataInput()
         {
-            if (txtStudentID.Text == "")
+            if (txtStudentID.Text == "" || txtFullName.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập mã số sinh viên!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ mã số và họ tên sinh viên!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else if (txtKhoaHoc.Text != "")
@@ -193,9 +193,9 @@ namespace csharp_winform
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            SINHVIEN updateStudent = dBContext.SINHVIENs.Where(p => p.MSSV == txtStudentID.Text).FirstOrDefault(); //lay sv dua vao mssv
+            SINHVIEN updateStudent = dBContext.SINHVIENs.Where(p => p.MSSV == txtStudentID.Text).FirstOrDefault();
             var updateDiemSV = dBContext.DIEMSVs.Where(p => p.MSSV == txtStudentID.Text).ToList();
-            if (updateStudent != null) //sv co ton tai trong dgv
+            if (updateStudent != null)
             {
                 DialogResult dr = MessageBox.Show($"Bạn thực sự muốn xoá thông tin sinh viên: {updateStudent.HOTEN}?" +
                     $"\n(Lưu ý toàn bộ điểm của sinh viên này sẽ đều bị xoá!)", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -203,11 +203,11 @@ namespace csharp_winform
                 {
                     foreach (var item in updateDiemSV)
                     {
-                        dBContext.DIEMSVs.Remove(item); 
+                        dBContext.DIEMSVs.Remove(item);
                         dBContext.SaveChanges();
                     }
 
-                    dBContext.SINHVIENs.Remove(updateStudent); //xoa du lieu trong db va save
+                    dBContext.SINHVIENs.Remove(updateStudent);
                     dBContext.SaveChanges();
 
                     int i = CheckIDStudent(updateStudent.MSSV);

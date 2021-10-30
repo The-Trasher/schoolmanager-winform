@@ -71,7 +71,7 @@ namespace csharp_winform
                         rbAdmin.Checked = true;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return;
             }

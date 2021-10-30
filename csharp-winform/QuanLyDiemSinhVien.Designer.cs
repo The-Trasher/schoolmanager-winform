@@ -80,7 +80,7 @@ namespace csharp_winform
             this.trợGiúpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1424, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -94,41 +94,41 @@ namespace csharp_winform
             this.exitToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(80, 21);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
             // reloadToolStripMenuItem
             // 
             this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
-            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.reloadToolStripMenuItem.Text = "Reload";
             this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
             // 
             // đổiMậtKhẩuToolStripMenuItem
             // 
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
             this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // dSTàiKhoảnToolStripMenuItem
             // 
             this.dSTàiKhoảnToolStripMenuItem.Name = "dSTàiKhoảnToolStripMenuItem";
-            this.dSTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.dSTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.dSTàiKhoảnToolStripMenuItem.Text = "DS Tài khoản";
             this.dSTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.dSTàiKhoảnToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -142,41 +142,41 @@ namespace csharp_winform
             this.khoaToolStripMenuItem});
             this.quảnLíToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quảnLíToolStripMenuItem.Name = "quảnLíToolStripMenuItem";
-            this.quảnLíToolStripMenuItem.Size = new System.Drawing.Size(67, 21);
+            this.quảnLíToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.quảnLíToolStripMenuItem.Text = "Quản lí";
             // 
             // sinhViênToolStripMenuItem
             // 
             this.sinhViênToolStripMenuItem.Name = "sinhViênToolStripMenuItem";
-            this.sinhViênToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.sinhViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sinhViênToolStripMenuItem.Text = "Sinh viên";
             this.sinhViênToolStripMenuItem.Click += new System.EventHandler(this.sinhViênToolStripMenuItem_Click);
             // 
             // diemSinhVienToolStripMenuItem
             // 
             this.diemSinhVienToolStripMenuItem.Name = "diemSinhVienToolStripMenuItem";
-            this.diemSinhVienToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
-            this.diemSinhVienToolStripMenuItem.Text = "Diem sinh vien";
+            this.diemSinhVienToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.diemSinhVienToolStripMenuItem.Text = "Điểm sinh viên";
             this.diemSinhVienToolStripMenuItem.Click += new System.EventHandler(this.diemSinhVienToolStripMenuItem_Click);
             // 
             // mônHọcToolStripMenuItem
             // 
             this.mônHọcToolStripMenuItem.Name = "mônHọcToolStripMenuItem";
-            this.mônHọcToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.mônHọcToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mônHọcToolStripMenuItem.Text = "Môn học";
             this.mônHọcToolStripMenuItem.Click += new System.EventHandler(this.mônHọcToolStripMenuItem_Click);
             // 
             // lớpToolStripMenuItem
             // 
             this.lớpToolStripMenuItem.Name = "lớpToolStripMenuItem";
-            this.lớpToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.lớpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.lớpToolStripMenuItem.Text = "Lớp";
             this.lớpToolStripMenuItem.Click += new System.EventHandler(this.lớpToolStripMenuItem_Click);
             // 
             // khoaToolStripMenuItem
             // 
             this.khoaToolStripMenuItem.Name = "khoaToolStripMenuItem";
-            this.khoaToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.khoaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.khoaToolStripMenuItem.Text = "Khoa";
             this.khoaToolStripMenuItem.Click += new System.EventHandler(this.khoaToolStripMenuItem_Click);
             // 
@@ -186,13 +186,13 @@ namespace csharp_winform
             this.tìmKiếmSinhViênToolStripMenuItem});
             this.tìmKiếmToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
-            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(78, 21);
+            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
             // 
             // tìmKiếmSinhViênToolStripMenuItem
             // 
             this.tìmKiếmSinhViênToolStripMenuItem.Name = "tìmKiếmSinhViênToolStripMenuItem";
-            this.tìmKiếmSinhViênToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
+            this.tìmKiếmSinhViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tìmKiếmSinhViênToolStripMenuItem.Text = "DS Sinh viên";
             this.tìmKiếmSinhViênToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmSinhViênToolStripMenuItem_Click);
             // 
@@ -203,20 +203,20 @@ namespace csharp_winform
             this.dSDiemSinhVienToolStripMenuItem});
             this.thốngKêToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(82, 21);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // dSSinhViênToolStripMenuItem
             // 
             this.dSSinhViênToolStripMenuItem.Name = "dSSinhViênToolStripMenuItem";
-            this.dSSinhViênToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.dSSinhViênToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.dSSinhViênToolStripMenuItem.Text = "DS Sinh viên";
             this.dSSinhViênToolStripMenuItem.Click += new System.EventHandler(this.dSSinhViênToolStripMenuItem_Click);
             // 
             // dSDiemSinhVienToolStripMenuItem
             // 
             this.dSDiemSinhVienToolStripMenuItem.Name = "dSDiemSinhVienToolStripMenuItem";
-            this.dSDiemSinhVienToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.dSDiemSinhVienToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.dSDiemSinhVienToolStripMenuItem.Text = "DS Điểm Sinh viên";
             this.dSDiemSinhVienToolStripMenuItem.Click += new System.EventHandler(this.dSDiemSinhVienToolStripMenuItem_Click);
             // 
@@ -226,7 +226,7 @@ namespace csharp_winform
             this.sideBarToolStripMenuItem});
             this.windowsToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.windowsToolStripMenuItem.Name = "windowsToolStripMenuItem";
-            this.windowsToolStripMenuItem.Size = new System.Drawing.Size(78, 21);
+            this.windowsToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.windowsToolStripMenuItem.Text = "Windows";
             // 
             // sideBarToolStripMenuItem
@@ -235,7 +235,7 @@ namespace csharp_winform
             this.sideBarToolStripMenuItem.CheckOnClick = true;
             this.sideBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.sideBarToolStripMenuItem.Name = "sideBarToolStripMenuItem";
-            this.sideBarToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.sideBarToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.sideBarToolStripMenuItem.Text = "Side bar";
             this.sideBarToolStripMenuItem.Click += new System.EventHandler(this.sideBarToolStripMenuItem_Click);
             // 
@@ -245,13 +245,13 @@ namespace csharp_winform
             this.thôngTinPhầnMềmToolStripMenuItem});
             this.trợGiúpToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(51, 21);
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.trợGiúpToolStripMenuItem.Text = "Help";
             // 
             // thôngTinPhầnMềmToolStripMenuItem
             // 
             this.thôngTinPhầnMềmToolStripMenuItem.Name = "thôngTinPhầnMềmToolStripMenuItem";
-            this.thôngTinPhầnMềmToolStripMenuItem.Size = new System.Drawing.Size(127, 26);
+            this.thôngTinPhầnMềmToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.thôngTinPhầnMềmToolStripMenuItem.Text = "About";
             this.thôngTinPhầnMềmToolStripMenuItem.Click += new System.EventHandler(this.thôngTinPhầnMềmToolStripMenuItem_Click);
             // 
@@ -259,7 +259,7 @@ namespace csharp_winform
             // 
             this.btlQLMH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btlQLMH.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btlQLMH.Location = new System.Drawing.Point(1289, 482);
+            this.btlQLMH.Location = new System.Drawing.Point(1231, 472);
             this.btlQLMH.Margin = new System.Windows.Forms.Padding(4);
             this.btlQLMH.Name = "btlQLMH";
             this.btlQLMH.Size = new System.Drawing.Size(126, 70);
@@ -272,7 +272,7 @@ namespace csharp_winform
             // 
             this.btlQLK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btlQLK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btlQLK.Location = new System.Drawing.Point(1289, 404);
+            this.btlQLK.Location = new System.Drawing.Point(1231, 394);
             this.btlQLK.Margin = new System.Windows.Forms.Padding(4);
             this.btlQLK.Name = "btlQLK";
             this.btlQLK.Size = new System.Drawing.Size(126, 70);
@@ -285,7 +285,7 @@ namespace csharp_winform
             // 
             this.btlQLL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btlQLL.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btlQLL.Location = new System.Drawing.Point(1289, 326);
+            this.btlQLL.Location = new System.Drawing.Point(1231, 316);
             this.btlQLL.Margin = new System.Windows.Forms.Padding(4);
             this.btlQLL.Name = "btlQLL";
             this.btlQLL.Size = new System.Drawing.Size(126, 70);
@@ -298,7 +298,7 @@ namespace csharp_winform
             // 
             this.btlQLDSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btlQLDSV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btlQLDSV.Location = new System.Drawing.Point(1289, 250);
+            this.btlQLDSV.Location = new System.Drawing.Point(1231, 240);
             this.btlQLDSV.Margin = new System.Windows.Forms.Padding(4);
             this.btlQLDSV.Name = "btlQLDSV";
             this.btlQLDSV.Size = new System.Drawing.Size(126, 70);
@@ -311,7 +311,7 @@ namespace csharp_winform
             // 
             this.btlQLSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btlQLSV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btlQLSV.Location = new System.Drawing.Point(1289, 172);
+            this.btlQLSV.Location = new System.Drawing.Point(1231, 162);
             this.btlQLSV.Margin = new System.Windows.Forms.Padding(4);
             this.btlQLSV.Name = "btlQLSV";
             this.btlQLSV.Size = new System.Drawing.Size(126, 70);
@@ -326,10 +326,10 @@ namespace csharp_winform
             this.btnCloseSideBar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseSideBar.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseSideBar.Image")));
             this.btnCloseSideBar.InitialImage = null;
-            this.btnCloseSideBar.Location = new System.Drawing.Point(1270, 130);
+            this.btnCloseSideBar.Location = new System.Drawing.Point(1216, 125);
             this.btnCloseSideBar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCloseSideBar.Name = "btnCloseSideBar";
-            this.btnCloseSideBar.Size = new System.Drawing.Size(26, 20);
+            this.btnCloseSideBar.Size = new System.Drawing.Size(21, 20);
             this.btnCloseSideBar.TabIndex = 33;
             this.btnCloseSideBar.TabStop = false;
             this.btnCloseSideBar.Click += new System.EventHandler(this.btnCloseSideBar_Click);
@@ -339,10 +339,10 @@ namespace csharp_winform
             this.sideBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sideBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.sideBar.InitialImage = null;
-            this.sideBar.Location = new System.Drawing.Point(1270, 130);
+            this.sideBar.Location = new System.Drawing.Point(1216, 125);
             this.sideBar.Margin = new System.Windows.Forms.Padding(4);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(154, 615);
+            this.sideBar.Size = new System.Drawing.Size(154, 591);
             this.sideBar.TabIndex = 32;
             this.sideBar.TabStop = false;
             // 
@@ -350,10 +350,10 @@ namespace csharp_winform
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 24);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1424, 102);
+            this.pictureBox1.Size = new System.Drawing.Size(1370, 102);
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
@@ -361,7 +361,7 @@ namespace csharp_winform
             // 
             this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTimKiem.Location = new System.Drawing.Point(1289, 560);
+            this.btnTimKiem.Location = new System.Drawing.Point(1231, 550);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(126, 70);
@@ -374,7 +374,7 @@ namespace csharp_winform
             // 
             this.btnQLTK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQLTK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLTK.Location = new System.Drawing.Point(1289, 638);
+            this.btnQLTK.Location = new System.Drawing.Point(1231, 628);
             this.btnQLTK.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLTK.Name = "btnQLTK";
             this.btnQLTK.Size = new System.Drawing.Size(126, 70);
@@ -385,10 +385,10 @@ namespace csharp_winform
             // 
             // QuanLyDiemSinhVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1424, 719);
+            this.ClientSize = new System.Drawing.Size(1370, 719);
             this.Controls.Add(this.btnCloseSideBar);
             this.Controls.Add(this.btlQLMH);
             this.Controls.Add(this.btnQLTK);

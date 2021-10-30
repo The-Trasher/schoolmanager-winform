@@ -83,10 +83,10 @@ namespace csharp_winform
             this.rdbPass.ForeColor = System.Drawing.Color.Black;
             this.rdbPass.Location = new System.Drawing.Point(18, 49);
             this.rdbPass.Name = "rdbPass";
-            this.rdbPass.Size = new System.Drawing.Size(168, 21);
+            this.rdbPass.Size = new System.Drawing.Size(138, 17);
             this.rdbPass.TabIndex = 0;
             this.rdbPass.TabStop = true;
-            this.rdbPass.Text = "4 <= Điểm TB <=10";
+            this.rdbPass.Text = "4 <= Điểm TB <= 10";
             this.rdbPass.UseVisualStyleBackColor = true;
             // 
             // rdbMiss
@@ -96,10 +96,10 @@ namespace csharp_winform
             this.rdbMiss.ForeColor = System.Drawing.Color.Black;
             this.rdbMiss.Location = new System.Drawing.Point(18, 15);
             this.rdbMiss.Name = "rdbMiss";
-            this.rdbMiss.Size = new System.Drawing.Size(155, 21);
+            this.rdbMiss.Size = new System.Drawing.Size(124, 17);
             this.rdbMiss.TabIndex = 0;
             this.rdbMiss.TabStop = true;
-            this.rdbMiss.Text = "0 <= Điểm TB  <4";
+            this.rdbMiss.Text = "0 <= Điểm TB < 4";
             this.rdbMiss.UseVisualStyleBackColor = true;
             // 
             // btnXoa
@@ -131,7 +131,7 @@ namespace csharp_winform
             this.cbbKhoa.FormattingEnabled = true;
             this.cbbKhoa.Location = new System.Drawing.Point(230, 130);
             this.cbbKhoa.Name = "cbbKhoa";
-            this.cbbKhoa.Size = new System.Drawing.Size(246, 24);
+            this.cbbKhoa.Size = new System.Drawing.Size(246, 21);
             this.cbbKhoa.TabIndex = 2;
             // 
             // cbbLop
@@ -139,7 +139,7 @@ namespace csharp_winform
             this.cbbLop.FormattingEnabled = true;
             this.cbbLop.Location = new System.Drawing.Point(230, 85);
             this.cbbLop.Name = "cbbLop";
-            this.cbbLop.Size = new System.Drawing.Size(246, 24);
+            this.cbbLop.Size = new System.Drawing.Size(246, 21);
             this.cbbLop.TabIndex = 2;
             // 
             // label1
@@ -147,7 +147,7 @@ namespace csharp_winform
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(3, 18);
+            this.label1.Location = new System.Drawing.Point(3, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(954, 53);
             this.label1.TabIndex = 1;
@@ -161,7 +161,7 @@ namespace csharp_winform
             this.rdbDiem.ForeColor = System.Drawing.Color.Black;
             this.rdbDiem.Location = new System.Drawing.Point(87, 181);
             this.rdbDiem.Name = "rdbDiem";
-            this.rdbDiem.Size = new System.Drawing.Size(132, 21);
+            this.rdbDiem.Size = new System.Drawing.Size(106, 17);
             this.rdbDiem.TabIndex = 0;
             this.rdbDiem.TabStop = true;
             this.rdbDiem.Text = "Theo Điểm TB";
@@ -175,7 +175,7 @@ namespace csharp_winform
             this.rdbKhoa.ForeColor = System.Drawing.Color.Black;
             this.rdbKhoa.Location = new System.Drawing.Point(87, 130);
             this.rdbKhoa.Name = "rdbKhoa";
-            this.rdbKhoa.Size = new System.Drawing.Size(108, 21);
+            this.rdbKhoa.Size = new System.Drawing.Size(87, 17);
             this.rdbKhoa.TabIndex = 0;
             this.rdbKhoa.TabStop = true;
             this.rdbKhoa.Text = "Theo Khoa";
@@ -189,7 +189,7 @@ namespace csharp_winform
             this.rdbLop.ForeColor = System.Drawing.Color.Black;
             this.rdbLop.Location = new System.Drawing.Point(87, 85);
             this.rdbLop.Name = "rdbLop";
-            this.rdbLop.Size = new System.Drawing.Size(93, 21);
+            this.rdbLop.Size = new System.Drawing.Size(75, 17);
             this.rdbLop.TabIndex = 0;
             this.rdbLop.TabStop = true;
             this.rdbLop.Text = "Theo lớp";
@@ -209,7 +209,8 @@ namespace csharp_winform
             // 
             // RP_DanhSachSV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AcceptButton = this.btnXuat;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1246, 681);
