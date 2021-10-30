@@ -59,7 +59,7 @@ namespace csharp_winform
             this.grDanhSach.Controls.Add(this.dgvDSMonHoc);
             this.grDanhSach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.grDanhSach.ForeColor = System.Drawing.Color.Black;
-            this.grDanhSach.Location = new System.Drawing.Point(514, 64);
+            this.grDanhSach.Location = new System.Drawing.Point(425, 66);
             this.grDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.grDanhSach.Name = "grDanhSach";
             this.grDanhSach.Padding = new System.Windows.Forms.Padding(4);
@@ -139,7 +139,7 @@ namespace csharp_winform
             this.grThongTinChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.grThongTinChiTiet.Name = "grThongTinChiTiet";
             this.grThongTinChiTiet.Padding = new System.Windows.Forms.Padding(4);
-            this.grThongTinChiTiet.Size = new System.Drawing.Size(442, 367);
+            this.grThongTinChiTiet.Size = new System.Drawing.Size(404, 440);
             this.grThongTinChiTiet.TabIndex = 10;
             this.grThongTinChiTiet.TabStop = false;
             this.grThongTinChiTiet.Text = "Thông tin chi tiết";
@@ -148,7 +148,7 @@ namespace csharp_winform
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.Black;
-            this.btnRefresh.Location = new System.Drawing.Point(23, 252);
+            this.btnRefresh.Location = new System.Drawing.Point(44, 254);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 27);
             this.btnRefresh.TabIndex = 18;
@@ -160,7 +160,7 @@ namespace csharp_winform
             // 
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.Black;
-            this.btnThoat.Location = new System.Drawing.Point(255, 305);
+            this.btnThoat.Location = new System.Drawing.Point(276, 307);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(88, 32);
@@ -173,7 +173,7 @@ namespace csharp_winform
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
-            this.btnXoa.Location = new System.Drawing.Point(255, 251);
+            this.btnXoa.Location = new System.Drawing.Point(276, 253);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(88, 28);
@@ -186,7 +186,7 @@ namespace csharp_winform
             // 
             this.btnNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhap.ForeColor = System.Drawing.Color.Black;
-            this.btnNhap.Location = new System.Drawing.Point(121, 251);
+            this.btnNhap.Location = new System.Drawing.Point(142, 253);
             this.btnNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btnNhap.Name = "btnNhap";
             this.btnNhap.Size = new System.Drawing.Size(116, 28);
@@ -200,7 +200,7 @@ namespace csharp_winform
             this.txtTCTH.Location = new System.Drawing.Point(159, 193);
             this.txtTCTH.Margin = new System.Windows.Forms.Padding(4);
             this.txtTCTH.Name = "txtTCTH";
-            this.txtTCTH.Size = new System.Drawing.Size(205, 30);
+            this.txtTCTH.Size = new System.Drawing.Size(205, 26);
             this.txtTCTH.TabIndex = 14;
             // 
             // txtTCLT
@@ -208,7 +208,7 @@ namespace csharp_winform
             this.txtTCLT.Location = new System.Drawing.Point(159, 139);
             this.txtTCLT.Margin = new System.Windows.Forms.Padding(4);
             this.txtTCLT.Name = "txtTCLT";
-            this.txtTCLT.Size = new System.Drawing.Size(205, 30);
+            this.txtTCLT.Size = new System.Drawing.Size(205, 26);
             this.txtTCLT.TabIndex = 14;
             // 
             // txtTenMon
@@ -216,7 +216,7 @@ namespace csharp_winform
             this.txtTenMon.Location = new System.Drawing.Point(159, 86);
             this.txtTenMon.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenMon.Name = "txtTenMon";
-            this.txtTenMon.Size = new System.Drawing.Size(205, 30);
+            this.txtTenMon.Size = new System.Drawing.Size(205, 26);
             this.txtTenMon.TabIndex = 13;
             // 
             // txtMaMon
@@ -224,7 +224,7 @@ namespace csharp_winform
             this.txtMaMon.Location = new System.Drawing.Point(159, 33);
             this.txtMaMon.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaMon.Name = "txtMaMon";
-            this.txtMaMon.Size = new System.Drawing.Size(205, 30);
+            this.txtMaMon.Size = new System.Drawing.Size(205, 26);
             this.txtMaMon.TabIndex = 12;
             // 
             // label1
@@ -235,7 +235,7 @@ namespace csharp_winform
             this.label1.Location = new System.Drawing.Point(2, 193);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 17);
+            this.label1.Size = new System.Drawing.Size(128, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Số tín chỉ thực hành:";
             // 
@@ -247,7 +247,7 @@ namespace csharp_winform
             this.lblSoDVHT.Location = new System.Drawing.Point(8, 144);
             this.lblSoDVHT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSoDVHT.Name = "lblSoDVHT";
-            this.lblSoDVHT.Size = new System.Drawing.Size(148, 17);
+            this.lblSoDVHT.Size = new System.Drawing.Size(119, 13);
             this.lblSoDVHT.TabIndex = 3;
             this.lblSoDVHT.Text = "Số tín chỉ lý thuyết:";
             // 
@@ -259,7 +259,7 @@ namespace csharp_winform
             this.lblTenMon.Location = new System.Drawing.Point(48, 91);
             this.lblTenMon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTenMon.Name = "lblTenMon";
-            this.lblTenMon.Size = new System.Drawing.Size(107, 17);
+            this.lblTenMon.Size = new System.Drawing.Size(85, 13);
             this.lblTenMon.TabIndex = 2;
             this.lblTenMon.Text = "Tên môn học:";
             // 
@@ -271,7 +271,7 @@ namespace csharp_winform
             this.lblMaMon.Location = new System.Drawing.Point(51, 44);
             this.lblMaMon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMaMon.Name = "lblMaMon";
-            this.lblMaMon.Size = new System.Drawing.Size(100, 17);
+            this.lblMaMon.Size = new System.Drawing.Size(80, 13);
             this.lblMaMon.TabIndex = 1;
             this.lblMaMon.Text = "Mã môn học:";
             // 
@@ -283,17 +283,17 @@ namespace csharp_winform
             this.lblDanhSachMonHoc.Location = new System.Drawing.Point(271, 21);
             this.lblDanhSachMonHoc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDanhSachMonHoc.Name = "lblDanhSachMonHoc";
-            this.lblDanhSachMonHoc.Size = new System.Drawing.Size(352, 35);
+            this.lblDanhSachMonHoc.Size = new System.Drawing.Size(280, 26);
             this.lblDanhSachMonHoc.TabIndex = 9;
             this.lblDanhSachMonHoc.Text = "DANH SÁCH MÔN HỌC";
             // 
             // QuanLyMonHoc
             // 
             this.AcceptButton = this.btnNhap;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1202, 708);
+            this.ClientSize = new System.Drawing.Size(1105, 519);
             this.Controls.Add(this.grDanhSach);
             this.Controls.Add(this.grThongTinChiTiet);
             this.Controls.Add(this.lblDanhSachMonHoc);

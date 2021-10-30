@@ -179,16 +179,16 @@ namespace csharp_winform
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            var checkExist = dBContext.DIEMSVs.Where(p => p.MAMH == txtMaMon.Text).ToList();
-            if (checkExist.Count > 0)
-            {
-                MessageBox.Show($"Không thể xoá môn học: {txtTenMon.Text} do tồn tại điểm sinh viên, hãy xóa điểm sinh viên trước", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                return;
-            }
 
             MONHOC updateSubject = dBContext.MONHOCs.Where(p => p.MAMH == txtMaMon.Text).FirstOrDefault();
             if (updateSubject != null)
             {
+                var checkExist = dBContext.DIEMSVs.Where(p => p.MAMH == txtMaMon.Text).ToList();
+                if (checkExist.Count > 0)
+                {
+                    MessageBox.Show($"Không thể xoá môn học: {txtTenMon.Text} do tồn tại điểm sinh viên, hãy xóa điểm sinh viên trước", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    return;
+                }
                 DialogResult dr = MessageBox.Show("Bạn có muốn xóa không ?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {

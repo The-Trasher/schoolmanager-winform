@@ -71,18 +71,9 @@ namespace csharp_winform
 
                     newScore.MAMH = txtMaMH.Text;
                     newScore.MSSV = txtMaSV.Text;
-                    if (txtKTL1.Text != "")
-                        newScore.DIEMKTLAN1 = float.Parse(txtKTL1.Text);
-                    else
-                        newScore.DIEMKTLAN1 = 0;
-                    if (txtKTL2.Text != "")
-                        newScore.DIEMKTLAN2 = float.Parse(txtKTL2.Text);
-                    else
-                        newScore.DIEMKTLAN2 = 0;
-                    if (txtDiemThi.Text != "")
-                        newScore.DIEMTHI = float.Parse(txtDiemThi.Text);
-                    else
-                        newScore.DIEMTHI = 0;
+                    newScore.DIEMKTLAN1 = float.Parse(txtKTL1.Text);
+                    newScore.DIEMKTLAN2 = float.Parse(txtKTL2.Text);
+                    newScore.DIEMTHI = float.Parse(txtDiemThi.Text);
                     newScore.DIEMTONGKET = ((newScore.DIEMKTLAN1 + newScore.DIEMKTLAN2) / 2 + newScore.DIEMTHI) / 2;
 
                     dBContext.DIEMSVs.AddOrUpdate(newScore);
@@ -102,18 +93,9 @@ namespace csharp_winform
 
                     if (updateScore != null)
                     {
-                        if (txtKTL1.Text != "")
-                            updateScore.DIEMKTLAN1 = float.Parse(txtKTL1.Text);
-                        else
-                            updateScore.DIEMKTLAN1 = 0;
-                        if (txtKTL2.Text != "")
-                            updateScore.DIEMKTLAN2 = float.Parse(txtKTL2.Text);
-                        else
-                            updateScore.DIEMKTLAN2 = 0;
-                        if (txtDiemThi.Text != "")
-                            updateScore.DIEMTHI = float.Parse(txtDiemThi.Text);
-                        else
-                            updateScore.DIEMTHI = 0;
+                        updateScore.DIEMKTLAN1 = float.Parse(txtKTL1.Text);
+                        updateScore.DIEMKTLAN2 = float.Parse(txtKTL2.Text);
+                        updateScore.DIEMTHI = float.Parse(txtDiemThi.Text);
                         updateScore.DIEMTONGKET = ((updateScore.DIEMKTLAN1 + updateScore.DIEMKTLAN2) / 2 + updateScore.DIEMTHI) / 2;
 
                         dBContext.DIEMSVs.AddOrUpdate(updateScore);
@@ -143,9 +125,9 @@ namespace csharp_winform
 
         private bool CheckDataInput()
         {
-            if (txtMaMH.Text == "" || txtMaSV.Text == "")
+            if (txtMaMH.Text == "" || txtMaSV.Text == "" || txtKTL1.Text == "" || txtKTL2.Text == "" || txtDiemThi.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ mã môn học và mã sinh viên!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (txtKTL1.Text != "")

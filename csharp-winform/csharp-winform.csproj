@@ -254,7 +254,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="image\Delete.ico" />
-    <Content Include="image\quanlydiemsv2.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

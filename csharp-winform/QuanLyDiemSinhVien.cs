@@ -287,7 +287,23 @@ namespace csharp_winform
         private void QuanLyDiemSinhVien_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (flag == 0)
-                exitToolStripMenuItem_Click(sender, e);
+            {
+                DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn thoát không ?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (dr == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Environment.Exit(1);
+                    }
+                    catch (Exception)
+                    {
+                        Environment.Exit(1);
+                    }
+                }
+                else
+                    e.Cancel = true;
+            }
         }
     }
 }
