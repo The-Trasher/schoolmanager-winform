@@ -246,6 +246,7 @@ namespace csharp_winform
             // 
             this.dgvDanhSach.AllowUserToAddRows = false;
             this.dgvDanhSach.AllowUserToDeleteRows = false;
+            this.dgvDanhSach.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvMaSV,
@@ -351,7 +352,7 @@ namespace csharp_winform
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NhapDiemSinhVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "NhapDiemSinhVien";
+            this.Text = "Quản Lý Điểm Sinh VIên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.NhapDiemSinhVien_Load);
             this.grThongTinChiTiet.ResumeLayout(false);

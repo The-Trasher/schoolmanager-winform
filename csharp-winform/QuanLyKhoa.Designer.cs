@@ -106,6 +106,7 @@ namespace csharp_winform
             this.dgvDSKhoa.AllowUserToAddRows = false;
             this.dgvDSKhoa.AllowUserToDeleteRows = false;
             this.dgvDSKhoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDSKhoa.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvDSKhoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSKhoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaKhoa,
@@ -116,6 +117,7 @@ namespace csharp_winform
             this.dgvDSKhoa.ReadOnly = true;
             this.dgvDSKhoa.RowHeadersWidth = 51;
             this.dgvDSKhoa.RowTemplate.Height = 24;
+            this.dgvDSKhoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDSKhoa.Size = new System.Drawing.Size(601, 425);
             this.dgvDSKhoa.TabIndex = 0;
             this.dgvDSKhoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSKhoa_CellClick);
@@ -229,7 +231,7 @@ namespace csharp_winform
             this.Controls.Add(this.lblQuanLyKhoa);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QuanLyKhoa";
-            this.Text = "QuanLyKhoa";
+            this.Text = "Quản Lý Khoa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.QuanLyKhoa_Load);
             this.grDanhSach.ResumeLayout(false);
