@@ -60,7 +60,7 @@ namespace csharp_winform
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTimKiem.Location = new System.Drawing.Point(473, 137);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(100, 38);
             this.btnTimKiem.TabIndex = 13;
@@ -73,9 +73,9 @@ namespace csharp_winform
             this.grThongTinChiTiet.Controls.Add(this.dgvStudent);
             this.grThongTinChiTiet.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.grThongTinChiTiet.Location = new System.Drawing.Point(11, 192);
-            this.grThongTinChiTiet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grThongTinChiTiet.Margin = new System.Windows.Forms.Padding(2);
             this.grThongTinChiTiet.Name = "grThongTinChiTiet";
-            this.grThongTinChiTiet.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grThongTinChiTiet.Padding = new System.Windows.Forms.Padding(2);
             this.grThongTinChiTiet.Size = new System.Drawing.Size(867, 365);
             this.grThongTinChiTiet.TabIndex = 12;
             this.grThongTinChiTiet.TabStop = false;
@@ -84,6 +84,7 @@ namespace csharp_winform
             // dgvStudent
             // 
             this.dgvStudent.AllowUserToAddRows = false;
+            this.dgvStudent.AllowUserToDeleteRows = false;
             this.dgvStudent.AllowUserToResizeRows = false;
             this.dgvStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStudent.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
@@ -161,7 +162,7 @@ namespace csharp_winform
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnRefresh.Location = new System.Drawing.Point(605, 137);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(100, 38);
             this.btnRefresh.TabIndex = 13;
@@ -208,7 +209,7 @@ namespace csharp_winform
             this.cbbKhoa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbbKhoa.FormattingEnabled = true;
             this.cbbKhoa.Location = new System.Drawing.Point(256, 98);
-            this.cbbKhoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbKhoa.Margin = new System.Windows.Forms.Padding(2);
             this.cbbKhoa.Name = "cbbKhoa";
             this.cbbKhoa.Size = new System.Drawing.Size(152, 24);
             this.cbbKhoa.TabIndex = 4;
@@ -219,7 +220,7 @@ namespace csharp_winform
             this.cbbLop.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbbLop.FormattingEnabled = true;
             this.cbbLop.Location = new System.Drawing.Point(256, 137);
-            this.cbbLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbLop.Margin = new System.Windows.Forms.Padding(2);
             this.cbbLop.Name = "cbbLop";
             this.cbbLop.Size = new System.Drawing.Size(152, 24);
             this.cbbLop.TabIndex = 5;
@@ -230,7 +231,7 @@ namespace csharp_winform
             this.cbbMonHoc.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbbMonHoc.FormattingEnabled = true;
             this.cbbMonHoc.Location = new System.Drawing.Point(569, 63);
-            this.cbbMonHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbMonHoc.Margin = new System.Windows.Forms.Padding(2);
             this.cbbMonHoc.Name = "cbbMonHoc";
             this.cbbMonHoc.Size = new System.Drawing.Size(152, 24);
             this.cbbMonHoc.TabIndex = 7;
@@ -285,7 +286,7 @@ namespace csharp_winform
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThoat.Location = new System.Drawing.Point(734, 137);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(100, 38);
             this.btnThoat.TabIndex = 13;

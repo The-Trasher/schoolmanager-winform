@@ -32,6 +32,7 @@ namespace csharp_winform
             FillDataCBB(listLop);
             txtStudentID.Focus();
         }
+
         private void FillDataDGV(List<SINHVIEN> listSinhVien)
         {
             dgvStudent.Rows.Clear();
@@ -71,10 +72,7 @@ namespace csharp_winform
                     newStudent.HOTEN = txtFullName.Text;
                     newStudent.GIOITINH = optFemale.Checked ? "Nữ" : "Nam";
                     newStudent.NGAYSINH = dtpNgaySinh.Value;
-                    if (txtKhoaHoc.Text != "")
-                        newStudent.KHOAHOC = int.Parse(txtKhoaHoc.Text);
-                    else
-                        newStudent.KHOAHOC = null;
+                    newStudent.KHOAHOC = int.Parse(txtKhoaHoc.Text);
                     newStudent.MALOP = cbbMaLop.SelectedValue.ToString();
                     newStudent.DIACHI = txtDiaChi.Text;
                     newStudent.DIEMTB = 0;
@@ -99,10 +97,7 @@ namespace csharp_winform
                         updateStudent.HOTEN = txtFullName.Text;
                         updateStudent.GIOITINH = optFemale.Checked ? "Nữ" : "Nam";
                         updateStudent.NGAYSINH = dtpNgaySinh.Value;
-                        if (txtKhoaHoc.Text != "")
-                            updateStudent.KHOAHOC = int.Parse(txtKhoaHoc.Text);
-                        else
-                            updateStudent.KHOAHOC = null;
+                        updateStudent.KHOAHOC = int.Parse(txtKhoaHoc.Text);
                         updateStudent.MALOP = cbbMaLop.SelectedValue.ToString();
                         updateStudent.DIACHI = txtDiaChi.Text;
 
@@ -134,9 +129,9 @@ namespace csharp_winform
 
         private bool CheckDataInput()
         {
-            if (txtStudentID.Text == "" || txtFullName.Text == "")
+            if (txtStudentID.Text == "" || txtFullName.Text == "" || txtKhoaHoc.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ mã số và họ tên sinh viên!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ mã số, họ tên và khóa học của sinh viên!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else if (txtKhoaHoc.Text != "")
@@ -178,13 +173,13 @@ namespace csharp_winform
         private void btnDelete_Click(object sender, EventArgs e)
         {
             SINHVIEN updateStudent = dBContext.SINHVIENs.Where(p => p.MSSV == txtStudentID.Text).FirstOrDefault();
-            var updateDiemSV = dBContext.DIEMSVs.Where(p => p.MSSV == txtStudentID.Text).ToList();
             if (updateStudent != null)
             {
                 DialogResult dr = MessageBox.Show($"Bạn thực sự muốn xoá thông tin sinh viên: {updateStudent.HOTEN}?" +
                     $"\n(Lưu ý toàn bộ điểm của sinh viên này sẽ đều bị xoá!)", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
+                    var updateDiemSV = dBContext.DIEMSVs.Where(p => p.MSSV == txtStudentID.Text).ToList();
                     foreach (var item in updateDiemSV)
                     {
                         dBContext.DIEMSVs.Remove(item);

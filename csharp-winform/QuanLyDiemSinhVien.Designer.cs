@@ -62,6 +62,7 @@ namespace csharp_winform
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnQLTK = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseSideBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sideBar)).BeginInit();
@@ -349,7 +350,6 @@ namespace csharp_winform
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 24);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
@@ -383,12 +383,24 @@ namespace csharp_winform
             this.btnQLTK.UseVisualStyleBackColor = true;
             this.btnQLTK.Click += new System.EventHandler(this.btnQLTK_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(154, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1043, 55);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "CHƯƠNG TRÌNH QUẢN LÝ ĐIỂM SINH VIÊN";
+            // 
             // QuanLyDiemSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1370, 719);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCloseSideBar);
             this.Controls.Add(this.btlQLMH);
             this.Controls.Add(this.btnQLTK);
@@ -453,5 +465,6 @@ namespace csharp_winform
         public System.Windows.Forms.Button btnQLTK;
         private System.Windows.Forms.ToolStripMenuItem tìmKiếmSinhViênToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem dSTàiKhoảnToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
     }
 }

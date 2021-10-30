@@ -132,16 +132,16 @@ namespace csharp_winform
         private void btnXoa_Click(object sender, EventArgs e)
         {
 
-            LOP checkExist = dBContext.LOPs.Where(p => p.MAKHOA == txtMaKhoa.Text).FirstOrDefault();
-            if (checkExist != null)
-            {
-                MessageBox.Show($"Không thể xoá khoa: {txtTenKhoa.Text}, do tồn tại lớp và sinh viên trong khoa, hãy xóa lớp và sinh viên trong khoa trước!", "Thông Báo!");
-                return;
-            }
 
             KHOA updateFaculty = dBContext.KHOAs.Where(p => p.MAKHOA == txtMaKhoa.Text).FirstOrDefault();
             if (updateFaculty != null)
             {
+                LOP checkExist = dBContext.LOPs.Where(p => p.MAKHOA == txtMaKhoa.Text).FirstOrDefault();
+                if (checkExist != null)
+                {
+                    MessageBox.Show($"Không thể xoá khoa: {txtTenKhoa.Text}, do tồn tại lớp và sinh viên trong khoa, hãy xóa lớp và sinh viên trong khoa trước!", "Thông Báo!");
+                    return;
+                }
                 DialogResult dr = MessageBox.Show("Bạn có muốn xóa khoa ?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
