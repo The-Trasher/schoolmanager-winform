@@ -148,35 +148,35 @@ namespace csharp_winform
             // sinhViênToolStripMenuItem
             // 
             this.sinhViênToolStripMenuItem.Name = "sinhViênToolStripMenuItem";
-            this.sinhViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sinhViênToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.sinhViênToolStripMenuItem.Text = "Sinh viên";
             this.sinhViênToolStripMenuItem.Click += new System.EventHandler(this.sinhViênToolStripMenuItem_Click);
             // 
             // diemSinhVienToolStripMenuItem
             // 
             this.diemSinhVienToolStripMenuItem.Name = "diemSinhVienToolStripMenuItem";
-            this.diemSinhVienToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.diemSinhVienToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.diemSinhVienToolStripMenuItem.Text = "Điểm sinh viên";
             this.diemSinhVienToolStripMenuItem.Click += new System.EventHandler(this.diemSinhVienToolStripMenuItem_Click);
             // 
             // mônHọcToolStripMenuItem
             // 
             this.mônHọcToolStripMenuItem.Name = "mônHọcToolStripMenuItem";
-            this.mônHọcToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mônHọcToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.mônHọcToolStripMenuItem.Text = "Môn học";
             this.mônHọcToolStripMenuItem.Click += new System.EventHandler(this.mônHọcToolStripMenuItem_Click);
             // 
             // lớpToolStripMenuItem
             // 
             this.lớpToolStripMenuItem.Name = "lớpToolStripMenuItem";
-            this.lớpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lớpToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.lớpToolStripMenuItem.Text = "Lớp";
             this.lớpToolStripMenuItem.Click += new System.EventHandler(this.lớpToolStripMenuItem_Click);
             // 
             // khoaToolStripMenuItem
             // 
             this.khoaToolStripMenuItem.Name = "khoaToolStripMenuItem";
-            this.khoaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.khoaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.khoaToolStripMenuItem.Text = "Khoa";
             this.khoaToolStripMenuItem.Click += new System.EventHandler(this.khoaToolStripMenuItem_Click);
             // 
@@ -192,7 +192,7 @@ namespace csharp_winform
             // tìmKiếmSinhViênToolStripMenuItem
             // 
             this.tìmKiếmSinhViênToolStripMenuItem.Name = "tìmKiếmSinhViênToolStripMenuItem";
-            this.tìmKiếmSinhViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tìmKiếmSinhViênToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.tìmKiếmSinhViênToolStripMenuItem.Text = "DS Sinh viên";
             this.tìmKiếmSinhViênToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmSinhViênToolStripMenuItem_Click);
             // 
@@ -408,7 +408,7 @@ namespace csharp_winform
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Điểm Sinh Viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QuanLyDiemSinhVien_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuanLyDiemSinhVien_FormClosing);
             this.Load += new System.EventHandler(this.QuanLyDiemSinhVien_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

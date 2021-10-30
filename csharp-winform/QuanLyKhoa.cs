@@ -135,7 +135,7 @@ namespace csharp_winform
             LOP checkExist = dBContext.LOPs.Where(p => p.MAKHOA == txtMaKhoa.Text).FirstOrDefault();
             if (checkExist != null)
             {
-                MessageBox.Show($"Không thể xoá khoa: {txtTenKhoa.Text}!", "Thông Báo!");
+                MessageBox.Show($"Không thể xoá khoa: {txtTenKhoa.Text}, do tồn tại lớp và sinh viên trong khoa, hãy xóa lớp và sinh viên trong khoa trước!", "Thông Báo!");
                 return;
             }
 

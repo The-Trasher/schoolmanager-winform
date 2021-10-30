@@ -53,8 +53,7 @@ namespace csharp_winform
                             dBContext.SaveChanges();
 
                             MessageBox.Show($"Đổi mật khẩu thành công. Vui lòng đăng nhập lại!", "Thông Báo!");
-
-                            mainForm.đăngXuấtToolStripMenuItem_Click(sender, e);
+                            mainForm.dangNhapLai();
                         }
                     }
                     else

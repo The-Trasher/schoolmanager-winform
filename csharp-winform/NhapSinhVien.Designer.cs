@@ -257,7 +257,7 @@ namespace csharp_winform
             this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnUpdate.Location = new System.Drawing.Point(117, 419);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(83, 24);
+            this.btnUpdate.Size = new System.Drawing.Size(101, 24);
             this.btnUpdate.TabIndex = 0;
             this.btnUpdate.Text = "Thêm / Sửa";
             this.btnUpdate.UseVisualStyleBackColor = true;

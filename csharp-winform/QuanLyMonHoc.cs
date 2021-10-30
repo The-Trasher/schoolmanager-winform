@@ -182,7 +182,7 @@ namespace csharp_winform
             var checkExist = dBContext.DIEMSVs.Where(p => p.MAMH == txtMaMon.Text).ToList();
             if (checkExist.Count > 0)
             {
-                MessageBox.Show($"Không thể xoá môn học: {txtTenMon.Text}", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                MessageBox.Show($"Không thể xoá môn học: {txtTenMon.Text} do tồn tại điểm sinh viên, hãy xóa điểm sinh viên trước", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 return;
             }
 
@@ -192,7 +192,6 @@ namespace csharp_winform
                 DialogResult dr = MessageBox.Show("Bạn có muốn xóa không ?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
-                    StudentDBContext dBContext = new StudentDBContext();
                     dBContext.MONHOCs.Remove(updateSubject);
                     dBContext.SaveChanges();
 

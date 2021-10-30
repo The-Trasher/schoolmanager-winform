@@ -68,10 +68,7 @@ namespace csharp_winform
                     newClass.MALOP = txtMaLop.Text;
                     newClass.TENLOP = txtTenLop.Text;
                     newClass.MAKHOA = cbbKhoa.SelectedValue.ToString();
-                    if (txtSiSo.Text != "")
-                        newClass.SISO = int.Parse(txtSiSo.Text);
-                    else
-                        newClass.SISO = null;
+                    newClass.SISO = 0;
 
                     dBContext.LOPs.AddOrUpdate(newClass);
                     dBContext.SaveChanges();
@@ -91,10 +88,6 @@ namespace csharp_winform
                     {
                         updateClass.TENLOP = txtTenLop.Text;
                         updateClass.MAKHOA = cbbKhoa.SelectedValue.ToString();
-                        if (txtSiSo.Text != "")
-                            updateClass.SISO = int.Parse(txtSiSo.Text);
-                        else
-                            updateClass.SISO = null;
 
                         dBContext.LOPs.AddOrUpdate(updateClass);
                         dBContext.SaveChanges();
@@ -127,16 +120,6 @@ namespace csharp_winform
                 MessageBox.Show("Vui lòng nhập mã và tên lớp!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            else if (txtSiSo.Text != "")
-            {
-                int kq = 0;
-                bool ketQua = int.TryParse(txtSiSo.Text, out kq);
-                if (!ketQua)
-                {
-                    MessageBox.Show("Sĩ số phải là số!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
-            }
 
             var regexItem = new Regex("^[a-zA-Z0-9]*$");
             if (!regexItem.IsMatch(txtMaLop.Text))
@@ -168,7 +151,7 @@ namespace csharp_winform
             SINHVIEN checkExist = dBContext.SINHVIENs.Where(p => p.MALOP == updateClass.MALOP).FirstOrDefault();
             if (checkExist != null)
             {
-                MessageBox.Show($"Không thể xoá lớp: {txtTenLop.Text}!", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                MessageBox.Show($"Không thể xoá lớp: {txtTenLop.Text}, do tồn tại sinh viên trong lớp, hãy xóa sinh viên trong lớp trước!", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 return;
             }
 

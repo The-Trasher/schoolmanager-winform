@@ -36,16 +36,8 @@ namespace csharp_winform
         {
             dgvStudent.Rows.Clear();
 
-
             foreach (SINHVIEN item in listSinhVien)
             {
-
-                var DIEMTB = dBContext.DIEMSVs
-                                .Where(p => p.MSSV == item.MSSV)
-                                .Select(p => new { DiemTB = p.DIEMTONGKET })
-                                .Average(p => p.DiemTB);
-                if (DIEMTB == null)
-                    DIEMTB = 0;
                 int newRow = dgvStudent.Rows.Add();
                 dgvStudent.Rows[newRow].Cells[0].Value = item.MSSV;
                 dgvStudent.Rows[newRow].Cells[1].Value = item.HOTEN;
@@ -55,15 +47,7 @@ namespace csharp_winform
                 dgvStudent.Rows[newRow].Cells[4].Value = item.KHOAHOC;
                 dgvStudent.Rows[newRow].Cells[5].Value = item.MALOP;
                 dgvStudent.Rows[newRow].Cells[6].Value = item.DIACHI;
-                dgvStudent.Rows[newRow].Cells[7].Value = Math.Round((double)DIEMTB, 2).ToString();
-                SINHVIEN updateStudent = dBContext.SINHVIENs.Where(p => p.MSSV == item.MSSV).FirstOrDefault();
-                if (updateStudent != null)
-                {
-                    updateStudent.DIEMTB = DIEMTB;
-                    dBContext.SINHVIENs.AddOrUpdate(updateStudent);
-                    dBContext.SaveChanges();
-                }
-
+                dgvStudent.Rows[newRow].Cells[7].Value = Math.Round((double)item.DIEMTB, 2).ToString();
             }
         }
 
@@ -78,7 +62,8 @@ namespace csharp_winform
         {
             if (CheckDataInput())
             {
-                if (CheckIDStudent(txtStudentID.Text) == -1)
+                int idStudent = CheckIDStudent(txtStudentID.Text);
+                if (idStudent == -1)
                 {
                     SINHVIEN newStudent = new SINHVIEN();
 
@@ -92,10 +77,11 @@ namespace csharp_winform
                         newStudent.KHOAHOC = null;
                     newStudent.MALOP = cbbMaLop.SelectedValue.ToString();
                     newStudent.DIACHI = txtDiaChi.Text;
-
+                    newStudent.DIEMTB = 0;
 
                     dBContext.SINHVIENs.AddOrUpdate(newStudent);
                     dBContext.SaveChanges();
+                    updateSiSoLop(newStudent.MALOP, 1);
 
                     LoadForm();
                     LoadDGV();
@@ -119,13 +105,11 @@ namespace csharp_winform
                             updateStudent.KHOAHOC = null;
                         updateStudent.MALOP = cbbMaLop.SelectedValue.ToString();
                         updateStudent.DIACHI = txtDiaChi.Text;
-                        updateStudent.DIEMTB = dBContext.DIEMSVs
-                                                .Where(p => p.MSSV == updateStudent.MSSV)
-                                                .Select(p => new { DiemTB = p.DIEMTONGKET })
-                                                .Average(p => p.DiemTB);
 
                         dBContext.SINHVIENs.AddOrUpdate(updateStudent);
                         dBContext.SaveChanges();
+                        updateSiSoLop(updateStudent.MALOP, 1);
+                        updateSiSoLop(dgvStudent.Rows[idStudent].Cells[5].FormattedValue.ToString(), -1);
 
                         LoadForm();
                         LoadDGV();
@@ -145,7 +129,7 @@ namespace csharp_winform
                 if (dgvStudent.Rows[i].Cells[0].Value.ToString() == idStudent)
                     return i;
             }
-            return -1; //sv chua ton tai trong dgv
+            return -1;
         }
 
         private bool CheckDataInput()
@@ -161,7 +145,7 @@ namespace csharp_winform
                 bool ketQua = int.TryParse(txtKhoaHoc.Text, out kq);
                 if (!ketQua)
                 {
-                    MessageBox.Show("Khoa hoc phai la so!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Khóa học phải là số!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
@@ -207,6 +191,7 @@ namespace csharp_winform
                         dBContext.SaveChanges();
                     }
 
+                    updateSiSoLop(updateStudent.MALOP, -1);
                     dBContext.SINHVIENs.Remove(updateStudent);
                     dBContext.SaveChanges();
 
@@ -250,6 +235,14 @@ namespace csharp_winform
             {
                 return;
             }
+        }
+
+        private void updateSiSoLop(string maLop, int type)
+        {
+            LOP checkExist = dBContext.LOPs.Where(p => p.MALOP == maLop).FirstOrDefault();
+            checkExist.SISO = checkExist.SISO + type;
+            dBContext.LOPs.AddOrUpdate(checkExist);
+            dBContext.SaveChanges();
         }
 
         private void sumMaleFemale()

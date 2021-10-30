@@ -87,6 +87,7 @@ namespace csharp_winform
 
                     dBContext.DIEMSVs.AddOrUpdate(newScore);
                     dBContext.SaveChanges();
+                    updateDiemTBSinhVien(checkExist);
 
                     LoadForm();
                     LoadDGV();
@@ -97,7 +98,7 @@ namespace csharp_winform
                 }
                 else
                 {
-                    DIEMSV updateScore = dBContext.DIEMSVs.Where(p => p.MSSV == txtMaSV.Text && p.MSSV == txtMaSV.Text).FirstOrDefault();
+                    DIEMSV updateScore = dBContext.DIEMSVs.Where(p => p.MSSV == txtMaSV.Text && p.MAMH == txtMaMH.Text).FirstOrDefault();
 
                     if (updateScore != null)
                     {
@@ -117,6 +118,7 @@ namespace csharp_winform
 
                         dBContext.DIEMSVs.AddOrUpdate(updateScore);
                         dBContext.SaveChanges();
+                        updateDiemTBSinhVien(checkExist);
 
                         LoadForm();
                         LoadDGV();
@@ -218,7 +220,7 @@ namespace csharp_winform
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DIEMSV updateScore = dBContext.DIEMSVs.Where(p => p.MSSV == txtMaSV.Text && p.MSSV == txtMaSV.Text).FirstOrDefault();
+            DIEMSV updateScore = dBContext.DIEMSVs.Where(p => p.MSSV == txtMaSV.Text && p.MAMH == txtMaMH.Text).FirstOrDefault();
 
             if (updateScore != null)
             {
@@ -228,6 +230,8 @@ namespace csharp_winform
                 {
                     dBContext.DIEMSVs.Remove(updateScore);
                     dBContext.SaveChanges();
+                    SINHVIEN checkExist = dBContext.SINHVIENs.Where(p => p.MSSV == updateScore.MSSV).FirstOrDefault();
+                    updateDiemTBSinhVien(checkExist);
 
                     int i = CheckID(updateScore.MSSV, updateScore.MAMH);
 
@@ -244,6 +248,19 @@ namespace csharp_winform
             {
                 MessageBox.Show($"Không tìm thấy điểm {txtMaSV.Text} - {txtMaMH.Text}!", "Thông Báo!");
             }
+        }
+
+        private void updateDiemTBSinhVien(SINHVIEN checkExist)
+        {
+            var DIEMTB = dBContext.DIEMSVs
+                                .Where(p => p.MSSV == checkExist.MSSV)
+                                .Select(p => new { DiemTB = p.DIEMTONGKET })
+                                .Average(p => p.DiemTB);
+            if (DIEMTB == null)
+                DIEMTB = 0;
+            checkExist.DIEMTB = DIEMTB;
+            dBContext.SINHVIENs.AddOrUpdate(checkExist);
+            dBContext.SaveChanges();
         }
 
         public void btnRefresh_Click(object sender, EventArgs e)
