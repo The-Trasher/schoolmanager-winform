@@ -126,9 +126,9 @@ namespace csharp_winform
 
         private bool CheckDataInput()
         {
-            if (txtMaMon.Text == "")
+            if (txtMaMon.Text == "" || txtTenMon.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập mã môn học!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ mã và tên môn học!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else if (txtTCLT.Text != "")
@@ -137,7 +137,7 @@ namespace csharp_winform
                 bool ketQua = int.TryParse(txtTCLT.Text, out kq);
                 if (!ketQua)
                 {
-                    MessageBox.Show("Số tín chỉ phải là số !", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Số tín chỉ lý thuyết phải là số !", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
@@ -180,9 +180,9 @@ namespace csharp_winform
         private void btnXoa_Click(object sender, EventArgs e)
         {
             var checkExist = dBContext.DIEMSVs.Where(p => p.MAMH == txtMaMon.Text).ToList();
-            if(checkExist.Count>0)
+            if (checkExist.Count > 0)
             {
-                MessageBox.Show($"Không thể xoá môn học: {txtTenMon.Text}", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                MessageBox.Show($"Không thể xoá môn học: {txtTenMon.Text} do tồn tại điểm sinh viên, hãy xóa điểm sinh viên trước", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 return;
             }
 
@@ -192,7 +192,6 @@ namespace csharp_winform
                 DialogResult dr = MessageBox.Show("Bạn có muốn xóa không ?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
-                    StudentDBContext dBContext = new StudentDBContext();
                     dBContext.MONHOCs.Remove(updateSubject);
                     dBContext.SaveChanges();
 

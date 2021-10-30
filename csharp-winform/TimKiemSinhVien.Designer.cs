@@ -59,10 +59,10 @@ namespace csharp_winform
             // btnTimKiem
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnTimKiem.Location = new System.Drawing.Point(631, 169);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTimKiem.Location = new System.Drawing.Point(473, 137);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(133, 47);
+            this.btnTimKiem.Size = new System.Drawing.Size(100, 38);
             this.btnTimKiem.TabIndex = 13;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
@@ -72,11 +72,11 @@ namespace csharp_winform
             // 
             this.grThongTinChiTiet.Controls.Add(this.dgvStudent);
             this.grThongTinChiTiet.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.grThongTinChiTiet.Location = new System.Drawing.Point(15, 236);
-            this.grThongTinChiTiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grThongTinChiTiet.Location = new System.Drawing.Point(11, 192);
+            this.grThongTinChiTiet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grThongTinChiTiet.Name = "grThongTinChiTiet";
-            this.grThongTinChiTiet.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grThongTinChiTiet.Size = new System.Drawing.Size(1156, 449);
+            this.grThongTinChiTiet.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grThongTinChiTiet.Size = new System.Drawing.Size(867, 365);
             this.grThongTinChiTiet.TabIndex = 12;
             this.grThongTinChiTiet.TabStop = false;
             this.grThongTinChiTiet.Text = "Thông tin chi tiết";
@@ -96,12 +96,11 @@ namespace csharp_winform
             this.dgvKhoaHoc,
             this.dgvMaLop,
             this.dgvDiaChi});
-            this.dgvStudent.Location = new System.Drawing.Point(7, 30);
-            this.dgvStudent.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvStudent.Location = new System.Drawing.Point(5, 24);
             this.dgvStudent.Name = "dgvStudent";
             this.dgvStudent.RowHeadersWidth = 51;
             this.dgvStudent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStudent.Size = new System.Drawing.Size(1143, 414);
+            this.dgvStudent.Size = new System.Drawing.Size(857, 336);
             this.dgvStudent.TabIndex = 4;
             // 
             // dvgMSSV
@@ -151,19 +150,20 @@ namespace csharp_winform
             this.lblDSSVThiLai.AutoSize = true;
             this.lblDSSVThiLai.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblDSSVThiLai.ForeColor = System.Drawing.Color.Red;
-            this.lblDSSVThiLai.Location = new System.Drawing.Point(375, 11);
+            this.lblDSSVThiLai.Location = new System.Drawing.Point(281, 9);
+            this.lblDSSVThiLai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDSSVThiLai.Name = "lblDSSVThiLai";
-            this.lblDSSVThiLai.Size = new System.Drawing.Size(331, 35);
+            this.lblDSSVThiLai.Size = new System.Drawing.Size(261, 26);
             this.lblDSSVThiLai.TabIndex = 9;
             this.lblDSSVThiLai.Text = "TÌM KIẾM SINH VIÊN";
             // 
             // btnRefresh
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnRefresh.Location = new System.Drawing.Point(807, 169);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRefresh.Location = new System.Drawing.Point(605, 137);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(133, 47);
+            this.btnRefresh.Size = new System.Drawing.Size(100, 38);
             this.btnRefresh.TabIndex = 13;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -173,10 +173,9 @@ namespace csharp_winform
             // 
             this.rbKhoa.AutoSize = true;
             this.rbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbKhoa.Location = new System.Drawing.Point(172, 124);
-            this.rbKhoa.Margin = new System.Windows.Forms.Padding(4);
+            this.rbKhoa.Location = new System.Drawing.Point(129, 101);
             this.rbKhoa.Name = "rbKhoa";
-            this.rbKhoa.Size = new System.Drawing.Size(134, 21);
+            this.rbKhoa.Size = new System.Drawing.Size(107, 17);
             this.rbKhoa.TabIndex = 14;
             this.rbKhoa.TabStop = true;
             this.rbKhoa.Text = "Tìm theo Khoa";
@@ -187,10 +186,9 @@ namespace csharp_winform
             // 
             this.rbMSSV.AutoSize = true;
             this.rbMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMSSV.Location = new System.Drawing.Point(172, 80);
-            this.rbMSSV.Margin = new System.Windows.Forms.Padding(4);
+            this.rbMSSV.Location = new System.Drawing.Point(129, 65);
             this.rbMSSV.Name = "rbMSSV";
-            this.rbMSSV.Size = new System.Drawing.Size(139, 21);
+            this.rbMSSV.Size = new System.Drawing.Size(112, 17);
             this.rbMSSV.TabIndex = 14;
             this.rbMSSV.TabStop = true;
             this.rbMSSV.Text = "Tìm theo MSSV";
@@ -199,10 +197,9 @@ namespace csharp_winform
             // 
             // txtMSSV
             // 
-            this.txtMSSV.Location = new System.Drawing.Point(341, 76);
-            this.txtMSSV.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMSSV.Location = new System.Drawing.Point(256, 62);
             this.txtMSSV.Name = "txtMSSV";
-            this.txtMSSV.Size = new System.Drawing.Size(201, 22);
+            this.txtMSSV.Size = new System.Drawing.Size(152, 20);
             this.txtMSSV.TabIndex = 1;
             // 
             // cbbKhoa
@@ -210,10 +207,10 @@ namespace csharp_winform
             this.cbbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbKhoa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbbKhoa.FormattingEnabled = true;
-            this.cbbKhoa.Location = new System.Drawing.Point(341, 121);
-            this.cbbKhoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbKhoa.Location = new System.Drawing.Point(256, 98);
+            this.cbbKhoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbbKhoa.Name = "cbbKhoa";
-            this.cbbKhoa.Size = new System.Drawing.Size(201, 27);
+            this.cbbKhoa.Size = new System.Drawing.Size(152, 24);
             this.cbbKhoa.TabIndex = 4;
             // 
             // cbbLop
@@ -221,10 +218,10 @@ namespace csharp_winform
             this.cbbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLop.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbbLop.FormattingEnabled = true;
-            this.cbbLop.Location = new System.Drawing.Point(341, 169);
-            this.cbbLop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbLop.Location = new System.Drawing.Point(256, 137);
+            this.cbbLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbbLop.Name = "cbbLop";
-            this.cbbLop.Size = new System.Drawing.Size(201, 27);
+            this.cbbLop.Size = new System.Drawing.Size(152, 24);
             this.cbbLop.TabIndex = 5;
             // 
             // cbbMonHoc
@@ -232,20 +229,19 @@ namespace csharp_winform
             this.cbbMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMonHoc.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbbMonHoc.FormattingEnabled = true;
-            this.cbbMonHoc.Location = new System.Drawing.Point(737, 76);
-            this.cbbMonHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbMonHoc.Location = new System.Drawing.Point(569, 63);
+            this.cbbMonHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbbMonHoc.Name = "cbbMonHoc";
-            this.cbbMonHoc.Size = new System.Drawing.Size(201, 27);
+            this.cbbMonHoc.Size = new System.Drawing.Size(152, 24);
             this.cbbMonHoc.TabIndex = 7;
             // 
             // rbLop
             // 
             this.rbLop.AutoSize = true;
             this.rbLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbLop.Location = new System.Drawing.Point(172, 172);
-            this.rbLop.Margin = new System.Windows.Forms.Padding(4);
+            this.rbLop.Location = new System.Drawing.Point(129, 140);
             this.rbLop.Name = "rbLop";
-            this.rbLop.Size = new System.Drawing.Size(124, 21);
+            this.rbLop.Size = new System.Drawing.Size(99, 17);
             this.rbLop.TabIndex = 14;
             this.rbLop.TabStop = true;
             this.rbLop.Text = "Tìm theo Lớp";
@@ -256,10 +252,9 @@ namespace csharp_winform
             // 
             this.rbMonHoc.AutoSize = true;
             this.rbMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMonHoc.Location = new System.Drawing.Point(575, 80);
-            this.rbMonHoc.Margin = new System.Windows.Forms.Padding(4);
+            this.rbMonHoc.Location = new System.Drawing.Point(431, 65);
             this.rbMonHoc.Name = "rbMonHoc";
-            this.rbMonHoc.Size = new System.Drawing.Size(158, 21);
+            this.rbMonHoc.Size = new System.Drawing.Size(127, 17);
             this.rbMonHoc.TabIndex = 14;
             this.rbMonHoc.TabStop = true;
             this.rbMonHoc.Text = "Tìm theo Môn học";
@@ -270,10 +265,9 @@ namespace csharp_winform
             // 
             this.rbKhoaHoc.AutoSize = true;
             this.rbKhoaHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbKhoaHoc.Location = new System.Drawing.Point(575, 121);
-            this.rbKhoaHoc.Margin = new System.Windows.Forms.Padding(4);
+            this.rbKhoaHoc.Location = new System.Drawing.Point(431, 98);
             this.rbKhoaHoc.Name = "rbKhoaHoc";
-            this.rbKhoaHoc.Size = new System.Drawing.Size(165, 21);
+            this.rbKhoaHoc.Size = new System.Drawing.Size(132, 17);
             this.rbKhoaHoc.TabIndex = 14;
             this.rbKhoaHoc.TabStop = true;
             this.rbKhoaHoc.Text = "Tìm theo Khóa học";
@@ -282,19 +276,18 @@ namespace csharp_winform
             // 
             // txtKhoaHoc
             // 
-            this.txtKhoaHoc.Location = new System.Drawing.Point(737, 119);
-            this.txtKhoaHoc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKhoaHoc.Location = new System.Drawing.Point(569, 98);
             this.txtKhoaHoc.Name = "txtKhoaHoc";
-            this.txtKhoaHoc.Size = new System.Drawing.Size(201, 22);
+            this.txtKhoaHoc.Size = new System.Drawing.Size(152, 20);
             this.txtKhoaHoc.TabIndex = 1;
             // 
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnThoat.Location = new System.Drawing.Point(979, 169);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThoat.Location = new System.Drawing.Point(734, 137);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(133, 47);
+            this.btnThoat.Size = new System.Drawing.Size(100, 38);
             this.btnThoat.TabIndex = 13;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -303,10 +296,10 @@ namespace csharp_winform
             // TimKiemSinhVien
             // 
             this.AcceptButton = this.btnTimKiem;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1185, 699);
+            this.ClientSize = new System.Drawing.Size(889, 568);
             this.Controls.Add(this.txtKhoaHoc);
             this.Controls.Add(this.txtMSSV);
             this.Controls.Add(this.rbMSSV);
@@ -322,7 +315,6 @@ namespace csharp_winform
             this.Controls.Add(this.grThongTinChiTiet);
             this.Controls.Add(this.lblDSSVThiLai);
             this.Controls.Add(this.cbbKhoa);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TimKiemSinhVien";
             this.Text = "Tìm Kiếm Sinh Viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

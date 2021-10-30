@@ -15,6 +15,7 @@ namespace csharp_winform
     public partial class RP_DanhSachSV : Form
     {
         StudentDBContext dBContext = new StudentDBContext();
+
         public RP_DanhSachSV()
         {
             InitializeComponent();
@@ -30,12 +31,14 @@ namespace csharp_winform
             RP_DSSV.Visible = false;
             this.RP_DSSV.RefreshReport();
         }
+
         private void FillDataCBBLop(List<LOP> listLop)
         {
             cbbLop.DataSource = listLop;
             cbbLop.ValueMember = "MALOP";
             cbbLop.DisplayMember = "TENLOP";
         }
+
         private void FillDataCBBKhoa(List<KHOA> listKhoa)
         {
             cbbKhoa.DataSource = listKhoa;
@@ -65,7 +68,6 @@ namespace csharp_winform
             rdbMiss.Checked = true;
         }
 
-        
         private void btnXuat_Click(object sender, EventArgs e)
         {
             RP_DSSV.Visible = true;
@@ -77,8 +79,8 @@ namespace csharp_winform
                 var listRP = dBContext.SINHVIENs.Where(p => p.MALOP == cbbLop.SelectedValue.ToString()).ToList();
                 param[0] = new ReportParameter("NgayTK", string.Format(today.ToString("dd/MM/yyyy")));
                 param[1] = new ReportParameter("Lop", cbbLop.SelectedValue.ToString());
-                param[2] = new ReportParameter("TongSo",listRP.Count().ToString());
-                if (listRP.Count()==0)
+                param[2] = new ReportParameter("TongSo", listRP.Count().ToString());
+                if (listRP.Count() == 0)
                 {
                     MessageBox.Show($"Không có sinh viên nào thuộc lớp: {cbbLop.Text}", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
@@ -94,7 +96,7 @@ namespace csharp_winform
                 }
             }
 
-            //============================================================================================================================================================
+            //=====================================================================================================================
 
             if (rdbKhoa.Checked)
             {
@@ -106,7 +108,7 @@ namespace csharp_winform
                 param[2] = new ReportParameter("TongSo", listRP.Count().ToString());
                 if (listRP.Count() == 0)
                 {
-                    MessageBox.Show($"Không có sinh viên nào thuộc khoa: {cbbKhoa.Text}","Thông Báo!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show($"Không có sinh viên nào thuộc khoa: {cbbKhoa.Text}", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 else
@@ -120,7 +122,7 @@ namespace csharp_winform
                 }
             }
 
-            //============================================================================================================================================================
+            //=====================================================================================================================
 
             if (rdbDiem.Checked)
             {

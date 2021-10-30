@@ -48,7 +48,7 @@ namespace csharp_winform
                 }
                 else
                 {
-                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu","Thông Báo!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -79,8 +79,6 @@ namespace csharp_winform
         private void DangNhapHeThong_Load(object sender, EventArgs e)
         {
             txtTenDN.Focus();
-            txtTenDN.Text = "an";
-            txtMatKhau.Text = "123";
         }
     }
 }

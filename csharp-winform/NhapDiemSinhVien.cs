@@ -52,7 +52,7 @@ namespace csharp_winform
             if (CheckDataInput())
             {
                 SINHVIEN checkExist = dBContext.SINHVIENs.Where(p => p.MSSV == txtMaSV.Text).FirstOrDefault();
-                if (checkExist == null )
+                if (checkExist == null)
                 {
                     MessageBox.Show($"Không tồn tại sinh viên có MSSV: {txtMaSV.Text}", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                     return;
@@ -87,6 +87,7 @@ namespace csharp_winform
 
                     dBContext.DIEMSVs.AddOrUpdate(newScore);
                     dBContext.SaveChanges();
+                    updateDiemTBSinhVien(checkExist);
 
                     LoadForm();
                     LoadDGV();
@@ -97,7 +98,7 @@ namespace csharp_winform
                 }
                 else
                 {
-                    DIEMSV updateScore = dBContext.DIEMSVs.Where(p => p.MSSV == txtMaSV.Text && p.MSSV == txtMaSV.Text).FirstOrDefault();
+                    DIEMSV updateScore = dBContext.DIEMSVs.Where(p => p.MSSV == txtMaSV.Text && p.MAMH == txtMaMH.Text).FirstOrDefault();
 
                     if (updateScore != null)
                     {
@@ -117,6 +118,7 @@ namespace csharp_winform
 
                         dBContext.DIEMSVs.AddOrUpdate(updateScore);
                         dBContext.SaveChanges();
+                        updateDiemTBSinhVien(checkExist);
 
                         LoadForm();
                         LoadDGV();
@@ -173,7 +175,7 @@ namespace csharp_winform
                     return false;
                 }
             }
-            if(float.Parse(txtKTL1.Text)<0 || float.Parse(txtKTL1.Text) > 10)
+            if (float.Parse(txtKTL1.Text) < 0 || float.Parse(txtKTL1.Text) > 10)
             {
                 MessageBox.Show("0<= Điểm kiểm tra lần 1 <= 10!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -218,7 +220,7 @@ namespace csharp_winform
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DIEMSV updateScore = dBContext.DIEMSVs.Where(p => p.MSSV == txtMaSV.Text && p.MSSV == txtMaSV.Text).FirstOrDefault();
+            DIEMSV updateScore = dBContext.DIEMSVs.Where(p => p.MSSV == txtMaSV.Text && p.MAMH == txtMaMH.Text).FirstOrDefault();
 
             if (updateScore != null)
             {
@@ -228,6 +230,8 @@ namespace csharp_winform
                 {
                     dBContext.DIEMSVs.Remove(updateScore);
                     dBContext.SaveChanges();
+                    SINHVIEN checkExist = dBContext.SINHVIENs.Where(p => p.MSSV == updateScore.MSSV).FirstOrDefault();
+                    updateDiemTBSinhVien(checkExist);
 
                     int i = CheckID(updateScore.MSSV, updateScore.MAMH);
 
@@ -246,7 +250,20 @@ namespace csharp_winform
             }
         }
 
-       public void btnRefresh_Click(object sender, EventArgs e)
+        private void updateDiemTBSinhVien(SINHVIEN checkExist)
+        {
+            var DIEMTB = dBContext.DIEMSVs
+                                .Where(p => p.MSSV == checkExist.MSSV)
+                                .Select(p => new { DiemTB = p.DIEMTONGKET })
+                                .Average(p => p.DiemTB);
+            if (DIEMTB == null)
+                DIEMTB = 0;
+            checkExist.DIEMTB = DIEMTB;
+            dBContext.SINHVIENs.AddOrUpdate(checkExist);
+            dBContext.SaveChanges();
+        }
+
+        public void btnRefresh_Click(object sender, EventArgs e)
         {
 
             LoadDGV();

@@ -19,12 +19,6 @@ namespace csharp_winform
             InitializeComponent();
         }
 
-        private void QuanLyDiemSinhVien_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (flag == 0)
-                Environment.Exit(1);
-        }
-
         private void QuanLyDiemSinhVien_Load(object sender, EventArgs e)
         {
             sinhViênToolStripMenuItem_Click(sender, e);
@@ -48,7 +42,6 @@ namespace csharp_winform
 
         private void sinhViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
             Form frm = QuanLyDiemSinhVien.ActiveForm;
             foreach (Form f in frm.MdiChildren)
             {
@@ -176,7 +169,14 @@ namespace csharp_winform
 
             if (dr == DialogResult.Yes)
             {
-                Environment.Exit(1);
+                try
+                {
+                    Environment.Exit(1);
+                }
+                catch (Exception)
+                {
+                    Environment.Exit(1);
+                }
             }
         }
 
@@ -191,6 +191,14 @@ namespace csharp_winform
                 flag = 1;
                 this.Close();
             }
+        }
+
+        public void dangNhapLai()
+        {
+            DangNhapHeThong dangNhapHeThong = new DangNhapHeThong();
+            dangNhapHeThong.Show();
+            flag = 1;
+            this.Close();
         }
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -274,6 +282,12 @@ namespace csharp_winform
             RP_DanhSachDiemSV rP_DiemSV = new RP_DanhSachDiemSV();
             rP_DiemSV.MdiParent = this;
             rP_DiemSV.Show();
+        }
+
+        private void QuanLyDiemSinhVien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (flag == 0)
+                exitToolStripMenuItem_Click(sender, e);
         }
     }
 }
