@@ -1,4 +1,23 @@
-Code: /csharp-winform (visual studio 2019 trở lên)  
-SQL: /csharp-winform/SQL (SQL Server 2014/2019, nếu không attach được file .mdf, .ldf, lựa chọn phiên bản và chạy script .sql)  
-*Trong file App.config sửa data source = tên sql server máy để kết nối database  
-*Nên đặt /csharp-winform ở D:/csharp-winform để tránh bị lỗi
+# Winform
+
+## author
+
+```
+19DTHD4
+```
+
+## SQL Server 2014/2019
+
+```
+run script *.sql in /SQL
+```
+
+```
+change data source in App.config
+```
+
+## start
+
+```
+start with visual studio 2019
+```
